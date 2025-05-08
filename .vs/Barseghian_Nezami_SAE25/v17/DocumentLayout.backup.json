@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\BUT\\2nd Semestre\\D21\\Barseghian_Nezami_SAE25\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{59C267C0-6277-4F8F-9CF4-3B83D7FC36DA}|Barseghian_Nezami_SAE25\\Barseghian_Nezami_SAE25.csproj|c:\\but\\2nd semestre\\d21\\barseghian_nezami_sae25\\barseghian_nezami_sae25\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{59C267C0-6277-4F8F-9CF4-3B83D7FC36DA}|Barseghian_Nezami_SAE25\\Barseghian_Nezami_SAE25.csproj|solutionrelative:barseghian_nezami_sae25\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59C267C0-6277-4F8F-9CF4-3B83D7FC36DA}|Barseghian_Nezami_SAE25\\Barseghian_Nezami_SAE25.csproj|C:\\BUT\\2nd Semestre\\D21\\Barseghian_Nezami_SAE25\\barseghian_nezami_sae25\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59C267C0-6277-4F8F-9CF4-3B83D7FC36DA}|Barseghian_Nezami_SAE25\\Barseghian_Nezami_SAE25.csproj|solutionrelative:barseghian_nezami_sae25\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59C267C0-6277-4F8F-9CF4-3B83D7FC36DA}|Barseghian_Nezami_SAE25\\Barseghian_Nezami_SAE25.csproj|C:\\BUT\\2nd Semestre\\D21\\Barseghian_Nezami_SAE25\\barseghian_nezami_sae25\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59C267C0-6277-4F8F-9CF4-3B83D7FC36DA}|Barseghian_Nezami_SAE25\\Barseghian_Nezami_SAE25.csproj|solutionrelative:barseghian_nezami_sae25\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\BUT\\2nd Semestre\\D21\\Barseghian_Nezami_SAE25\\Barseghian_Nezami_SAE25\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Barseghian_Nezami_SAE25\\Form1.Designer.cs",
+              "ToolTip": "C:\\BUT\\2nd Semestre\\D21\\Barseghian_Nezami_SAE25\\Barseghian_Nezami_SAE25\\Form1.Designer.cs",
+              "RelativeToolTip": "Barseghian_Nezami_SAE25\\Form1.Designer.cs",
+              "ViewState": "AgIAAG0BAAAAAAAAAADgv20BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T20:06:23.492Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\BUT\\2nd Semestre\\D21\\Barseghian_Nezami_SAE25\\Barseghian_Nezami_SAE25\\Form1.cs",
+              "RelativeDocumentMoniker": "Barseghian_Nezami_SAE25\\Form1.cs",
+              "ToolTip": "C:\\BUT\\2nd Semestre\\D21\\Barseghian_Nezami_SAE25\\Barseghian_Nezami_SAE25\\Form1.cs",
+              "RelativeToolTip": "Barseghian_Nezami_SAE25\\Form1.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAqwGAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T20:06:11.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\BUT\\2nd Semestre\\D21\\Barseghian_Nezami_SAE25\\Barseghian_Nezami_SAE25\\Form1.cs",
+              "RelativeDocumentMoniker": "Barseghian_Nezami_SAE25\\Form1.cs",
+              "ToolTip": "C:\\BUT\\2nd Semestre\\D21\\Barseghian_Nezami_SAE25\\Barseghian_Nezami_SAE25\\Form1.cs [Design]",
+              "RelativeToolTip": "Barseghian_Nezami_SAE25\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T19:41:01.213Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
