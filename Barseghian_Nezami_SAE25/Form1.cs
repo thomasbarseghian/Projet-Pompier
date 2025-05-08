@@ -44,9 +44,15 @@ namespace Barseghian_Nezami_SAE25
             img = Image.FromFile(@"..\..\Resources\Icons\statistics.png");
             resizedImage = new Bitmap(img, new Size(50, 50));
             btnStatistiques.Image = resizedImage;
+
+            // Button Quitter
+            img = Image.FromFile(@"..\..\Resources\Icons\logout.png");
+            resizedImage = new Bitmap(img, new Size(50, 50));
+            btnQuitter.Image = resizedImage;
         }
+
         /***************************************************************************/
-      
+
         /***************************************************************************/
 
     }
