@@ -31,28 +31,42 @@ namespace Barseghian_Nezami_SAE25
         private void InitializeComponent()
         {
             this.pnlSideBar = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnQuitter = new System.Windows.Forms.Button();
             this.btnGestionEngins = new System.Windows.Forms.Button();
             this.btnGestionPersonnel = new System.Windows.Forms.Button();
             this.btnStatistiques = new System.Windows.Forms.Button();
             this.btnNouvelleMission = new System.Windows.Forms.Button();
             this.btnTableauBord = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnlMainLayout = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.pnlSideBar.SuspendLayout();
+            this.pnlMainLayout.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSideBar
             // 
             this.pnlSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.pnlSideBar.Controls.Add(this.panel1);
             this.pnlSideBar.Controls.Add(this.btnQuitter);
             this.pnlSideBar.Controls.Add(this.btnGestionEngins);
             this.pnlSideBar.Controls.Add(this.btnGestionPersonnel);
             this.pnlSideBar.Controls.Add(this.btnStatistiques);
             this.pnlSideBar.Controls.Add(this.btnNouvelleMission);
             this.pnlSideBar.Controls.Add(this.btnTableauBord);
+            this.pnlSideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSideBar.Location = new System.Drawing.Point(0, 0);
             this.pnlSideBar.Name = "pnlSideBar";
-            this.pnlSideBar.Size = new System.Drawing.Size(301, 755);
+            this.pnlSideBar.Size = new System.Drawing.Size(301, 749);
             this.pnlSideBar.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(306, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(584, 753);
+            this.panel1.TabIndex = 1;
             // 
             // btnQuitter
             // 
@@ -74,6 +88,7 @@ namespace Barseghian_Nezami_SAE25
             this.btnQuitter.Text = "   Quitter";
             this.btnQuitter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQuitter.UseVisualStyleBackColor = false;
+            this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
             // 
             // btnGestionEngins
             // 
@@ -95,6 +110,7 @@ namespace Barseghian_Nezami_SAE25
             this.btnGestionEngins.Text = "   Gestion des Engins";
             this.btnGestionEngins.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGestionEngins.UseVisualStyleBackColor = false;
+            this.btnGestionEngins.Click += new System.EventHandler(this.btnGestionEngins_Click);
             // 
             // btnGestionPersonnel
             // 
@@ -116,6 +132,7 @@ namespace Barseghian_Nezami_SAE25
             this.btnGestionPersonnel.Text = "   Ressources humaines";
             this.btnGestionPersonnel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGestionPersonnel.UseVisualStyleBackColor = false;
+            this.btnGestionPersonnel.Click += new System.EventHandler(this.btnGestionPersonnel_Click);
             // 
             // btnStatistiques
             // 
@@ -137,6 +154,7 @@ namespace Barseghian_Nezami_SAE25
             this.btnStatistiques.Text = "   Statistiques";
             this.btnStatistiques.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStatistiques.UseVisualStyleBackColor = false;
+            this.btnStatistiques.Click += new System.EventHandler(this.btnStatistiques_Click);
             // 
             // btnNouvelleMission
             // 
@@ -158,6 +176,7 @@ namespace Barseghian_Nezami_SAE25
             this.btnNouvelleMission.Text = "   Nouvelle Mission";
             this.btnNouvelleMission.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNouvelleMission.UseVisualStyleBackColor = false;
+            this.btnNouvelleMission.Click += new System.EventHandler(this.btnNouvelleMission_Click);
             // 
             // btnTableauBord
             // 
@@ -179,6 +198,39 @@ namespace Barseghian_Nezami_SAE25
             this.btnTableauBord.Text = "   Tableau de bord";
             this.btnTableauBord.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTableauBord.UseVisualStyleBackColor = false;
+            this.btnTableauBord.Click += new System.EventHandler(this.btnTableauBord_Click);
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 0;
+            // 
+            // pnlMainLayout
+            // 
+            this.pnlMainLayout.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlMainLayout.AutoScroll = true;
+            this.pnlMainLayout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlMainLayout.Controls.Add(this.label2);
+            this.pnlMainLayout.Location = new System.Drawing.Point(302, 1);
+            this.pnlMainLayout.Name = "pnlMainLayout";
+            this.pnlMainLayout.Size = new System.Drawing.Size(705, 748);
+            this.pnlMainLayout.TabIndex = 1;
+            this.pnlMainLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMainLayout_Paint);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(348, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(165, 17);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Main Form Layout Panel";
+            this.label2.Visible = false;
             // 
             // mainLayout
             // 
@@ -186,14 +238,16 @@ namespace Barseghian_Nezami_SAE25
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(1007, 749);
+            this.Controls.Add(this.pnlMainLayout);
             this.Controls.Add(this.pnlSideBar);
             this.Name = "mainLayout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Les soldats du feu";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.mainLayout_Load);
             this.pnlSideBar.ResumeLayout(false);
             this.pnlSideBar.PerformLayout();
+            this.pnlMainLayout.ResumeLayout(false);
+            this.pnlMainLayout.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -207,6 +261,10 @@ namespace Barseghian_Nezami_SAE25
         private System.Windows.Forms.Button btnStatistiques;
         private System.Windows.Forms.Button btnNouvelleMission;
         private System.Windows.Forms.Button btnQuitter;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel pnlMainLayout;
+        private System.Windows.Forms.Label label2;
     }
 }
 
