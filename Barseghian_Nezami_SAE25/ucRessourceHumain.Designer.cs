@@ -43,6 +43,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlInfoCarrière = new System.Windows.Forms.Panel();
+            this.pnlPlusInfo = new System.Windows.Forms.Panel();
+            this.chkConge = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.lbAffectations = new System.Windows.Forms.ListBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cboCaserneRattachement = new System.Windows.Forms.ComboBox();
+            this.lbllnfoCarriere = new System.Windows.Forms.Label();
+            this.btnPlusInfoCarriere = new System.Windows.Forms.Button();
             this.pnlInfoPersonal = new System.Windows.Forms.Panel();
             this.pnlChoisirGrade = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -78,15 +92,19 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblSexe = new System.Windows.Forms.Label();
-            this.nomPompier = new System.Windows.Forms.Label();
             this.pbGrade = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.prenomPompier = new System.Windows.Forms.Label();
+            this.nomPompier = new System.Windows.Forms.Label();
             this.pbPompier = new System.Windows.Forms.PictureBox();
-            this.btnChanger = new System.Windows.Forms.Button();
             this.pnlLogin.SuspendLayout();
             this.tlpUserSettings.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.pnlInfoCarrière.SuspendLayout();
+            this.pnlPlusInfo.SuspendLayout();
+            this.panel18.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.pnlInfoPersonal.SuspendLayout();
             this.pnlChoisirGrade.SuspendLayout();
             this.panel15.SuspendLayout();
@@ -119,7 +137,7 @@
             this.pnlLogin.Controls.Add(this.txtValider);
             this.pnlLogin.Controls.Add(this.txtName);
             this.pnlLogin.Controls.Add(this.lblName);
-            this.pnlLogin.Location = new System.Drawing.Point(-12967, 170);
+            this.pnlLogin.Location = new System.Drawing.Point(691, 228);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(360, 169);
             this.pnlLogin.TabIndex = 0;
@@ -206,10 +224,10 @@
             this.tlpUserSettings.Location = new System.Drawing.Point(10, 5);
             this.tlpUserSettings.Name = "tlpUserSettings";
             this.tlpUserSettings.RowCount = 3;
-            this.tlpUserSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlpUserSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.tlpUserSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.tlpUserSettings.Size = new System.Drawing.Size(570, 733);
+            this.tlpUserSettings.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpUserSettings.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpUserSettings.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpUserSettings.Size = new System.Drawing.Size(573, 831);
             this.tlpUserSettings.TabIndex = 1;
             this.tlpUserSettings.Visible = false;
             // 
@@ -218,6 +236,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.panel1.Controls.Add(this.cboPompier);
             this.panel1.Controls.Add(this.cboCaserne);
@@ -225,7 +244,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(564, 67);
+            this.panel1.Size = new System.Drawing.Size(567, 81);
             this.panel1.TabIndex = 0;
             // 
             // cboPompier
@@ -287,12 +306,197 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlInfoCarrière.AutoScroll = true;
-            this.pnlInfoCarrière.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.pnlInfoCarrière.Location = new System.Drawing.Point(3, 405);
+            this.pnlInfoCarrière.AutoSize = true;
+            this.pnlInfoCarrière.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.pnlInfoCarrière.Controls.Add(this.pnlPlusInfo);
+            this.pnlInfoCarrière.Controls.Add(this.lbllnfoCarriere);
+            this.pnlInfoCarrière.Controls.Add(this.btnPlusInfoCarriere);
+            this.pnlInfoCarrière.Location = new System.Drawing.Point(3, 441);
             this.pnlInfoCarrière.Name = "pnlInfoCarrière";
-            this.pnlInfoCarrière.Size = new System.Drawing.Size(564, 325);
+            this.pnlInfoCarrière.Size = new System.Drawing.Size(567, 387);
             this.pnlInfoCarrière.TabIndex = 2;
-            this.pnlInfoCarrière.Visible = false;
+            // 
+            // pnlPlusInfo
+            // 
+            this.pnlPlusInfo.Controls.Add(this.chkConge);
+            this.pnlPlusInfo.Controls.Add(this.button1);
+            this.pnlPlusInfo.Controls.Add(this.panel18);
+            this.pnlPlusInfo.Controls.Add(this.panel17);
+            this.pnlPlusInfo.Controls.Add(this.panel14);
+            this.pnlPlusInfo.Location = new System.Drawing.Point(0, 44);
+            this.pnlPlusInfo.Name = "pnlPlusInfo";
+            this.pnlPlusInfo.Size = new System.Drawing.Size(564, 340);
+            this.pnlPlusInfo.TabIndex = 10;
+            this.pnlPlusInfo.Visible = false;
+            // 
+            // chkConge
+            // 
+            this.chkConge.AutoSize = true;
+            this.chkConge.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkConge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.chkConge.Location = new System.Drawing.Point(16, 281);
+            this.chkConge.Name = "chkConge";
+            this.chkConge.Size = new System.Drawing.Size(97, 22);
+            this.chkConge.TabIndex = 11;
+            this.chkConge.Text = "En Congé";
+            this.chkConge.UseVisualStyleBackColor = true;
+            this.chkConge.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.button1.Location = new System.Drawing.Point(398, 281);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 35);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Mettre à jour";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // panel18
+            // 
+            this.panel18.AutoSize = true;
+            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel18.Controls.Add(this.lbAffectations);
+            this.panel18.Controls.Add(this.label11);
+            this.panel18.Location = new System.Drawing.Point(16, 165);
+            this.panel18.Name = "panel18";
+            this.panel18.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.panel18.Size = new System.Drawing.Size(502, 95);
+            this.panel18.TabIndex = 19;
+            // 
+            // lbAffectations
+            // 
+            this.lbAffectations.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbAffectations.FormattingEnabled = true;
+            this.lbAffectations.Location = new System.Drawing.Point(0, 21);
+            this.lbAffectations.Name = "lbAffectations";
+            this.lbAffectations.Size = new System.Drawing.Size(502, 69);
+            this.lbAffectations.TabIndex = 1;
+            this.lbAffectations.SelectedIndexChanged += new System.EventHandler(this.lbAffectations_SelectedIndexChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.label11.Location = new System.Drawing.Point(0, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(144, 17);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Affectations passées";
+            // 
+            // panel17
+            // 
+            this.panel17.AutoSize = true;
+            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel17.Controls.Add(this.listBox1);
+            this.panel17.Controls.Add(this.label10);
+            this.panel17.Location = new System.Drawing.Point(16, 56);
+            this.panel17.Name = "panel17";
+            this.panel17.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.panel17.Size = new System.Drawing.Size(502, 95);
+            this.panel17.TabIndex = 18;
+            // 
+            // listBox1
+            // 
+            this.listBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Items.AddRange(new object[] {
+            "Hello",
+            "Sir",
+            "How",
+            "Are",
+            "You",
+            ":)",
+            "!"});
+            this.listBox1.Location = new System.Drawing.Point(0, 21);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(502, 69);
+            this.listBox1.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.label10.Location = new System.Drawing.Point(0, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(86, 17);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Habilitations";
+            // 
+            // panel14
+            // 
+            this.panel14.AutoSize = true;
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel14.Controls.Add(this.label4);
+            this.panel14.Controls.Add(this.cboCaserneRattachement);
+            this.panel14.Location = new System.Drawing.Point(16, 2);
+            this.panel14.Name = "panel14";
+            this.panel14.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.panel14.Size = new System.Drawing.Size(212, 51);
+            this.panel14.TabIndex = 17;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(174, 17);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Caserne de rattachement";
+            // 
+            // cboCaserneRattachement
+            // 
+            this.cboCaserneRattachement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
+            this.cboCaserneRattachement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cboCaserneRattachement.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCaserneRattachement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.cboCaserneRattachement.FormattingEnabled = true;
+            this.cboCaserneRattachement.Location = new System.Drawing.Point(0, 18);
+            this.cboCaserneRattachement.Name = "cboCaserneRattachement";
+            this.cboCaserneRattachement.Size = new System.Drawing.Size(209, 25);
+            this.cboCaserneRattachement.TabIndex = 8;
+            // 
+            // lbllnfoCarriere
+            // 
+            this.lbllnfoCarriere.AutoSize = true;
+            this.lbllnfoCarriere.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbllnfoCarriere.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.lbllnfoCarriere.Location = new System.Drawing.Point(0, 9);
+            this.lbllnfoCarriere.Name = "lbllnfoCarriere";
+            this.lbllnfoCarriere.Size = new System.Drawing.Size(230, 24);
+            this.lbllnfoCarriere.TabIndex = 6;
+            this.lbllnfoCarriere.Text = "Informations Carrière";
+            this.lbllnfoCarriere.Visible = false;
+            // 
+            // btnPlusInfoCarriere
+            // 
+            this.btnPlusInfoCarriere.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
+            this.btnPlusInfoCarriere.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPlusInfoCarriere.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.btnPlusInfoCarriere.FlatAppearance.BorderSize = 0;
+            this.btnPlusInfoCarriere.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.btnPlusInfoCarriere.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPlusInfoCarriere.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlusInfoCarriere.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnPlusInfoCarriere.Location = new System.Drawing.Point(394, 6);
+            this.btnPlusInfoCarriere.Name = "btnPlusInfoCarriere";
+            this.btnPlusInfoCarriere.Size = new System.Drawing.Size(120, 35);
+            this.btnPlusInfoCarriere.TabIndex = 9;
+            this.btnPlusInfoCarriere.Text = "En savoir plus";
+            this.btnPlusInfoCarriere.UseVisualStyleBackColor = false;
+            this.btnPlusInfoCarriere.Visible = false;
+            this.btnPlusInfoCarriere.Click += new System.EventHandler(this.btnPlusInfoCarriere_Click);
             // 
             // pnlInfoPersonal
             // 
@@ -311,9 +515,9 @@
             this.pnlInfoPersonal.Controls.Add(this.panel7);
             this.pnlInfoPersonal.Controls.Add(this.panel5);
             this.pnlInfoPersonal.Controls.Add(this.panel3);
-            this.pnlInfoPersonal.Location = new System.Drawing.Point(3, 76);
+            this.pnlInfoPersonal.Location = new System.Drawing.Point(3, 90);
             this.pnlInfoPersonal.Name = "pnlInfoPersonal";
-            this.pnlInfoPersonal.Size = new System.Drawing.Size(564, 323);
+            this.pnlInfoPersonal.Size = new System.Drawing.Size(567, 345);
             this.pnlInfoPersonal.TabIndex = 3;
             this.pnlInfoPersonal.Visible = false;
             // 
@@ -323,7 +527,7 @@
             this.pnlChoisirGrade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.pnlChoisirGrade.Controls.Add(this.label9);
             this.pnlChoisirGrade.Controls.Add(this.cboGrade);
-            this.pnlChoisirGrade.Location = new System.Drawing.Point(303, 209);
+            this.pnlChoisirGrade.Location = new System.Drawing.Point(303, 206);
             this.pnlChoisirGrade.Name = "pnlChoisirGrade";
             this.pnlChoisirGrade.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.pnlChoisirGrade.Size = new System.Drawing.Size(212, 51);
@@ -359,7 +563,7 @@
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.panel15.Controls.Add(this.panel16);
             this.panel15.Controls.Add(this.label12);
-            this.panel15.Location = new System.Drawing.Point(303, 262);
+            this.panel15.Location = new System.Drawing.Point(303, 276);
             this.panel15.Name = "panel15";
             this.panel15.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.panel15.Size = new System.Drawing.Size(212, 51);
@@ -404,7 +608,7 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(16, 262);
+            this.panel2.Location = new System.Drawing.Point(16, 276);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.panel2.Size = new System.Drawing.Size(212, 51);
@@ -449,7 +653,7 @@
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.panel12.Controls.Add(this.pnlGrade);
             this.panel12.Controls.Add(this.label7);
-            this.panel12.Location = new System.Drawing.Point(16, 209);
+            this.panel12.Location = new System.Drawing.Point(16, 206);
             this.panel12.Name = "panel12";
             this.panel12.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.panel12.Size = new System.Drawing.Size(212, 51);
@@ -468,6 +672,7 @@
             // 
             // pbEditGrade
             // 
+            this.pbEditGrade.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbEditGrade.Image = ((System.Drawing.Image)(resources.GetObject("pbEditGrade.Image")));
             this.pbEditGrade.Location = new System.Drawing.Point(168, -10);
             this.pbEditGrade.Name = "pbEditGrade";
@@ -551,7 +756,7 @@
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.panel8.Controls.Add(this.panel9);
             this.panel8.Controls.Add(this.label6);
-            this.panel8.Location = new System.Drawing.Point(16, 115);
+            this.panel8.Location = new System.Drawing.Point(16, 112);
             this.panel8.Name = "panel8";
             this.panel8.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.panel8.Size = new System.Drawing.Size(212, 51);
@@ -610,7 +815,7 @@
             this.panel7.Controls.Add(this.rdbProfessionnel);
             this.panel7.Location = new System.Drawing.Point(0, 163);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(567, 34);
+            this.panel7.Size = new System.Drawing.Size(570, 27);
             this.panel7.TabIndex = 4;
             // 
             // rdvVolontaire
@@ -647,7 +852,7 @@
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.label5);
-            this.panel5.Location = new System.Drawing.Point(303, 115);
+            this.panel5.Location = new System.Drawing.Point(303, 112);
             this.panel5.Name = "panel5";
             this.panel5.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.panel5.Size = new System.Drawing.Size(212, 51);
@@ -696,7 +901,6 @@
             this.panel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.panel3.Controls.Add(this.lblSexe);
-            this.panel3.Controls.Add(this.nomPompier);
             this.panel3.Controls.Add(this.pbGrade);
             this.panel3.Controls.Add(this.flowLayoutPanel1);
             this.panel3.Controls.Add(this.pbPompier);
@@ -716,18 +920,6 @@
             this.lblSexe.TabIndex = 5;
             this.lblSexe.Text = "label4";
             // 
-            // nomPompier
-            // 
-            this.nomPompier.AutoSize = true;
-            this.nomPompier.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomPompier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.nomPompier.Location = new System.Drawing.Point(157, 19);
-            this.nomPompier.Margin = new System.Windows.Forms.Padding(0);
-            this.nomPompier.Name = "nomPompier";
-            this.nomPompier.Size = new System.Drawing.Size(61, 22);
-            this.nomPompier.TabIndex = 1;
-            this.nomPompier.Text = "label3";
-            // 
             // pbGrade
             // 
             this.pbGrade.Image = ((System.Drawing.Image)(resources.GetObject("pbGrade.Image")));
@@ -743,9 +935,10 @@
             this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowLayoutPanel1.Controls.Add(this.prenomPompier);
+            this.flowLayoutPanel1.Controls.Add(this.nomPompier);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(102, 19);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(61, 22);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(122, 22);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // prenomPompier
@@ -760,6 +953,18 @@
             this.prenomPompier.TabIndex = 2;
             this.prenomPompier.Text = "label4";
             // 
+            // nomPompier
+            // 
+            this.nomPompier.AutoSize = true;
+            this.nomPompier.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomPompier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.nomPompier.Location = new System.Drawing.Point(61, 0);
+            this.nomPompier.Margin = new System.Windows.Forms.Padding(0);
+            this.nomPompier.Name = "nomPompier";
+            this.nomPompier.Size = new System.Drawing.Size(61, 22);
+            this.nomPompier.TabIndex = 1;
+            this.nomPompier.Text = "label3";
+            // 
             // pbPompier
             // 
             this.pbPompier.Image = ((System.Drawing.Image)(resources.GetObject("pbPompier.Image")));
@@ -770,20 +975,6 @@
             this.pbPompier.TabIndex = 0;
             this.pbPompier.TabStop = false;
             // 
-            // btnChanger
-            // 
-            this.btnChanger.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
-            this.btnChanger.FlatAppearance.BorderSize = 0;
-            this.btnChanger.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
-            this.btnChanger.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnChanger.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btnChanger.Location = new System.Drawing.Point(707, 65);
-            this.btnChanger.Name = "btnChanger";
-            this.btnChanger.Size = new System.Drawing.Size(100, 25);
-            this.btnChanger.TabIndex = 9;
-            this.btnChanger.Text = "Changer";
-            this.btnChanger.UseVisualStyleBackColor = false;
-            // 
             // ucRessourceHumain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -793,16 +984,26 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.Controls.Add(this.pnlLogin);
-            this.Controls.Add(this.btnChanger);
             this.Controls.Add(this.tlpUserSettings);
             this.Name = "ucRessourceHumain";
-            this.Size = new System.Drawing.Size(810, 741);
+            this.Size = new System.Drawing.Size(586, 839);
             this.Resize += new System.EventHandler(this.ucRessourceHumain_Resize);
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();
             this.tlpUserSettings.ResumeLayout(false);
+            this.tlpUserSettings.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.pnlInfoCarrière.ResumeLayout(false);
+            this.pnlInfoCarrière.PerformLayout();
+            this.pnlPlusInfo.ResumeLayout(false);
+            this.pnlPlusInfo.PerformLayout();
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
             this.pnlInfoPersonal.ResumeLayout(false);
             this.pnlInfoPersonal.PerformLayout();
             this.pnlChoisirGrade.ResumeLayout(false);
@@ -885,7 +1086,7 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label lblMatricule;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnChanger;
+        private System.Windows.Forms.Button btnPlusInfoCarriere;
         private System.Windows.Forms.Panel pnlChoisirGrade;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cboGrade;
@@ -902,5 +1103,18 @@
         private System.Windows.Forms.PictureBox pbEditGrade;
         private System.Windows.Forms.Label lblGrade;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbllnfoCarriere;
+        private System.Windows.Forms.Panel pnlPlusInfo;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cboCaserneRattachement;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.ListBox lbAffectations;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.CheckBox chkConge;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -241,8 +241,9 @@ namespace Barseghian_Nezami_SAE25
             this.Controls.Add(this.pnlMainLayout);
             this.Controls.Add(this.pnlSideBar);
             this.Name = "mainLayout";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = " Les soldats du feu";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.mainLayout_Load);
             this.pnlSideBar.ResumeLayout(false);
             this.pnlSideBar.PerformLayout();

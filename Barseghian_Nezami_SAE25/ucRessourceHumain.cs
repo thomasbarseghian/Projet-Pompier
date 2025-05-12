@@ -29,6 +29,7 @@ namespace Barseghian_Nezami_SAE25
             while (reader.Read())
             {
                 cboCaserne.Items.Add(reader["nom"].ToString());
+                
             }  
             this.Dock = DockStyle.Fill;
             // styling login
@@ -101,6 +102,8 @@ namespace Barseghian_Nezami_SAE25
             {
                 pnlInfoCarrière.Visible = true;
                 pnlInfoPersonal.Visible = true;
+                btnPlusInfoCarriere.Visible = true;
+                pnlPlusInfo.Visible = false;
                 int matricule = Convert.ToInt32(selectedItem.matricule);
                 string query = "SELECT * FROM  Pompier P WHERE matricule = " + matricule;
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
@@ -162,6 +165,39 @@ namespace Barseghian_Nezami_SAE25
                 };
                 cboGrade.Items.Add(item);
             }
+        }
+
+        private void btnPlusInfoCarriere_Click(object sender, EventArgs e)
+        {
+            pnlPlusInfo.Visible = true;
+            lbAffectations.Items.Clear();
+            lbllnfoCarriere.Visible = true;
+            chkConge.Visible = true;
+            if (cboPompier.SelectedItem is PompierComboItem selectedItem)
+            {
+                int matricule = Convert.ToInt32(selectedItem.matricule);
+                string query = "SELECT A.DateA, C.nom,  A.DateFin " +
+                    "FROM Affectation A " +
+                    "JOIN Caserne C ON C.id = A.idCaserne " +
+                    "WHERE A.matriculePompier = " + matricule;
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                SQLiteDataReader reader = cmd.ExecuteReader();
+                cboCaserneRattachement.Items.Clear();
+                while (reader.Read())
+                {
+                    cboCaserneRattachement.Items.Add(reader["nom"].ToString());
+                    if (reader["DateFin"].ToString() != "" )
+                    { 
+                    string affectations = reader["dateA"] + " - " + reader["nom"];
+                    lbAffectations.Items.Add(affectations);
+                    }
+                }
+            }
+        }
+
+        private void lbAffectations_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
     public class PompierComboItem
