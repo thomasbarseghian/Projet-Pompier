@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,7 @@ using System.Xml;
 
 namespace Barseghian_Nezami_SAE25
 {
+  
     public partial class mainLayout : Form
     {
         public mainLayout()
@@ -50,7 +52,12 @@ namespace Barseghian_Nezami_SAE25
             resizedImage = new Bitmap(img, new Size(50, 50));
             btnQuitter.Image = resizedImage;
         }
+        
 
+        private void btnNouvelleMission_Click(object sender, EventArgs e)
+        {
+
+        }
         /***************************************************************************/
 
         /***************************************************************************/
