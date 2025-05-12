@@ -31,29 +31,42 @@ namespace Barseghian_Nezami_SAE25
         private void InitializeComponent()
         {
             this.pnlSideBar = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnQuitter = new System.Windows.Forms.Button();
             this.btnGestionEngins = new System.Windows.Forms.Button();
             this.btnGestionPersonnel = new System.Windows.Forms.Button();
             this.btnStatistiques = new System.Windows.Forms.Button();
             this.btnNouvelleMission = new System.Windows.Forms.Button();
             this.btnTableauBord = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnlMainLayout = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.pnlSideBar.SuspendLayout();
+            this.pnlMainLayout.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSideBar
             // 
             this.pnlSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.pnlSideBar.Controls.Add(this.panel1);
             this.pnlSideBar.Controls.Add(this.btnQuitter);
             this.pnlSideBar.Controls.Add(this.btnGestionEngins);
             this.pnlSideBar.Controls.Add(this.btnGestionPersonnel);
             this.pnlSideBar.Controls.Add(this.btnStatistiques);
             this.pnlSideBar.Controls.Add(this.btnNouvelleMission);
             this.pnlSideBar.Controls.Add(this.btnTableauBord);
+            this.pnlSideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSideBar.Location = new System.Drawing.Point(0, 0);
-            this.pnlSideBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlSideBar.Name = "pnlSideBar";
-            this.pnlSideBar.Size = new System.Drawing.Size(452, 1162);
+            this.pnlSideBar.Size = new System.Drawing.Size(301, 749);
             this.pnlSideBar.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(306, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(584, 753);
+            this.panel1.TabIndex = 1;
             // 
             // btnQuitter
             // 
@@ -68,14 +81,14 @@ namespace Barseghian_Nezami_SAE25
             this.btnQuitter.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitter.ForeColor = System.Drawing.Color.White;
             this.btnQuitter.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnQuitter.Location = new System.Drawing.Point(0, 971);
-            this.btnQuitter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnQuitter.Location = new System.Drawing.Point(0, 631);
             this.btnQuitter.Name = "btnQuitter";
-            this.btnQuitter.Size = new System.Drawing.Size(450, 77);
+            this.btnQuitter.Size = new System.Drawing.Size(300, 50);
             this.btnQuitter.TabIndex = 11;
             this.btnQuitter.Text = "   Quitter";
             this.btnQuitter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQuitter.UseVisualStyleBackColor = false;
+            this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
             // 
             // btnGestionEngins
             // 
@@ -90,14 +103,14 @@ namespace Barseghian_Nezami_SAE25
             this.btnGestionEngins.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionEngins.ForeColor = System.Drawing.Color.White;
             this.btnGestionEngins.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnGestionEngins.Location = new System.Drawing.Point(0, 283);
-            this.btnGestionEngins.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGestionEngins.Location = new System.Drawing.Point(0, 184);
             this.btnGestionEngins.Name = "btnGestionEngins";
-            this.btnGestionEngins.Size = new System.Drawing.Size(520, 77);
+            this.btnGestionEngins.Size = new System.Drawing.Size(300, 50);
             this.btnGestionEngins.TabIndex = 10;
             this.btnGestionEngins.Text = "   Gestion des Engins";
             this.btnGestionEngins.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGestionEngins.UseVisualStyleBackColor = false;
+            this.btnGestionEngins.Click += new System.EventHandler(this.btnGestionEngins_Click);
             // 
             // btnGestionPersonnel
             // 
@@ -112,14 +125,14 @@ namespace Barseghian_Nezami_SAE25
             this.btnGestionPersonnel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionPersonnel.ForeColor = System.Drawing.Color.White;
             this.btnGestionPersonnel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnGestionPersonnel.Location = new System.Drawing.Point(0, 391);
-            this.btnGestionPersonnel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGestionPersonnel.Location = new System.Drawing.Point(0, 254);
             this.btnGestionPersonnel.Name = "btnGestionPersonnel";
-            this.btnGestionPersonnel.Size = new System.Drawing.Size(586, 77);
+            this.btnGestionPersonnel.Size = new System.Drawing.Size(300, 50);
             this.btnGestionPersonnel.TabIndex = 9;
             this.btnGestionPersonnel.Text = "   Ressources humaines";
             this.btnGestionPersonnel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGestionPersonnel.UseVisualStyleBackColor = false;
+            this.btnGestionPersonnel.Click += new System.EventHandler(this.btnGestionPersonnel_Click);
             // 
             // btnStatistiques
             // 
@@ -134,14 +147,14 @@ namespace Barseghian_Nezami_SAE25
             this.btnStatistiques.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStatistiques.ForeColor = System.Drawing.Color.White;
             this.btnStatistiques.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnStatistiques.Location = new System.Drawing.Point(0, 498);
-            this.btnStatistiques.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnStatistiques.Location = new System.Drawing.Point(0, 324);
             this.btnStatistiques.Name = "btnStatistiques";
-            this.btnStatistiques.Size = new System.Drawing.Size(450, 77);
+            this.btnStatistiques.Size = new System.Drawing.Size(300, 50);
             this.btnStatistiques.TabIndex = 8;
             this.btnStatistiques.Text = "   Statistiques";
             this.btnStatistiques.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStatistiques.UseVisualStyleBackColor = false;
+            this.btnStatistiques.Click += new System.EventHandler(this.btnStatistiques_Click);
             // 
             // btnNouvelleMission
             // 
@@ -156,10 +169,9 @@ namespace Barseghian_Nezami_SAE25
             this.btnNouvelleMission.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNouvelleMission.ForeColor = System.Drawing.Color.White;
             this.btnNouvelleMission.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnNouvelleMission.Location = new System.Drawing.Point(0, 175);
-            this.btnNouvelleMission.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnNouvelleMission.Location = new System.Drawing.Point(0, 114);
             this.btnNouvelleMission.Name = "btnNouvelleMission";
-            this.btnNouvelleMission.Size = new System.Drawing.Size(466, 77);
+            this.btnNouvelleMission.Size = new System.Drawing.Size(300, 50);
             this.btnNouvelleMission.TabIndex = 7;
             this.btnNouvelleMission.Text = "   Nouvelle Mission";
             this.btnNouvelleMission.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -179,31 +191,64 @@ namespace Barseghian_Nezami_SAE25
             this.btnTableauBord.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTableauBord.ForeColor = System.Drawing.Color.White;
             this.btnTableauBord.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnTableauBord.Location = new System.Drawing.Point(0, 75);
-            this.btnTableauBord.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnTableauBord.Location = new System.Drawing.Point(0, 49);
             this.btnTableauBord.Name = "btnTableauBord";
-            this.btnTableauBord.Size = new System.Drawing.Size(456, 77);
+            this.btnTableauBord.Size = new System.Drawing.Size(300, 50);
             this.btnTableauBord.TabIndex = 6;
             this.btnTableauBord.Text = "   Tableau de bord";
             this.btnTableauBord.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTableauBord.UseVisualStyleBackColor = false;
+            this.btnTableauBord.Click += new System.EventHandler(this.btnTableauBord_Click);
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 0;
+            // 
+            // pnlMainLayout
+            // 
+            this.pnlMainLayout.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlMainLayout.AutoScroll = true;
+            this.pnlMainLayout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlMainLayout.Controls.Add(this.label2);
+            this.pnlMainLayout.Location = new System.Drawing.Point(302, 1);
+            this.pnlMainLayout.Name = "pnlMainLayout";
+            this.pnlMainLayout.Size = new System.Drawing.Size(705, 748);
+            this.pnlMainLayout.TabIndex = 1;
+            this.pnlMainLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMainLayout_Paint);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(348, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(165, 17);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Main Form Layout Panel";
+            this.label2.Visible = false;
             // 
             // mainLayout
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(235)))));
-            this.ClientSize = new System.Drawing.Size(1510, 1050);
+            this.ClientSize = new System.Drawing.Size(1007, 749);
+            this.Controls.Add(this.pnlMainLayout);
             this.Controls.Add(this.pnlSideBar);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "mainLayout";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ls";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
+            this.Text = " Les soldats du feu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.mainLayout_Load);
             this.pnlSideBar.ResumeLayout(false);
             this.pnlSideBar.PerformLayout();
+            this.pnlMainLayout.ResumeLayout(false);
+            this.pnlMainLayout.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -217,6 +262,10 @@ namespace Barseghian_Nezami_SAE25
         private System.Windows.Forms.Button btnStatistiques;
         private System.Windows.Forms.Button btnNouvelleMission;
         private System.Windows.Forms.Button btnQuitter;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel pnlMainLayout;
+        private System.Windows.Forms.Label label2;
     }
 }
 

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,12 +11,12 @@ using System.Xml;
 
 namespace Barseghian_Nezami_SAE25
 {
-  
     public partial class mainLayout : Form
     {
         public mainLayout()
         {
             InitializeComponent();
+
         }
 
         private void mainLayout_Load(object sender, EventArgs e)
@@ -52,12 +51,68 @@ namespace Barseghian_Nezami_SAE25
             resizedImage = new Bitmap(img, new Size(50, 50));
             btnQuitter.Image = resizedImage;
         }
-        
+
+        private void btnQuitter_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        private void addToPanelLayout(UserControl uc)
+        {
+            pnlMainLayout.Controls.Clear();
+          
+            pnlMainLayout.Controls.Add(uc);
+        }
+        private void activeBtnStylying(Button btn)
+        {
+            foreach(Button buttonn in pnlSideBar.Controls.OfType<Button>())
+            {
+                if(buttonn == btn)
+                {
+                    buttonn.BackColor = Color.FromArgb(160, 40, 50); 
+                }
+                else
+                {
+                    buttonn.BackColor = Color.FromArgb(140, 30, 40);
+                }
+
+            }
+        }
+        private void btnTableauBord_Click(object sender, EventArgs e)
+        {
+            pnlMainLayout.Controls.Clear();
+            activeBtnStylying((Button)sender);
+        }
 
         private void btnNouvelleMission_Click(object sender, EventArgs e)
         {
+            pnlMainLayout.Controls.Clear();
+            activeBtnStylying((Button)sender);
+        }
+
+        private void btnGestionEngins_Click(object sender, EventArgs e)
+        {
+            pnlMainLayout.Controls.Clear();
+            activeBtnStylying((Button)sender);
+        }
+
+        private void btnGestionPersonnel_Click(object sender, EventArgs e)
+        {
+            ucRessourceHumain RH = new ucRessourceHumain();
+            activeBtnStylying((Button)sender);
+            addToPanelLayout(RH);
+        }
+
+        private void btnStatistiques_Click(object sender, EventArgs e)
+        {
+            pnlMainLayout.Controls.Clear();
+            activeBtnStylying((Button)sender);
+        }
+
+        private void pnlMainLayout_Paint(object sender, PaintEventArgs e)
+        {
 
         }
+
         /***************************************************************************/
 
         /***************************************************************************/

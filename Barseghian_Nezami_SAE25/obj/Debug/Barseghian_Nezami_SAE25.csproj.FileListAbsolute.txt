@@ -8,17 +8,7 @@ C:\BUT\2nd Semestre\D21\Barseghian_Nezami_SAE25\Barseghian_Nezami_SAE25\obj\Debu
 C:\BUT\2nd Semestre\D21\Barseghian_Nezami_SAE25\Barseghian_Nezami_SAE25\obj\Debug\Barseghian_Nezami_SAE25.csproj.CoreCompileInputs.cache
 C:\BUT\2nd Semestre\D21\Barseghian_Nezami_SAE25\Barseghian_Nezami_SAE25\obj\Debug\Barseghian_Nezami_SAE25.exe
 C:\BUT\2nd Semestre\D21\Barseghian_Nezami_SAE25\Barseghian_Nezami_SAE25\obj\Debug\Barseghian_Nezami_SAE25.pdb
-D:\IUT\SAE_A21\Barseghian_Nezami_SAE25\bin\Debug\Barseghian_Nezami_SAE25.exe.config
-D:\IUT\SAE_A21\Barseghian_Nezami_SAE25\bin\Debug\Barseghian_Nezami_SAE25.exe
-D:\IUT\SAE_A21\Barseghian_Nezami_SAE25\bin\Debug\Barseghian_Nezami_SAE25.pdb
-D:\IUT\SAE_A21\Barseghian_Nezami_SAE25\obj\Debug\Barseghian_Nezami_SAE25.csproj.AssemblyReference.cache
-D:\IUT\SAE_A21\Barseghian_Nezami_SAE25\obj\Debug\Barseghian_Nezami_SAE25.mainLayout.resources
-D:\IUT\SAE_A21\Barseghian_Nezami_SAE25\obj\Debug\Barseghian_Nezami_SAE25.Properties.Resources.resources
-D:\IUT\SAE_A21\Barseghian_Nezami_SAE25\obj\Debug\Barseghian_Nezami_SAE25.csproj.GenerateResource.cache
-D:\IUT\SAE_A21\Barseghian_Nezami_SAE25\obj\Debug\Barseghian_Nezami_SAE25.csproj.CoreCompileInputs.cache
-D:\IUT\SAE_A21\Barseghian_Nezami_SAE25\obj\Debug\Barseghian_Nezami_SAE25.exe
-D:\IUT\SAE_A21\Barseghian_Nezami_SAE25\obj\Debug\Barseghian_Nezami_SAE25.pdb
-D:\IUT\SAE_A21\Barseghian_Nezami_SAE25\bin\Debug\System.Data.SQLite.dll
-D:\IUT\SAE_A21\Barseghian_Nezami_SAE25\bin\Debug\System.Data.SQLite.xml
-D:\IUT\SAE_A21\Barseghian_Nezami_SAE25\obj\Debug\Barseghian_Nezami_SAE25.UserControl1.resources
-D:\IUT\SAE_A21\Barseghian_Nezami_SAE25\obj\Debug\Barseghi.181DD733.Up2Date
+C:\BUT\2nd Semestre\D21\Barseghian_Nezami_SAE25\Barseghian_Nezami_SAE25\bin\Debug\System.Data.SQLite.dll
+C:\BUT\2nd Semestre\D21\Barseghian_Nezami_SAE25\Barseghian_Nezami_SAE25\bin\Debug\System.Data.SQLite.xml
+C:\BUT\2nd Semestre\D21\Barseghian_Nezami_SAE25\Barseghian_Nezami_SAE25\obj\Debug\Barseghi.181DD733.Up2Date
+C:\BUT\2nd Semestre\D21\Barseghian_Nezami_SAE25\Barseghian_Nezami_SAE25\obj\Debug\Barseghian_Nezami_SAE25.ucRessourceHumain.resources

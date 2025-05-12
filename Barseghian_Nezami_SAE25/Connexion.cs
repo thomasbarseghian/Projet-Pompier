@@ -5,12 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Barseghian_Nezami_SAE25
+namespace Barseghian_Nezami_SAE25.Utils
 {
-    // Classe basée sur le pattern Singleton pour s'assurer que la connexion n'est ouverte qu'une seule fois
+	// Classe basée sur le pattern Singleton pour s'assurer que la connexion n'est ouverte qu'une seule fois
     internal class Connexion
     {
-        /// Objet Connection
+		// Objet Connection
         private static SQLiteConnection connec;
 
         // Constructeur privé pour empêcher l'instanciation directe depuis l'extérieur.
@@ -26,22 +26,22 @@ namespace Barseghian_Nezami_SAE25
                 {
                     try
                     {
-                        // Chaîne de connexion à votre base de données
-                        string chaine = @"Data Source = ..\..\..\SDIS67.db";
+						// Chaîne de connexion à votre base de données
+						string chaine = @"Data Source = ..\..\Database\SDIS67.db";
                         connec = new SQLiteConnection(chaine);
                         connec.Open();
                     }
-                    catch (SQLiteException err)
+                    catch (SQLiteException err) 
                     {
                         Console.WriteLine($"Erreur lors de l'ouverture de la connexion : {err.Message}");
                     }
                 }
-                //Dans tous les cas on renvoie la connexion
+				//Dans tous les cas on renvoie la connexion
                 return connec;
             }
         }
 
-        // Méthode pour fermer proprement la connexion
+		// Méthode pour fermer proprement la connexion
         public static void FermerConnexion()
         {
             if (connec != null)
