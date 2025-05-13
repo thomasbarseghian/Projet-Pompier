@@ -1,6 +1,6 @@
 ﻿namespace Barseghian_Nezami_SAE25
 {
-    partial class UserControl1
+    partial class ucNouvelleMission
     {
         /// <summary> 
         /// Required designer variable.
@@ -48,6 +48,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cboNatureSinistre = new System.Windows.Forms.ComboBox();
             this.btnFermer = new System.Windows.Forms.Button();
+            this.grpEnginsPompiers = new System.Windows.Forms.GroupBox();
             this.grpInfosUsagers.SuspendLayout();
             this.grpDecisions.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +57,7 @@
             // 
             this.lblMission.AutoSize = true;
             this.lblMission.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMission.Location = new System.Drawing.Point(56, 85);
+            this.lblMission.Location = new System.Drawing.Point(64, 34);
             this.lblMission.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMission.Name = "lblMission";
             this.lblMission.Size = new System.Drawing.Size(111, 29);
@@ -67,7 +68,7 @@
             // 
             this.lblDeclenche.AutoSize = true;
             this.lblDeclenche.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeclenche.Location = new System.Drawing.Point(518, 85);
+            this.lblDeclenche.Location = new System.Drawing.Point(529, 34);
             this.lblDeclenche.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDeclenche.Name = "lblDeclenche";
             this.lblDeclenche.Size = new System.Drawing.Size(149, 29);
@@ -86,7 +87,7 @@
             this.grpInfosUsagers.Controls.Add(this.label1);
             this.grpInfosUsagers.Controls.Add(this.rtbMotif);
             this.grpInfosUsagers.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpInfosUsagers.Location = new System.Drawing.Point(69, 134);
+            this.grpInfosUsagers.Location = new System.Drawing.Point(69, 81);
             this.grpInfosUsagers.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpInfosUsagers.Name = "grpInfosUsagers";
             this.grpInfosUsagers.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -102,6 +103,7 @@
             this.txtVille.Name = "txtVille";
             this.txtVille.Size = new System.Drawing.Size(350, 30);
             this.txtVille.TabIndex = 8;
+            this.txtVille.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVille_KeyPress);
             // 
             // txtRue
             // 
@@ -110,6 +112,7 @@
             this.txtRue.Name = "txtRue";
             this.txtRue.Size = new System.Drawing.Size(350, 30);
             this.txtRue.TabIndex = 7;
+            this.txtRue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRue_KeyPress);
             // 
             // txtCP
             // 
@@ -118,6 +121,7 @@
             this.txtCP.Name = "txtCP";
             this.txtCP.Size = new System.Drawing.Size(152, 30);
             this.txtCP.TabIndex = 6;
+            this.txtCP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCP_KeyPress);
             // 
             // label5
             // 
@@ -176,7 +180,7 @@
             // 
             // rtbMotif
             // 
-            this.rtbMotif.Location = new System.Drawing.Point(80, 65);
+            this.rtbMotif.Location = new System.Drawing.Point(104, 62);
             this.rtbMotif.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rtbMotif.Name = "rtbMotif";
             this.rtbMotif.Size = new System.Drawing.Size(220, 98);
@@ -191,7 +195,7 @@
             this.grpDecisions.Controls.Add(this.label7);
             this.grpDecisions.Controls.Add(this.label6);
             this.grpDecisions.Controls.Add(this.cboNatureSinistre);
-            this.grpDecisions.Location = new System.Drawing.Point(69, 350);
+            this.grpDecisions.Location = new System.Drawing.Point(69, 288);
             this.grpDecisions.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpDecisions.Name = "grpDecisions";
             this.grpDecisions.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -269,11 +273,21 @@
             this.btnFermer.Text = "Fermer";
             this.btnFermer.UseVisualStyleBackColor = true;
             // 
+            // grpEnginsPompiers
+            // 
+            this.grpEnginsPompiers.Location = new System.Drawing.Point(69, 450);
+            this.grpEnginsPompiers.Name = "grpEnginsPompiers";
+            this.grpEnginsPompiers.Size = new System.Drawing.Size(918, 206);
+            this.grpEnginsPompiers.TabIndex = 10;
+            this.grpEnginsPompiers.TabStop = false;
+            this.grpEnginsPompiers.Text = "Mobilisation des engins et des pompiers";
+            // 
             // UserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(235)))));
+            this.Controls.Add(this.grpEnginsPompiers);
             this.Controls.Add(this.btnFermer);
             this.Controls.Add(this.grpDecisions);
             this.Controls.Add(this.grpInfosUsagers);
@@ -281,7 +295,7 @@
             this.Controls.Add(this.lblMission);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(1011, 728);
+            this.Size = new System.Drawing.Size(1005, 728);
             this.Load += new System.EventHandler(this.UserControl1_Load);
             this.grpInfosUsagers.ResumeLayout(false);
             this.grpInfosUsagers.PerformLayout();
@@ -314,5 +328,6 @@
         private System.Windows.Forms.Button btnEquipe;
         private System.Windows.Forms.Button btnAnnuler;
         private System.Windows.Forms.Button btnFermer;
+        private System.Windows.Forms.GroupBox grpEnginsPompiers;
     }
 }
