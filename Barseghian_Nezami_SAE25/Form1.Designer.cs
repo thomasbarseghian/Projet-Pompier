@@ -30,6 +30,7 @@ namespace Barseghian_Nezami_SAE25
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainLayout));
             this.pnlSideBar = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnQuitter = new System.Windows.Forms.Button();
@@ -41,13 +42,16 @@ namespace Barseghian_Nezami_SAE25
             this.label1 = new System.Windows.Forms.Label();
             this.pnlMainLayout = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlSideBar.SuspendLayout();
             this.pnlMainLayout.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSideBar
             // 
             this.pnlSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.pnlSideBar.Controls.Add(this.pictureBox1);
             this.pnlSideBar.Controls.Add(this.panel1);
             this.pnlSideBar.Controls.Add(this.btnQuitter);
             this.pnlSideBar.Controls.Add(this.btnGestionEngins);
@@ -103,7 +107,7 @@ namespace Barseghian_Nezami_SAE25
             this.btnGestionEngins.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionEngins.ForeColor = System.Drawing.Color.White;
             this.btnGestionEngins.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnGestionEngins.Location = new System.Drawing.Point(0, 184);
+            this.btnGestionEngins.Location = new System.Drawing.Point(0, 264);
             this.btnGestionEngins.Name = "btnGestionEngins";
             this.btnGestionEngins.Size = new System.Drawing.Size(300, 50);
             this.btnGestionEngins.TabIndex = 10;
@@ -125,7 +129,7 @@ namespace Barseghian_Nezami_SAE25
             this.btnGestionPersonnel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionPersonnel.ForeColor = System.Drawing.Color.White;
             this.btnGestionPersonnel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnGestionPersonnel.Location = new System.Drawing.Point(0, 254);
+            this.btnGestionPersonnel.Location = new System.Drawing.Point(0, 334);
             this.btnGestionPersonnel.Name = "btnGestionPersonnel";
             this.btnGestionPersonnel.Size = new System.Drawing.Size(300, 50);
             this.btnGestionPersonnel.TabIndex = 9;
@@ -147,7 +151,7 @@ namespace Barseghian_Nezami_SAE25
             this.btnStatistiques.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStatistiques.ForeColor = System.Drawing.Color.White;
             this.btnStatistiques.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnStatistiques.Location = new System.Drawing.Point(0, 324);
+            this.btnStatistiques.Location = new System.Drawing.Point(0, 404);
             this.btnStatistiques.Name = "btnStatistiques";
             this.btnStatistiques.Size = new System.Drawing.Size(300, 50);
             this.btnStatistiques.TabIndex = 8;
@@ -169,7 +173,7 @@ namespace Barseghian_Nezami_SAE25
             this.btnNouvelleMission.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNouvelleMission.ForeColor = System.Drawing.Color.White;
             this.btnNouvelleMission.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnNouvelleMission.Location = new System.Drawing.Point(0, 114);
+            this.btnNouvelleMission.Location = new System.Drawing.Point(0, 194);
             this.btnNouvelleMission.Name = "btnNouvelleMission";
             this.btnNouvelleMission.Size = new System.Drawing.Size(300, 50);
             this.btnNouvelleMission.TabIndex = 7;
@@ -191,7 +195,7 @@ namespace Barseghian_Nezami_SAE25
             this.btnTableauBord.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTableauBord.ForeColor = System.Drawing.Color.White;
             this.btnTableauBord.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnTableauBord.Location = new System.Drawing.Point(0, 49);
+            this.btnTableauBord.Location = new System.Drawing.Point(0, 129);
             this.btnTableauBord.Name = "btnTableauBord";
             this.btnTableauBord.Size = new System.Drawing.Size(300, 50);
             this.btnTableauBord.TabIndex = 6;
@@ -232,6 +236,16 @@ namespace Barseghian_Nezami_SAE25
             this.label2.Text = "Main Form Layout Panel";
             this.label2.Visible = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(71, -12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(159, 132);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
             // mainLayout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -249,6 +263,7 @@ namespace Barseghian_Nezami_SAE25
             this.pnlSideBar.PerformLayout();
             this.pnlMainLayout.ResumeLayout(false);
             this.pnlMainLayout.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -266,6 +281,7 @@ namespace Barseghian_Nezami_SAE25
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlMainLayout;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

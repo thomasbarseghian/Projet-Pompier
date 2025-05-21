@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Barseghian_Nezami_SAE25.Utils
 {
+    //comentaitre pour voir si je suis pas un boufon
 	// Classe basée sur le pattern Singleton pour s'assurer que la connexion n'est ouverte qu'une seule fois
     internal class Connexion
     {
