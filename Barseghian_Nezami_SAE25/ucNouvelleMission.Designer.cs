@@ -44,13 +44,18 @@
             this.btnEquipe = new System.Windows.Forms.Button();
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.cboCaserne = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblCaserne = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cboNatureSinistre = new System.Windows.Forms.ComboBox();
-            this.btnFermer = new System.Windows.Forms.Button();
+            this.btnAjouter = new System.Windows.Forms.Button();
             this.grpEnginsPompiers = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.grpInfosUsagers.SuspendLayout();
             this.grpDecisions.SuspendLayout();
+            this.grpEnginsPompiers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMission
@@ -118,6 +123,7 @@
             // 
             this.txtCP.Location = new System.Drawing.Point(536, 105);
             this.txtCP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCP.MaxLength = 5;
             this.txtCP.Name = "txtCP";
             this.txtCP.Size = new System.Drawing.Size(152, 30);
             this.txtCP.TabIndex = 6;
@@ -192,7 +198,7 @@
             this.grpDecisions.Controls.Add(this.btnEquipe);
             this.grpDecisions.Controls.Add(this.btnAnnuler);
             this.grpDecisions.Controls.Add(this.cboCaserne);
-            this.grpDecisions.Controls.Add(this.label7);
+            this.grpDecisions.Controls.Add(this.lblCaserne);
             this.grpDecisions.Controls.Add(this.label6);
             this.grpDecisions.Controls.Add(this.cboNatureSinistre);
             this.grpDecisions.Location = new System.Drawing.Point(69, 288);
@@ -230,17 +236,20 @@
             this.cboCaserne.Name = "cboCaserne";
             this.cboCaserne.Size = new System.Drawing.Size(200, 28);
             this.cboCaserne.TabIndex = 6;
+            this.cboCaserne.Visible = false;
+            this.cboCaserne.SelectedIndexChanged += new System.EventHandler(this.cboCaserne_SelectedIndexChanged);
             // 
-            // label7
+            // lblCaserne
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(421, 26);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(154, 24);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Caserne à Mobiliser";
+            this.lblCaserne.AutoSize = true;
+            this.lblCaserne.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCaserne.Location = new System.Drawing.Point(421, 26);
+            this.lblCaserne.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCaserne.Name = "lblCaserne";
+            this.lblCaserne.Size = new System.Drawing.Size(154, 24);
+            this.lblCaserne.TabIndex = 5;
+            this.lblCaserne.Text = "Caserne à Mobiliser";
+            this.lblCaserne.Visible = false;
             // 
             // label6
             // 
@@ -264,43 +273,69 @@
             this.cboNatureSinistre.TabIndex = 0;
             this.cboNatureSinistre.SelectedIndexChanged += new System.EventHandler(this.cboNatureSinistre_SelectedIndexChanged);
             // 
-            // btnFermer
+            // btnAjouter
             // 
-            this.btnFermer.Location = new System.Drawing.Point(795, 672);
-            this.btnFermer.Name = "btnFermer";
-            this.btnFermer.Size = new System.Drawing.Size(192, 44);
-            this.btnFermer.TabIndex = 9;
-            this.btnFermer.Text = "Fermer";
-            this.btnFermer.UseVisualStyleBackColor = true;
+            this.btnAjouter.Location = new System.Drawing.Point(795, 671);
+            this.btnAjouter.Name = "btnAjouter";
+            this.btnAjouter.Size = new System.Drawing.Size(192, 44);
+            this.btnAjouter.TabIndex = 9;
+            this.btnAjouter.Text = "Ajouter";
+            this.btnAjouter.UseVisualStyleBackColor = true;
             // 
             // grpEnginsPompiers
             // 
+            this.grpEnginsPompiers.Controls.Add(this.dataGridView3);
+            this.grpEnginsPompiers.Controls.Add(this.dataGridView1);
             this.grpEnginsPompiers.Location = new System.Drawing.Point(69, 450);
             this.grpEnginsPompiers.Name = "grpEnginsPompiers";
             this.grpEnginsPompiers.Size = new System.Drawing.Size(918, 206);
             this.grpEnginsPompiers.TabIndex = 10;
             this.grpEnginsPompiers.TabStop = false;
             this.grpEnginsPompiers.Text = "Mobilisation des engins et des pompiers";
+            this.grpEnginsPompiers.Visible = false;
             // 
-            // UserControl1
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(36, 25);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(288, 175);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(481, 25);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 62;
+            this.dataGridView3.RowTemplate.Height = 28;
+            this.dataGridView3.Size = new System.Drawing.Size(290, 175);
+            this.dataGridView3.TabIndex = 12;
+            // 
+            // ucNouvelleMission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(235)))));
             this.Controls.Add(this.grpEnginsPompiers);
-            this.Controls.Add(this.btnFermer);
+            this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.grpDecisions);
             this.Controls.Add(this.grpInfosUsagers);
             this.Controls.Add(this.lblDeclenche);
             this.Controls.Add(this.lblMission);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "UserControl1";
+            this.Name = "ucNouvelleMission";
             this.Size = new System.Drawing.Size(1005, 728);
             this.Load += new System.EventHandler(this.UserControl1_Load);
             this.grpInfosUsagers.ResumeLayout(false);
             this.grpInfosUsagers.PerformLayout();
             this.grpDecisions.ResumeLayout(false);
             this.grpDecisions.PerformLayout();
+            this.grpEnginsPompiers.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,10 +359,12 @@
         private System.Windows.Forms.ComboBox cboNatureSinistre;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cboCaserne;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblCaserne;
         private System.Windows.Forms.Button btnEquipe;
         private System.Windows.Forms.Button btnAnnuler;
-        private System.Windows.Forms.Button btnFermer;
+        private System.Windows.Forms.Button btnAjouter;
         private System.Windows.Forms.GroupBox grpEnginsPompiers;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -30,33 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucRessourceHumain));
             this.pnlLogin = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.PbLogo = new System.Windows.Forms.PictureBox();
             this.btnValider = new System.Windows.Forms.Button();
             this.btnAnnuler = new System.Windows.Forms.Button();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.txtValider = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.lblName = new System.Windows.Forms.Label();
             this.tlpUserSettings = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cboPompier = new System.Windows.Forms.ComboBox();
             this.cboCaserne = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pnlInfoCarrière = new System.Windows.Forms.Panel();
-            this.pnlPlusInfo = new System.Windows.Forms.Panel();
-            this.chkConge = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.lbAffectations = new System.Windows.Forms.ListBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cboCaserneRattachement = new System.Windows.Forms.ComboBox();
-            this.lbllnfoCarriere = new System.Windows.Forms.Label();
-            this.btnPlusInfoCarriere = new System.Windows.Forms.Button();
             this.pnlInfoPersonal = new System.Windows.Forms.Panel();
             this.pnlChoisirGrade = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -97,14 +85,37 @@
             this.prenomPompier = new System.Windows.Forms.Label();
             this.nomPompier = new System.Windows.Forms.Label();
             this.pbPompier = new System.Windows.Forms.PictureBox();
+            this.pnlInfoCarrière = new System.Windows.Forms.Panel();
+            this.pnlPlusInfo = new System.Windows.Forms.Panel();
+            this.pnlChoisirCaserne = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cboCaserneRattachement = new System.Windows.Forms.ComboBox();
+            this.chkConge = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.lbAffectations = new System.Windows.Forms.ListBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.chklstbHabilitation = new System.Windows.Forms.CheckedListBox();
+            this.lbHabilitations = new System.Windows.Forms.ListBox();
+            this.pbEditHabilitations = new System.Windows.Forms.PictureBox();
+            this.btnConfirmHabilitation = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.pbChoisirCaserne = new System.Windows.Forms.PictureBox();
+            this.lblRattachement = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbllnfoCarriere = new System.Windows.Forms.Label();
+            this.btnPlusInfoCarriere = new System.Windows.Forms.Button();
+            this.btnAjoutPompier = new System.Windows.Forms.Button();
             this.pnlLogin.SuspendLayout();
+            this.panel21.SuspendLayout();
+            this.panel20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).BeginInit();
             this.tlpUserSettings.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.pnlInfoCarrière.SuspendLayout();
-            this.pnlPlusInfo.SuspendLayout();
-            this.panel18.SuspendLayout();
-            this.panel17.SuspendLayout();
-            this.panel14.SuspendLayout();
             this.pnlInfoPersonal.SuspendLayout();
             this.pnlChoisirGrade.SuspendLayout();
             this.panel15.SuspendLayout();
@@ -125,14 +136,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbGrade)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPompier)).BeginInit();
+            this.pnlInfoCarrière.SuspendLayout();
+            this.pnlPlusInfo.SuspendLayout();
+            this.pnlChoisirCaserne.SuspendLayout();
+            this.panel18.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.panel19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEditHabilitations)).BeginInit();
+            this.panel14.SuspendLayout();
+            this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbChoisirCaserne)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlLogin
             // 
             this.pnlLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
+            this.pnlLogin.Controls.Add(this.panel21);
+            this.pnlLogin.Controls.Add(this.panel20);
+            this.pnlLogin.Controls.Add(this.PbLogo);
             this.pnlLogin.Controls.Add(this.btnValider);
             this.pnlLogin.Controls.Add(this.btnAnnuler);
+<<<<<<< HEAD
             this.pnlLogin.Controls.Add(this.txtPass);
             this.pnlLogin.Controls.Add(this.txtValider);
             this.pnlLogin.Controls.Add(this.txtName);
@@ -141,18 +166,112 @@
             this.pnlLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(540, 260);
+=======
+            this.pnlLogin.Location = new System.Drawing.Point(683, 101);
+            this.pnlLogin.Name = "pnlLogin";
+            this.pnlLogin.Size = new System.Drawing.Size(360, 426);
+>>>>>>> 0d9328f94722908d94c3b54f7b9d0a5fa30f4cab
             this.pnlLogin.TabIndex = 0;
+            this.pnlLogin.Visible = false;
+            // 
+            // panel21
+            // 
+            this.panel21.AutoSize = true;
+            this.panel21.BackColor = System.Drawing.Color.Transparent;
+            this.panel21.Controls.Add(this.label13);
+            this.panel21.Controls.Add(this.txtPass);
+            this.panel21.Location = new System.Drawing.Point(75, 242);
+            this.panel21.Name = "panel21";
+            this.panel21.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.panel21.Size = new System.Drawing.Size(218, 54);
+            this.panel21.TabIndex = 15;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label13.Location = new System.Drawing.Point(0, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(105, 17);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Mots de passe";
+            // 
+            // txtPass
+            // 
+            this.txtPass.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtPass.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.txtPass.Location = new System.Drawing.Point(0, 23);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(218, 26);
+            this.txtPass.TabIndex = 9;
+            this.txtPass.UseSystemPasswordChar = true;
+            this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyDown);
+            // 
+            // panel20
+            // 
+            this.panel20.AutoSize = true;
+            this.panel20.BackColor = System.Drawing.Color.Transparent;
+            this.panel20.Controls.Add(this.label15);
+            this.panel20.Controls.Add(this.txtName);
+            this.panel20.Location = new System.Drawing.Point(75, 166);
+            this.panel20.Name = "panel20";
+            this.panel20.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.panel20.Size = new System.Drawing.Size(224, 53);
+            this.panel20.TabIndex = 14;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label15.Location = new System.Drawing.Point(0, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(117, 17);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Nom d\'utilisateur";
+            // 
+            // txtName
+            // 
+            this.txtName.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.txtName.Location = new System.Drawing.Point(0, 22);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(224, 26);
+            this.txtName.TabIndex = 7;
+            this.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyDown);
+            // 
+            // PbLogo
+            // 
+            this.PbLogo.Image = ((System.Drawing.Image)(resources.GetObject("PbLogo.Image")));
+            this.PbLogo.Location = new System.Drawing.Point(102, 0);
+            this.PbLogo.Name = "PbLogo";
+            this.PbLogo.Size = new System.Drawing.Size(159, 132);
+            this.PbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbLogo.TabIndex = 13;
+            this.PbLogo.TabStop = false;
             // 
             // btnValider
             // 
-            this.btnValider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnValider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnValider.FlatAppearance.BorderSize = 0;
+            this.btnValider.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(150)))), ((int)(((byte)(0)))));
             this.btnValider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnValider.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.btnValider.Location = new System.Drawing.Point(394, 198);
             this.btnValider.Margin = new System.Windows.Forms.Padding(0);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(120, 46);
+=======
+            this.btnValider.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnValider.Location = new System.Drawing.Point(75, 332);
+            this.btnValider.Margin = new System.Windows.Forms.Padding(0);
+            this.btnValider.Name = "btnValider";
+            this.btnValider.Size = new System.Drawing.Size(215, 30);
+>>>>>>> 0d9328f94722908d94c3b54f7b9d0a5fa30f4cab
             this.btnValider.TabIndex = 11;
             this.btnValider.Text = "Valider";
             this.btnValider.UseVisualStyleBackColor = false;
@@ -160,17 +279,29 @@
             // 
             // btnAnnuler
             // 
-            this.btnAnnuler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnAnnuler.BackColor = System.Drawing.Color.Transparent;
+            this.btnAnnuler.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAnnuler.FlatAppearance.BorderSize = 0;
+            this.btnAnnuler.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAnnuler.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnnuler.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.btnAnnuler.Location = new System.Drawing.Point(236, 198);
             this.btnAnnuler.Margin = new System.Windows.Forms.Padding(0);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(120, 46);
+=======
+            this.btnAnnuler.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAnnuler.Location = new System.Drawing.Point(322, 0);
+            this.btnAnnuler.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAnnuler.Name = "btnAnnuler";
+            this.btnAnnuler.Size = new System.Drawing.Size(38, 30);
+>>>>>>> 0d9328f94722908d94c3b54f7b9d0a5fa30f4cab
             this.btnAnnuler.TabIndex = 10;
-            this.btnAnnuler.Text = "Annuler";
+            this.btnAnnuler.Text = " ❌";
             this.btnAnnuler.UseVisualStyleBackColor = false;
+<<<<<<< HEAD
             // 
             // txtPass
             // 
@@ -214,6 +345,9 @@
             this.lblName.Size = new System.Drawing.Size(67, 26);
             this.lblName.TabIndex = 6;
             this.lblName.Text = "Login";
+=======
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
+>>>>>>> 0d9328f94722908d94c3b54f7b9d0a5fa30f4cab
             // 
             // tlpUserSettings
             // 
@@ -224,18 +358,25 @@
             this.tlpUserSettings.ColumnCount = 1;
             this.tlpUserSettings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpUserSettings.Controls.Add(this.panel1, 0, 0);
-            this.tlpUserSettings.Controls.Add(this.pnlInfoCarrière, 0, 2);
             this.tlpUserSettings.Controls.Add(this.pnlInfoPersonal, 0, 1);
+<<<<<<< HEAD
             this.tlpUserSettings.Location = new System.Drawing.Point(15, 8);
             this.tlpUserSettings.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+=======
+            this.tlpUserSettings.Controls.Add(this.pnlInfoCarrière, 0, 2);
+            this.tlpUserSettings.Location = new System.Drawing.Point(10, 5);
+>>>>>>> 0d9328f94722908d94c3b54f7b9d0a5fa30f4cab
             this.tlpUserSettings.Name = "tlpUserSettings";
             this.tlpUserSettings.RowCount = 3;
             this.tlpUserSettings.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpUserSettings.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpUserSettings.RowStyles.Add(new System.Windows.Forms.RowStyle());
+<<<<<<< HEAD
             this.tlpUserSettings.Size = new System.Drawing.Size(858, 1282);
+=======
+            this.tlpUserSettings.Size = new System.Drawing.Size(578, 834);
+>>>>>>> 0d9328f94722908d94c3b54f7b9d0a5fa30f4cab
             this.tlpUserSettings.TabIndex = 1;
-            this.tlpUserSettings.Visible = false;
             // 
             // panel1
             // 
@@ -251,12 +392,17 @@
             this.panel1.Location = new System.Drawing.Point(4, 5);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
+<<<<<<< HEAD
             this.panel1.Size = new System.Drawing.Size(850, 125);
+=======
+            this.panel1.Size = new System.Drawing.Size(572, 81);
+>>>>>>> 0d9328f94722908d94c3b54f7b9d0a5fa30f4cab
             this.panel1.TabIndex = 0;
             // 
             // cboPompier
             // 
             this.cboPompier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
+            this.cboPompier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPompier.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cboPompier.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPompier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -266,13 +412,14 @@
             this.cboPompier.Name = "cboPompier";
             this.cboPompier.Size = new System.Drawing.Size(312, 34);
             this.cboPompier.TabIndex = 3;
-            this.cboPompier.SelectedIndexChanged += new System.EventHandler(this.cboPompier_SelectedIndexChanged);
+            this.cboPompier.SelectionChangeCommitted += new System.EventHandler(this.cboPompier_SelectionChangeCommitted);
             // 
             // cboCaserne
             // 
             this.cboCaserne.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.cboCaserne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
+            this.cboCaserne.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCaserne.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cboCaserne.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCaserne.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -282,7 +429,7 @@
             this.cboCaserne.Name = "cboCaserne";
             this.cboCaserne.Size = new System.Drawing.Size(316, 34);
             this.cboCaserne.TabIndex = 2;
-            this.cboCaserne.SelectedIndexChanged += new System.EventHandler(this.cboCaserne_SelectedIndexChanged);
+            this.cboCaserne.SelectionChangeCommitted += new System.EventHandler(this.cboCaserne_SelectionChangeCommitted);
             // 
             // label2
             // 
@@ -311,6 +458,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Veuillez Sélectionner une caserne : ";
             // 
+<<<<<<< HEAD
             // pnlInfoCarrière
             // 
             this.pnlInfoCarrière.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -526,6 +674,8 @@
             this.btnPlusInfoCarriere.Visible = false;
             this.btnPlusInfoCarriere.Click += new System.EventHandler(this.btnPlusInfoCarriere_Click);
             // 
+=======
+>>>>>>> 0d9328f94722908d94c3b54f7b9d0a5fa30f4cab
             // pnlInfoPersonal
             // 
             this.pnlInfoPersonal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -546,7 +696,11 @@
             this.pnlInfoPersonal.Location = new System.Drawing.Point(4, 140);
             this.pnlInfoPersonal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlInfoPersonal.Name = "pnlInfoPersonal";
+<<<<<<< HEAD
             this.pnlInfoPersonal.Size = new System.Drawing.Size(850, 531);
+=======
+            this.pnlInfoPersonal.Size = new System.Drawing.Size(572, 345);
+>>>>>>> 0d9328f94722908d94c3b54f7b9d0a5fa30f4cab
             this.pnlInfoPersonal.TabIndex = 3;
             this.pnlInfoPersonal.Visible = false;
             // 
@@ -579,6 +733,8 @@
             // cboGrade
             // 
             this.cboGrade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
+            this.cboGrade.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.cboGrade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboGrade.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cboGrade.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboGrade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -588,6 +744,7 @@
             this.cboGrade.Name = "cboGrade";
             this.cboGrade.Size = new System.Drawing.Size(312, 34);
             this.cboGrade.TabIndex = 8;
+            this.cboGrade.SelectionChangeCommitted += new System.EventHandler(this.cboGrade_SelectionChangeCommitted);
             // 
             // panel15
             // 
@@ -870,7 +1027,11 @@
             this.panel7.Location = new System.Drawing.Point(0, 251);
             this.panel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel7.Name = "panel7";
+<<<<<<< HEAD
             this.panel7.Size = new System.Drawing.Size(855, 42);
+=======
+            this.panel7.Size = new System.Drawing.Size(575, 27);
+>>>>>>> 0d9328f94722908d94c3b54f7b9d0a5fa30f4cab
             this.panel7.TabIndex = 4;
             // 
             // rdvVolontaire
@@ -1041,36 +1202,366 @@
             this.pbPompier.TabIndex = 0;
             this.pbPompier.TabStop = false;
             // 
+            // pnlInfoCarrière
+            // 
+            this.pnlInfoCarrière.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlInfoCarrière.AutoScroll = true;
+            this.pnlInfoCarrière.AutoSize = true;
+            this.pnlInfoCarrière.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.pnlInfoCarrière.Controls.Add(this.pnlPlusInfo);
+            this.pnlInfoCarrière.Controls.Add(this.lbllnfoCarriere);
+            this.pnlInfoCarrière.Controls.Add(this.btnPlusInfoCarriere);
+            this.pnlInfoCarrière.Location = new System.Drawing.Point(3, 441);
+            this.pnlInfoCarrière.Name = "pnlInfoCarrière";
+            this.pnlInfoCarrière.Size = new System.Drawing.Size(572, 390);
+            this.pnlInfoCarrière.TabIndex = 2;
+            // 
+            // pnlPlusInfo
+            // 
+            this.pnlPlusInfo.Controls.Add(this.pnlChoisirCaserne);
+            this.pnlPlusInfo.Controls.Add(this.chkConge);
+            this.pnlPlusInfo.Controls.Add(this.button1);
+            this.pnlPlusInfo.Controls.Add(this.panel18);
+            this.pnlPlusInfo.Controls.Add(this.panel17);
+            this.pnlPlusInfo.Controls.Add(this.panel14);
+            this.pnlPlusInfo.Location = new System.Drawing.Point(5, 47);
+            this.pnlPlusInfo.Name = "pnlPlusInfo";
+            this.pnlPlusInfo.Size = new System.Drawing.Size(564, 340);
+            this.pnlPlusInfo.TabIndex = 10;
+            this.pnlPlusInfo.Visible = false;
+            // 
+            // pnlChoisirCaserne
+            // 
+            this.pnlChoisirCaserne.AutoSize = true;
+            this.pnlChoisirCaserne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.pnlChoisirCaserne.Controls.Add(this.label14);
+            this.pnlChoisirCaserne.Controls.Add(this.cboCaserneRattachement);
+            this.pnlChoisirCaserne.Location = new System.Drawing.Point(299, 3);
+            this.pnlChoisirCaserne.Name = "pnlChoisirCaserne";
+            this.pnlChoisirCaserne.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.pnlChoisirCaserne.Size = new System.Drawing.Size(212, 51);
+            this.pnlChoisirCaserne.TabIndex = 17;
+            this.pnlChoisirCaserne.Visible = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.label14.Location = new System.Drawing.Point(0, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(156, 17);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Choisissez la Caserne";
+            // 
+            // cboCaserneRattachement
+            // 
+            this.cboCaserneRattachement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
+            this.cboCaserneRattachement.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.cboCaserneRattachement.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCaserneRattachement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cboCaserneRattachement.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCaserneRattachement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.cboCaserneRattachement.FormattingEnabled = true;
+            this.cboCaserneRattachement.Location = new System.Drawing.Point(0, 21);
+            this.cboCaserneRattachement.Name = "cboCaserneRattachement";
+            this.cboCaserneRattachement.Size = new System.Drawing.Size(212, 25);
+            this.cboCaserneRattachement.TabIndex = 8;
+            this.cboCaserneRattachement.SelectionChangeCommitted += new System.EventHandler(this.cboCaserneRattachement_SelectionChangeCommitted);
+            // 
+            // chkConge
+            // 
+            this.chkConge.AutoSize = true;
+            this.chkConge.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkConge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.chkConge.Location = new System.Drawing.Point(14, 287);
+            this.chkConge.Name = "chkConge";
+            this.chkConge.Size = new System.Drawing.Size(97, 22);
+            this.chkConge.TabIndex = 11;
+            this.chkConge.Text = "En Congé";
+            this.chkConge.UseVisualStyleBackColor = true;
+            this.chkConge.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.button1.Location = new System.Drawing.Point(398, 287);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 35);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Mettre à jour";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel18
+            // 
+            this.panel18.AutoSize = true;
+            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel18.Controls.Add(this.lbAffectations);
+            this.panel18.Controls.Add(this.label11);
+            this.panel18.Location = new System.Drawing.Point(16, 179);
+            this.panel18.Name = "panel18";
+            this.panel18.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.panel18.Size = new System.Drawing.Size(502, 95);
+            this.panel18.TabIndex = 19;
+            // 
+            // lbAffectations
+            // 
+            this.lbAffectations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
+            this.lbAffectations.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbAffectations.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAffectations.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.lbAffectations.FormattingEnabled = true;
+            this.lbAffectations.ItemHeight = 18;
+            this.lbAffectations.Location = new System.Drawing.Point(0, 32);
+            this.lbAffectations.Name = "lbAffectations";
+            this.lbAffectations.Size = new System.Drawing.Size(502, 58);
+            this.lbAffectations.TabIndex = 1;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.label11.Location = new System.Drawing.Point(0, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(144, 17);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Affectations passées";
+            // 
+            // panel17
+            // 
+            this.panel17.AutoSize = true;
+            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel17.Controls.Add(this.panel19);
+            this.panel17.Controls.Add(this.label10);
+            this.panel17.Location = new System.Drawing.Point(16, 65);
+            this.panel17.Name = "panel17";
+            this.panel17.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.panel17.Size = new System.Drawing.Size(494, 111);
+            this.panel17.TabIndex = 18;
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
+            this.panel19.Controls.Add(this.chklstbHabilitation);
+            this.panel19.Controls.Add(this.lbHabilitations);
+            this.panel19.Controls.Add(this.pbEditHabilitations);
+            this.panel19.Controls.Add(this.btnConfirmHabilitation);
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel19.Location = new System.Drawing.Point(0, 20);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(494, 86);
+            this.panel19.TabIndex = 2;
+            // 
+            // chklstbHabilitation
+            // 
+            this.chklstbHabilitation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
+            this.chklstbHabilitation.FormattingEnabled = true;
+            this.chklstbHabilitation.Location = new System.Drawing.Point(0, 3);
+            this.chklstbHabilitation.Name = "chklstbHabilitation";
+            this.chklstbHabilitation.Size = new System.Drawing.Size(439, 79);
+            this.chklstbHabilitation.TabIndex = 2;
+            this.chklstbHabilitation.Visible = false;
+            // 
+            // lbHabilitations
+            // 
+            this.lbHabilitations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
+            this.lbHabilitations.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbHabilitations.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lbHabilitations.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHabilitations.FormattingEnabled = true;
+            this.lbHabilitations.ItemHeight = 18;
+            this.lbHabilitations.Location = new System.Drawing.Point(0, 0);
+            this.lbHabilitations.Name = "lbHabilitations";
+            this.lbHabilitations.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.lbHabilitations.Size = new System.Drawing.Size(439, 86);
+            this.lbHabilitations.TabIndex = 1;
+            // 
+            // pbEditHabilitations
+            // 
+            this.pbEditHabilitations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
+            this.pbEditHabilitations.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbEditHabilitations.Image = ((System.Drawing.Image)(resources.GetObject("pbEditHabilitations.Image")));
+            this.pbEditHabilitations.Location = new System.Drawing.Point(448, 23);
+            this.pbEditHabilitations.Name = "pbEditHabilitations";
+            this.pbEditHabilitations.Size = new System.Drawing.Size(45, 41);
+            this.pbEditHabilitations.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbEditHabilitations.TabIndex = 4;
+            this.pbEditHabilitations.TabStop = false;
+            this.pbEditHabilitations.Click += new System.EventHandler(this.pbEditHabilitations_Click);
+            // 
+            // btnConfirmHabilitation
+            // 
+            this.btnConfirmHabilitation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
+            this.btnConfirmHabilitation.FlatAppearance.BorderSize = 0;
+            this.btnConfirmHabilitation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.btnConfirmHabilitation.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConfirmHabilitation.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnConfirmHabilitation.Location = new System.Drawing.Point(448, 23);
+            this.btnConfirmHabilitation.Name = "btnConfirmHabilitation";
+            this.btnConfirmHabilitation.Size = new System.Drawing.Size(45, 41);
+            this.btnConfirmHabilitation.TabIndex = 20;
+            this.btnConfirmHabilitation.Text = "✔";
+            this.btnConfirmHabilitation.UseVisualStyleBackColor = false;
+            this.btnConfirmHabilitation.Visible = false;
+            this.btnConfirmHabilitation.Click += new System.EventHandler(this.btnConfirmHabilitation_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.label10.Location = new System.Drawing.Point(0, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(86, 17);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Habilitations";
+            // 
+            // panel14
+            // 
+            this.panel14.AutoSize = true;
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel14.Controls.Add(this.panel13);
+            this.panel14.Controls.Add(this.label4);
+            this.panel14.Location = new System.Drawing.Point(16, 2);
+            this.panel14.Name = "panel14";
+            this.panel14.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.panel14.Size = new System.Drawing.Size(227, 54);
+            this.panel14.TabIndex = 17;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
+            this.panel13.Controls.Add(this.pbChoisirCaserne);
+            this.panel13.Controls.Add(this.lblRattachement);
+            this.panel13.Location = new System.Drawing.Point(3, 20);
+            this.panel13.Name = "panel13";
+            this.panel13.Padding = new System.Windows.Forms.Padding(3);
+            this.panel13.Size = new System.Drawing.Size(209, 26);
+            this.panel13.TabIndex = 4;
+            // 
+            // pbChoisirCaserne
+            // 
+            this.pbChoisirCaserne.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbChoisirCaserne.Image = ((System.Drawing.Image)(resources.GetObject("pbChoisirCaserne.Image")));
+            this.pbChoisirCaserne.Location = new System.Drawing.Point(168, -10);
+            this.pbChoisirCaserne.Name = "pbChoisirCaserne";
+            this.pbChoisirCaserne.Size = new System.Drawing.Size(45, 41);
+            this.pbChoisirCaserne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbChoisirCaserne.TabIndex = 2;
+            this.pbChoisirCaserne.TabStop = false;
+            this.pbChoisirCaserne.Click += new System.EventHandler(this.pbChoisirCaserne_Click);
+            // 
+            // lblRattachement
+            // 
+            this.lblRattachement.AutoSize = true;
+            this.lblRattachement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
+            this.lblRattachement.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRattachement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.lblRattachement.Location = new System.Drawing.Point(3, 5);
+            this.lblRattachement.Name = "lblRattachement";
+            this.lblRattachement.Size = new System.Drawing.Size(50, 18);
+            this.lblRattachement.TabIndex = 3;
+            this.lblRattachement.Text = "label4";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(174, 17);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Caserne de rattachement";
+            // 
+            // lbllnfoCarriere
+            // 
+            this.lbllnfoCarriere.AutoSize = true;
+            this.lbllnfoCarriere.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbllnfoCarriere.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.lbllnfoCarriere.Location = new System.Drawing.Point(0, 9);
+            this.lbllnfoCarriere.Name = "lbllnfoCarriere";
+            this.lbllnfoCarriere.Size = new System.Drawing.Size(230, 24);
+            this.lbllnfoCarriere.TabIndex = 6;
+            this.lbllnfoCarriere.Text = "Informations Carrière";
+            this.lbllnfoCarriere.Visible = false;
+            // 
+            // btnPlusInfoCarriere
+            // 
+            this.btnPlusInfoCarriere.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
+            this.btnPlusInfoCarriere.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPlusInfoCarriere.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.btnPlusInfoCarriere.FlatAppearance.BorderSize = 0;
+            this.btnPlusInfoCarriere.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.btnPlusInfoCarriere.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPlusInfoCarriere.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlusInfoCarriere.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnPlusInfoCarriere.Location = new System.Drawing.Point(394, 6);
+            this.btnPlusInfoCarriere.Name = "btnPlusInfoCarriere";
+            this.btnPlusInfoCarriere.Size = new System.Drawing.Size(120, 35);
+            this.btnPlusInfoCarriere.TabIndex = 9;
+            this.btnPlusInfoCarriere.Text = "En savoir plus";
+            this.btnPlusInfoCarriere.UseVisualStyleBackColor = false;
+            this.btnPlusInfoCarriere.Visible = false;
+            this.btnPlusInfoCarriere.Click += new System.EventHandler(this.btnPlusInfoCarriere_Click);
+            // 
+            // btnAjoutPompier
+            // 
+            this.btnAjoutPompier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
+            this.btnAjoutPompier.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAjoutPompier.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.btnAjoutPompier.FlatAppearance.BorderSize = 0;
+            this.btnAjoutPompier.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.btnAjoutPompier.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAjoutPompier.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAjoutPompier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnAjoutPompier.Location = new System.Drawing.Point(557, 15);
+            this.btnAjoutPompier.Name = "btnAjoutPompier";
+            this.btnAjoutPompier.Size = new System.Drawing.Size(148, 48);
+            this.btnAjoutPompier.TabIndex = 10;
+            this.btnAjoutPompier.Text = "Ajouter Pompier";
+            this.btnAjoutPompier.UseVisualStyleBackColor = false;
+            // 
             // ucRessourceHumain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.Controls.Add(this.btnAjoutPompier);
             this.Controls.Add(this.pnlLogin);
             this.Controls.Add(this.tlpUserSettings);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ucRessourceHumain";
+<<<<<<< HEAD
             this.Size = new System.Drawing.Size(877, 1295);
+=======
+            this.Size = new System.Drawing.Size(1153, 842);
+>>>>>>> 0d9328f94722908d94c3b54f7b9d0a5fa30f4cab
             this.Resize += new System.EventHandler(this.ucRessourceHumain_Resize);
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
+            this.panel20.ResumeLayout(false);
+            this.panel20.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).EndInit();
             this.tlpUserSettings.ResumeLayout(false);
             this.tlpUserSettings.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.pnlInfoCarrière.ResumeLayout(false);
-            this.pnlInfoCarrière.PerformLayout();
-            this.pnlPlusInfo.ResumeLayout(false);
-            this.pnlPlusInfo.PerformLayout();
-            this.panel18.ResumeLayout(false);
-            this.panel18.PerformLayout();
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
             this.pnlInfoPersonal.ResumeLayout(false);
             this.pnlInfoPersonal.PerformLayout();
             this.pnlChoisirGrade.ResumeLayout(false);
@@ -1108,6 +1599,23 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPompier)).EndInit();
+            this.pnlInfoCarrière.ResumeLayout(false);
+            this.pnlInfoCarrière.PerformLayout();
+            this.pnlPlusInfo.ResumeLayout(false);
+            this.pnlPlusInfo.PerformLayout();
+            this.pnlChoisirCaserne.ResumeLayout(false);
+            this.pnlChoisirCaserne.PerformLayout();
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
+            this.panel19.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbEditHabilitations)).EndInit();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbChoisirCaserne)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1119,9 +1627,7 @@
         private System.Windows.Forms.Button btnValider;
         private System.Windows.Forms.Button btnAnnuler;
         private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.Label txtValider;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TableLayoutPanel tlpUserSettings;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlInfoCarrière;
@@ -1180,8 +1686,23 @@
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.ListBox lbAffectations;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbHabilitations;
         private System.Windows.Forms.CheckBox chkConge;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel pnlChoisirCaserne;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.PictureBox pbChoisirCaserne;
+        private System.Windows.Forms.Label lblRattachement;
+        private System.Windows.Forms.PictureBox pbEditHabilitations;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.CheckedListBox chklstbHabilitation;
+        private System.Windows.Forms.Button btnConfirmHabilitation;
+        private System.Windows.Forms.PictureBox PbLogo;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btnAjoutPompier;
     }
 }
