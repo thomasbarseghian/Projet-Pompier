@@ -86,7 +86,9 @@ namespace Barseghian_Nezami_SAE25
         private void btnNouvelleMission_Click(object sender, EventArgs e)
         {
             pnlMainLayout.Controls.Clear();
+            ucNouvelleMission NM = new ucNouvelleMission();
             activeBtnStylying((Button)sender);
+            addToPanelLayout(NM);
         }
 
         private void btnGestionEngins_Click(object sender, EventArgs e)
@@ -97,6 +99,7 @@ namespace Barseghian_Nezami_SAE25
 
         private void btnGestionPersonnel_Click(object sender, EventArgs e)
         {
+            pnlMainLayout.Controls.Clear();
             ucRessourceHumain RH = new ucRessourceHumain();
             activeBtnStylying((Button)sender);
             addToPanelLayout(RH);

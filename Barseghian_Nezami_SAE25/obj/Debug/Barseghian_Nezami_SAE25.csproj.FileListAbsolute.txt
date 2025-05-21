@@ -12,4 +12,23 @@ C:\BUT\2nd Semestre\D21\Barseghian_Nezami_SAE25\Barseghian_Nezami_SAE25\bin\Debu
 C:\BUT\2nd Semestre\D21\Barseghian_Nezami_SAE25\Barseghian_Nezami_SAE25\bin\Debug\System.Data.SQLite.xml
 C:\BUT\2nd Semestre\D21\Barseghian_Nezami_SAE25\Barseghian_Nezami_SAE25\obj\Debug\Barseghi.181DD733.Up2Date
 C:\BUT\2nd Semestre\D21\Barseghian_Nezami_SAE25\Barseghian_Nezami_SAE25\obj\Debug\Barseghian_Nezami_SAE25.ucRessourceHumain.resources
+<<<<<<< HEAD
+C:\Users\Elève\Desktop\SAE24\Barseghian_Nezami_SAE25\bin\Debug\Barseghian_Nezami_SAE25.exe.config
+C:\Users\Elève\Desktop\SAE24\Barseghian_Nezami_SAE25\bin\Debug\Barseghian_Nezami_SAE25.exe
+C:\Users\Elève\Desktop\SAE24\Barseghian_Nezami_SAE25\bin\Debug\Barseghian_Nezami_SAE25.pdb
+C:\Users\Elève\Desktop\SAE24\Barseghian_Nezami_SAE25\bin\Debug\System.Data.SQLite.dll
+C:\Users\Elève\Desktop\SAE24\Barseghian_Nezami_SAE25\bin\Debug\System.Data.SQLite.xml
+C:\Users\Elève\Desktop\SAE24\Barseghian_Nezami_SAE25\obj\Debug\Barseghian_Nezami_SAE25.csproj.AssemblyReference.cache
+C:\Users\Elève\Desktop\SAE24\Barseghian_Nezami_SAE25\obj\Debug\Barseghian_Nezami_SAE25.mainLayout.resources
+C:\Users\Elève\Desktop\SAE24\Barseghian_Nezami_SAE25\obj\Debug\Barseghian_Nezami_SAE25.Properties.Resources.resources
+C:\Users\Elève\Desktop\SAE24\Barseghian_Nezami_SAE25\obj\Debug\Barseghian_Nezami_SAE25.ucRessourceHumain.resources
+C:\Users\Elève\Desktop\SAE24\Barseghian_Nezami_SAE25\obj\Debug\Barseghian_Nezami_SAE25.csproj.GenerateResource.cache
+C:\Users\Elève\Desktop\SAE24\Barseghian_Nezami_SAE25\obj\Debug\Barseghian_Nezami_SAE25.csproj.CoreCompileInputs.cache
+C:\Users\Elève\Desktop\SAE24\Barseghian_Nezami_SAE25\obj\Debug\Barseghi.181DD733.Up2Date
+C:\Users\Elève\Desktop\SAE24\Barseghian_Nezami_SAE25\obj\Debug\Barseghian_Nezami_SAE25.exe
+C:\Users\Elève\Desktop\SAE24\Barseghian_Nezami_SAE25\obj\Debug\Barseghian_Nezami_SAE25.pdb
+C:\Users\Elève\Desktop\SAE24\Barseghian_Nezami_SAE25\obj\Debug\Barseghian_Nezami_SAE25.ucNouvelleMission.resources
+=======
 C:\BUT\2nd Semestre\D21\Barseghian_Nezami_SAE25\Barseghian_Nezami_SAE25\obj\Debug\Barseghian_Nezami_SAE25.frmAjoutePompier.resources
+>>>>>>> 0d9328f94722908d94c3b54f7b9d0a5fa30f4cab
+C:\Users\Elève\Desktop\SAE24\Barseghian_Nezami_SAE25\obj\Debug\Barseghian_Nezami_SAE25.frmAjoutePompier.resources
