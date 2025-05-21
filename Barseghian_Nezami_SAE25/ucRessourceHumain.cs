@@ -386,8 +386,15 @@ namespace Barseghian_Nezami_SAE25
                         cmd.ExecuteNonQuery();
                     }
                 }
+
                 maTransac.Commit();
                 MessageBox.Show("Transaction réussie !");
+                remplirHabilitations(matricule);
+                remplirCaserneRattachement();
+                remplirPanelGrade();
+                pnlChoisirGrade.Visible = false;
+                pnlChoisirCaserne.Visible = false;
+
             }
             catch(Exception ex)
             {
