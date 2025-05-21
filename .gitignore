@@ -17,7 +17,6 @@
 mono_crash.*
 
 # Build results
-[Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
@@ -27,11 +26,11 @@ x86/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
-[Bb]in/
 [Oo]bj/
 [Oo]ut/
 [Ll]og/
 [Ll]ogs/
+
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -228,7 +227,7 @@ _pkginfo.txt
 # files ending in .cache can be ignored
 *.[Cc]ache
 # but keep track of directories ending in .cache
-!?*.[Cc]ache/
+.[Cc]ache/
 
 # Others
 ClientBin/
@@ -306,7 +305,15 @@ _Pvt_Extensions
 # Paket dependency manager
 .paket/paket.exe
 paket-files/
+*.exe
+Debug.*exe
+Debug.*pdb
+Debug.*cache
+**/Debug/*.exe
+**/Debug/*.cache
+**/Debug/*.pdb
 
+*.cache
 # FAKE - F# Make
 .fake/
 
