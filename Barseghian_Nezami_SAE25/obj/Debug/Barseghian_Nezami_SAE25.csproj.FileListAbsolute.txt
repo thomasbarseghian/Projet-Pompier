@@ -12,3 +12,4 @@ C:\BUT\2nd Semestre\D21\Barseghian_Nezami_SAE25\Barseghian_Nezami_SAE25\bin\Debu
 C:\BUT\2nd Semestre\D21\Barseghian_Nezami_SAE25\Barseghian_Nezami_SAE25\bin\Debug\System.Data.SQLite.xml
 C:\BUT\2nd Semestre\D21\Barseghian_Nezami_SAE25\Barseghian_Nezami_SAE25\obj\Debug\Barseghi.181DD733.Up2Date
 C:\BUT\2nd Semestre\D21\Barseghian_Nezami_SAE25\Barseghian_Nezami_SAE25\obj\Debug\Barseghian_Nezami_SAE25.ucRessourceHumain.resources
+C:\BUT\2nd Semestre\D21\Barseghian_Nezami_SAE25\Barseghian_Nezami_SAE25\obj\Debug\Barseghian_Nezami_SAE25.frmAjoutePompier.resources
