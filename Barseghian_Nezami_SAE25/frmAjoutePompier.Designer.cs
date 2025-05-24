@@ -122,6 +122,7 @@
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(195, 25);
             this.txtNom.TabIndex = 7;
+            this.txtNom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNom_KeyPress);
             // 
             // txtPrenom
             // 
@@ -133,6 +134,7 @@
             this.txtPrenom.Name = "txtPrenom";
             this.txtPrenom.Size = new System.Drawing.Size(195, 25);
             this.txtPrenom.TabIndex = 8;
+            this.txtPrenom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNom_KeyPress);
             // 
             // NOM
             // 
@@ -259,6 +261,7 @@
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(195, 25);
             this.txtPhone.TabIndex = 20;
+            this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
             // 
             // label7
             // 
@@ -475,7 +478,6 @@
             this.Name = "frmAjoutePompier";
             this.Text = "Ajoute Nouveau Pompier";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmAjoutePompier_Load);
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             this.panel3.ResumeLayout(false);

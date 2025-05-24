@@ -230,21 +230,19 @@ namespace Barseghian_Nezami_SAE25
         // Pour s'assurer que le Text box est correctement traité
         private void txtNom_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Pour bloquer tous sauf lettre
+            }
         }
 
         private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Pour bloquer tous sauf character
+            }
         }
 
-        private void frmAjoutePompier_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-                    }
     }
 }
