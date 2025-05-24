@@ -29,16 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucRessourceHumain));
-            this.pnlLogin = new System.Windows.Forms.Panel();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.PbLogo = new System.Windows.Forms.PictureBox();
-            this.btnValider = new System.Windows.Forms.Button();
-            this.btnAnnuler = new System.Windows.Forms.Button();
             this.tlpUserSettings = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cboPompier = new System.Windows.Forms.ComboBox();
@@ -91,7 +81,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.cboCaserneRattachement = new System.Windows.Forms.ComboBox();
             this.chkConge = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnMettreJour = new System.Windows.Forms.Button();
             this.panel18 = new System.Windows.Forms.Panel();
             this.lbAffectations = new System.Windows.Forms.ListBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -110,10 +100,6 @@
             this.lbllnfoCarriere = new System.Windows.Forms.Label();
             this.btnPlusInfoCarriere = new System.Windows.Forms.Button();
             this.btnAjoutPompier = new System.Windows.Forms.Button();
-            this.pnlLogin.SuspendLayout();
-            this.panel21.SuspendLayout();
-            this.panel20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).BeginInit();
             this.tlpUserSettings.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlInfoPersonal.SuspendLayout();
@@ -148,136 +134,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbChoisirCaserne)).BeginInit();
             this.SuspendLayout();
             // 
-            // pnlLogin
-            // 
-            this.pnlLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pnlLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
-            this.pnlLogin.Controls.Add(this.panel21);
-            this.pnlLogin.Controls.Add(this.panel20);
-            this.pnlLogin.Controls.Add(this.PbLogo);
-            this.pnlLogin.Controls.Add(this.btnValider);
-            this.pnlLogin.Controls.Add(this.btnAnnuler);
-            this.pnlLogin.Location = new System.Drawing.Point(683, 101);
-            this.pnlLogin.Name = "pnlLogin";
-            this.pnlLogin.Size = new System.Drawing.Size(360, 426);
-            this.pnlLogin.TabIndex = 0;
-            this.pnlLogin.Visible = false;
-            // 
-            // panel21
-            // 
-            this.panel21.AutoSize = true;
-            this.panel21.BackColor = System.Drawing.Color.Transparent;
-            this.panel21.Controls.Add(this.label13);
-            this.panel21.Controls.Add(this.txtPass);
-            this.panel21.Location = new System.Drawing.Point(75, 242);
-            this.panel21.Name = "panel21";
-            this.panel21.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.panel21.Size = new System.Drawing.Size(218, 54);
-            this.panel21.TabIndex = 15;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label13.Location = new System.Drawing.Point(0, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(105, 17);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Mots de passe";
-            // 
-            // txtPass
-            // 
-            this.txtPass.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtPass.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.txtPass.Location = new System.Drawing.Point(0, 23);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(218, 26);
-            this.txtPass.TabIndex = 9;
-            this.txtPass.UseSystemPasswordChar = true;
-            this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyDown);
-            // 
-            // panel20
-            // 
-            this.panel20.AutoSize = true;
-            this.panel20.BackColor = System.Drawing.Color.Transparent;
-            this.panel20.Controls.Add(this.label15);
-            this.panel20.Controls.Add(this.txtName);
-            this.panel20.Location = new System.Drawing.Point(75, 166);
-            this.panel20.Name = "panel20";
-            this.panel20.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.panel20.Size = new System.Drawing.Size(224, 53);
-            this.panel20.TabIndex = 14;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label15.Location = new System.Drawing.Point(0, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(117, 17);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Nom d\'utilisateur";
-            // 
-            // txtName
-            // 
-            this.txtName.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.txtName.Location = new System.Drawing.Point(0, 22);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(224, 26);
-            this.txtName.TabIndex = 7;
-            this.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyDown);
-            // 
-            // PbLogo
-            // 
-            this.PbLogo.Image = ((System.Drawing.Image)(resources.GetObject("PbLogo.Image")));
-            this.PbLogo.Location = new System.Drawing.Point(102, 0);
-            this.PbLogo.Name = "PbLogo";
-            this.PbLogo.Size = new System.Drawing.Size(159, 132);
-            this.PbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbLogo.TabIndex = 13;
-            this.PbLogo.TabStop = false;
-            // 
-            // btnValider
-            // 
-            this.btnValider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnValider.FlatAppearance.BorderSize = 0;
-            this.btnValider.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(150)))), ((int)(((byte)(0)))));
-            this.btnValider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnValider.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnValider.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnValider.Location = new System.Drawing.Point(75, 332);
-            this.btnValider.Margin = new System.Windows.Forms.Padding(0);
-            this.btnValider.Name = "btnValider";
-            this.btnValider.Size = new System.Drawing.Size(215, 30);
-            this.btnValider.TabIndex = 11;
-            this.btnValider.Text = "Valider";
-            this.btnValider.UseVisualStyleBackColor = false;
-            this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
-            // 
-            // btnAnnuler
-            // 
-            this.btnAnnuler.BackColor = System.Drawing.Color.Transparent;
-            this.btnAnnuler.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAnnuler.FlatAppearance.BorderSize = 0;
-            this.btnAnnuler.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAnnuler.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnnuler.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnnuler.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAnnuler.Location = new System.Drawing.Point(322, 0);
-            this.btnAnnuler.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAnnuler.Name = "btnAnnuler";
-            this.btnAnnuler.Size = new System.Drawing.Size(38, 30);
-            this.btnAnnuler.TabIndex = 10;
-            this.btnAnnuler.Text = " ❌";
-            this.btnAnnuler.UseVisualStyleBackColor = false;
-            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
-            // 
             // tlpUserSettings
             // 
             this.tlpUserSettings.AutoScroll = true;
@@ -295,13 +151,13 @@
             this.tlpUserSettings.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpUserSettings.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpUserSettings.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpUserSettings.Size = new System.Drawing.Size(578, 834);
+            this.tlpUserSettings.Size = new System.Drawing.Size(747, 834);
             this.tlpUserSettings.TabIndex = 1;
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
@@ -311,7 +167,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(572, 81);
+            this.panel1.Size = new System.Drawing.Size(741, 81);
             this.panel1.TabIndex = 0;
             // 
             // cboPompier
@@ -322,7 +178,7 @@
             this.cboPompier.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPompier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.cboPompier.FormattingEnabled = true;
-            this.cboPompier.Location = new System.Drawing.Point(303, 26);
+            this.cboPompier.Location = new System.Drawing.Point(333, 26);
             this.cboPompier.Name = "cboPompier";
             this.cboPompier.Size = new System.Drawing.Size(209, 25);
             this.cboPompier.TabIndex = 3;
@@ -330,7 +186,7 @@
             // 
             // cboCaserne
             // 
-            this.cboCaserne.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.cboCaserne.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.cboCaserne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
             this.cboCaserne.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -349,7 +205,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.label2.Location = new System.Drawing.Point(303, 7);
+            this.label2.Location = new System.Drawing.Point(333, 7);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(212, 16);
             this.label2.TabIndex = 1;
@@ -357,8 +213,8 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -371,8 +227,8 @@
             // 
             // pnlInfoPersonal
             // 
-            this.pnlInfoPersonal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.pnlInfoPersonal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlInfoPersonal.AutoScroll = true;
             this.pnlInfoPersonal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
@@ -388,9 +244,10 @@
             this.pnlInfoPersonal.Controls.Add(this.panel3);
             this.pnlInfoPersonal.Location = new System.Drawing.Point(3, 90);
             this.pnlInfoPersonal.Name = "pnlInfoPersonal";
-            this.pnlInfoPersonal.Size = new System.Drawing.Size(572, 345);
+            this.pnlInfoPersonal.Size = new System.Drawing.Size(741, 345);
             this.pnlInfoPersonal.TabIndex = 3;
             this.pnlInfoPersonal.Visible = false;
+            this.pnlInfoPersonal.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlInfoPersonal_Paint);
             // 
             // pnlChoisirGrade
             // 
@@ -398,7 +255,7 @@
             this.pnlChoisirGrade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.pnlChoisirGrade.Controls.Add(this.label9);
             this.pnlChoisirGrade.Controls.Add(this.cboGrade);
-            this.pnlChoisirGrade.Location = new System.Drawing.Point(303, 206);
+            this.pnlChoisirGrade.Location = new System.Drawing.Point(333, 206);
             this.pnlChoisirGrade.Name = "pnlChoisirGrade";
             this.pnlChoisirGrade.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.pnlChoisirGrade.Size = new System.Drawing.Size(212, 51);
@@ -437,7 +294,7 @@
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.panel15.Controls.Add(this.panel16);
             this.panel15.Controls.Add(this.label12);
-            this.panel15.Location = new System.Drawing.Point(303, 276);
+            this.panel15.Location = new System.Drawing.Point(333, 276);
             this.panel15.Name = "panel15";
             this.panel15.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.panel15.Size = new System.Drawing.Size(212, 51);
@@ -585,7 +442,7 @@
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.panel10.Controls.Add(this.panel11);
             this.panel10.Controls.Add(this.label8);
-            this.panel10.Location = new System.Drawing.Point(303, 3);
+            this.panel10.Location = new System.Drawing.Point(333, 3);
             this.panel10.Name = "panel10";
             this.panel10.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.panel10.Size = new System.Drawing.Size(212, 32);
@@ -682,14 +539,14 @@
             // 
             // panel7
             // 
-            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.Controls.Add(this.rdvVolontaire);
             this.panel7.Controls.Add(this.rdbProfessionnel);
             this.panel7.Location = new System.Drawing.Point(0, 163);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(575, 27);
+            this.panel7.Size = new System.Drawing.Size(545, 27);
             this.panel7.TabIndex = 4;
             // 
             // rdvVolontaire
@@ -698,7 +555,7 @@
             this.rdvVolontaire.Enabled = false;
             this.rdvVolontaire.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdvVolontaire.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.rdvVolontaire.Location = new System.Drawing.Point(303, 3);
+            this.rdvVolontaire.Location = new System.Drawing.Point(333, 2);
             this.rdvVolontaire.Name = "rdvVolontaire";
             this.rdvVolontaire.Size = new System.Drawing.Size(96, 22);
             this.rdvVolontaire.TabIndex = 1;
@@ -726,7 +583,7 @@
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.label5);
-            this.panel5.Location = new System.Drawing.Point(303, 112);
+            this.panel5.Location = new System.Drawing.Point(333, 112);
             this.panel5.Name = "panel5";
             this.panel5.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.panel5.Size = new System.Drawing.Size(212, 51);
@@ -767,8 +624,8 @@
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.AutoScroll = true;
             this.panel3.AutoSize = true;
@@ -778,9 +635,9 @@
             this.panel3.Controls.Add(this.pbGrade);
             this.panel3.Controls.Add(this.flowLayoutPanel1);
             this.panel3.Controls.Add(this.pbPompier);
-            this.panel3.Location = new System.Drawing.Point(0, 33);
+            this.panel3.Location = new System.Drawing.Point(5, 36);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(518, 76);
+            this.panel3.Size = new System.Drawing.Size(540, 76);
             this.panel3.TabIndex = 1;
             // 
             // lblSexe
@@ -797,7 +654,7 @@
             // pbGrade
             // 
             this.pbGrade.Image = ((System.Drawing.Image)(resources.GetObject("pbGrade.Image")));
-            this.pbGrade.Location = new System.Drawing.Point(465, 3);
+            this.pbGrade.Location = new System.Drawing.Point(487, 0);
             this.pbGrade.Name = "pbGrade";
             this.pbGrade.Size = new System.Drawing.Size(50, 50);
             this.pbGrade.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -851,8 +708,8 @@
             // 
             // pnlInfoCarrière
             // 
-            this.pnlInfoCarrière.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.pnlInfoCarrière.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlInfoCarrière.AutoScroll = true;
             this.pnlInfoCarrière.AutoSize = true;
@@ -862,14 +719,14 @@
             this.pnlInfoCarrière.Controls.Add(this.btnPlusInfoCarriere);
             this.pnlInfoCarrière.Location = new System.Drawing.Point(3, 441);
             this.pnlInfoCarrière.Name = "pnlInfoCarrière";
-            this.pnlInfoCarrière.Size = new System.Drawing.Size(572, 390);
+            this.pnlInfoCarrière.Size = new System.Drawing.Size(741, 390);
             this.pnlInfoCarrière.TabIndex = 2;
             // 
             // pnlPlusInfo
             // 
             this.pnlPlusInfo.Controls.Add(this.pnlChoisirCaserne);
             this.pnlPlusInfo.Controls.Add(this.chkConge);
-            this.pnlPlusInfo.Controls.Add(this.button1);
+            this.pnlPlusInfo.Controls.Add(this.btnMettreJour);
             this.pnlPlusInfo.Controls.Add(this.panel18);
             this.pnlPlusInfo.Controls.Add(this.panel17);
             this.pnlPlusInfo.Controls.Add(this.panel14);
@@ -885,7 +742,7 @@
             this.pnlChoisirCaserne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.pnlChoisirCaserne.Controls.Add(this.label14);
             this.pnlChoisirCaserne.Controls.Add(this.cboCaserneRattachement);
-            this.pnlChoisirCaserne.Location = new System.Drawing.Point(299, 3);
+            this.pnlChoisirCaserne.Location = new System.Drawing.Point(329, 3);
             this.pnlChoisirCaserne.Name = "pnlChoisirCaserne";
             this.pnlChoisirCaserne.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.pnlChoisirCaserne.Size = new System.Drawing.Size(212, 51);
@@ -931,23 +788,23 @@
             this.chkConge.UseVisualStyleBackColor = true;
             this.chkConge.Visible = false;
             // 
-            // button1
+            // btnMettreJour
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.button1.Location = new System.Drawing.Point(398, 287);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 35);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Mettre à jour";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnMettreJour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
+            this.btnMettreJour.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMettreJour.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.btnMettreJour.FlatAppearance.BorderSize = 0;
+            this.btnMettreJour.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.btnMettreJour.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMettreJour.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMettreJour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnMettreJour.Location = new System.Drawing.Point(419, 287);
+            this.btnMettreJour.Name = "btnMettreJour";
+            this.btnMettreJour.Size = new System.Drawing.Size(120, 35);
+            this.btnMettreJour.TabIndex = 12;
+            this.btnMettreJour.Text = "Mettre à jour";
+            this.btnMettreJour.UseVisualStyleBackColor = false;
+            this.btnMettreJour.Click += new System.EventHandler(this.btnMettreJour_Click);
             // 
             // panel18
             // 
@@ -958,7 +815,7 @@
             this.panel18.Location = new System.Drawing.Point(16, 179);
             this.panel18.Name = "panel18";
             this.panel18.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.panel18.Size = new System.Drawing.Size(502, 95);
+            this.panel18.Size = new System.Drawing.Size(524, 95);
             this.panel18.TabIndex = 19;
             // 
             // lbAffectations
@@ -971,7 +828,7 @@
             this.lbAffectations.ItemHeight = 18;
             this.lbAffectations.Location = new System.Drawing.Point(0, 32);
             this.lbAffectations.Name = "lbAffectations";
-            this.lbAffectations.Size = new System.Drawing.Size(502, 58);
+            this.lbAffectations.Size = new System.Drawing.Size(524, 58);
             this.lbAffectations.TabIndex = 1;
             // 
             // label11
@@ -994,7 +851,7 @@
             this.panel17.Location = new System.Drawing.Point(16, 65);
             this.panel17.Name = "panel17";
             this.panel17.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.panel17.Size = new System.Drawing.Size(494, 111);
+            this.panel17.Size = new System.Drawing.Size(525, 111);
             this.panel17.TabIndex = 18;
             // 
             // panel19
@@ -1007,16 +864,17 @@
             this.panel19.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel19.Location = new System.Drawing.Point(0, 20);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(494, 86);
+            this.panel19.Size = new System.Drawing.Size(525, 86);
             this.panel19.TabIndex = 2;
             // 
             // chklstbHabilitation
             // 
             this.chklstbHabilitation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
+            this.chklstbHabilitation.CheckOnClick = true;
             this.chklstbHabilitation.FormattingEnabled = true;
             this.chklstbHabilitation.Location = new System.Drawing.Point(0, 3);
             this.chklstbHabilitation.Name = "chklstbHabilitation";
-            this.chklstbHabilitation.Size = new System.Drawing.Size(439, 79);
+            this.chklstbHabilitation.Size = new System.Drawing.Size(473, 79);
             this.chklstbHabilitation.TabIndex = 2;
             this.chklstbHabilitation.Visible = false;
             // 
@@ -1039,7 +897,7 @@
             this.pbEditHabilitations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
             this.pbEditHabilitations.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbEditHabilitations.Image = ((System.Drawing.Image)(resources.GetObject("pbEditHabilitations.Image")));
-            this.pbEditHabilitations.Location = new System.Drawing.Point(448, 23);
+            this.pbEditHabilitations.Location = new System.Drawing.Point(479, 23);
             this.pbEditHabilitations.Name = "pbEditHabilitations";
             this.pbEditHabilitations.Size = new System.Drawing.Size(45, 41);
             this.pbEditHabilitations.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1054,7 +912,7 @@
             this.btnConfirmHabilitation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
             this.btnConfirmHabilitation.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnConfirmHabilitation.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnConfirmHabilitation.Location = new System.Drawing.Point(448, 23);
+            this.btnConfirmHabilitation.Location = new System.Drawing.Point(479, 23);
             this.btnConfirmHabilitation.Name = "btnConfirmHabilitation";
             this.btnConfirmHabilitation.Size = new System.Drawing.Size(45, 41);
             this.btnConfirmHabilitation.TabIndex = 20;
@@ -1154,7 +1012,7 @@
             this.btnPlusInfoCarriere.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPlusInfoCarriere.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlusInfoCarriere.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btnPlusInfoCarriere.Location = new System.Drawing.Point(394, 6);
+            this.btnPlusInfoCarriere.Location = new System.Drawing.Point(424, 6);
             this.btnPlusInfoCarriere.Name = "btnPlusInfoCarriere";
             this.btnPlusInfoCarriere.Size = new System.Drawing.Size(120, 35);
             this.btnPlusInfoCarriere.TabIndex = 9;
@@ -1167,18 +1025,19 @@
             // 
             this.btnAjoutPompier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
             this.btnAjoutPompier.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAjoutPompier.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.btnAjoutPompier.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAjoutPompier.FlatAppearance.BorderSize = 0;
             this.btnAjoutPompier.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
             this.btnAjoutPompier.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAjoutPompier.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAjoutPompier.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAjoutPompier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btnAjoutPompier.Location = new System.Drawing.Point(557, 15);
+            this.btnAjoutPompier.Location = new System.Drawing.Point(844, 8);
             this.btnAjoutPompier.Name = "btnAjoutPompier";
-            this.btnAjoutPompier.Size = new System.Drawing.Size(148, 48);
+            this.btnAjoutPompier.Size = new System.Drawing.Size(174, 48);
             this.btnAjoutPompier.TabIndex = 10;
             this.btnAjoutPompier.Text = "Ajouter Pompier";
             this.btnAjoutPompier.UseVisualStyleBackColor = false;
+            this.btnAjoutPompier.Click += new System.EventHandler(this.btnAjoutPompier_Click);
             // 
             // ucRessourceHumain
             // 
@@ -1188,18 +1047,9 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.Controls.Add(this.btnAjoutPompier);
-            this.Controls.Add(this.pnlLogin);
             this.Controls.Add(this.tlpUserSettings);
             this.Name = "ucRessourceHumain";
-            this.Size = new System.Drawing.Size(1153, 842);
-            this.Resize += new System.EventHandler(this.ucRessourceHumain_Resize);
-            this.pnlLogin.ResumeLayout(false);
-            this.pnlLogin.PerformLayout();
-            this.panel21.ResumeLayout(false);
-            this.panel21.PerformLayout();
-            this.panel20.ResumeLayout(false);
-            this.panel20.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).EndInit();
+            this.Size = new System.Drawing.Size(1030, 890);
             this.tlpUserSettings.ResumeLayout(false);
             this.tlpUserSettings.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -1264,12 +1114,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlLogin;
-        private System.Windows.Forms.Button btnValider;
-        private System.Windows.Forms.Button btnAnnuler;
-        private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TableLayoutPanel tlpUserSettings;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlInfoCarrière;
@@ -1330,7 +1174,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ListBox lbHabilitations;
         private System.Windows.Forms.CheckBox chkConge;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnMettreJour;
         private System.Windows.Forms.Panel pnlChoisirCaserne;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel13;
@@ -1340,11 +1184,6 @@
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.CheckedListBox chklstbHabilitation;
         private System.Windows.Forms.Button btnConfirmHabilitation;
-        private System.Windows.Forms.PictureBox PbLogo;
-        private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnAjoutPompier;
     }
 }
