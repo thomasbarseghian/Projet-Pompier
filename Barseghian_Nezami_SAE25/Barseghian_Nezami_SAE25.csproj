@@ -87,6 +87,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ucGestionEngins.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucGestionEngins.Designer.cs">
+      <DependentUpon>ucGestionEngins.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucNouvelleMission.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -117,6 +123,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ucGestionEngins.resx">
+      <DependentUpon>ucGestionEngins.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucNouvelleMission.resx">
       <DependentUpon>ucNouvelleMission.cs</DependentUpon>
     </EmbeddedResource>

@@ -18,8 +18,8 @@ namespace Barseghian_Nezami_SAE25
         public frmAjoutePompier()
         {
             InitializeComponent();
-            changeHeaderPosition();
             LoadCaserneList();
+            changeHeaderPosition();
         }
         // Remplir caserne à partir de base de donnée
         private void LoadCaserneList()

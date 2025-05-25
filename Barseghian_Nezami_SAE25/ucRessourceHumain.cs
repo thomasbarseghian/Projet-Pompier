@@ -504,6 +504,11 @@ namespace Barseghian_Nezami_SAE25
         {
 
         }
+
+        private void ucRessourceHumain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
     // Class pour faciliter travaile avec Combo box

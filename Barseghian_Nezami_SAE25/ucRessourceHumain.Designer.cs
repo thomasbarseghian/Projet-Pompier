@@ -1050,6 +1050,7 @@
             this.Controls.Add(this.tlpUserSettings);
             this.Name = "ucRessourceHumain";
             this.Size = new System.Drawing.Size(1030, 890);
+            this.Load += new System.EventHandler(this.ucRessourceHumain_Load);
             this.tlpUserSettings.ResumeLayout(false);
             this.tlpUserSettings.PerformLayout();
             this.panel1.ResumeLayout(false);
