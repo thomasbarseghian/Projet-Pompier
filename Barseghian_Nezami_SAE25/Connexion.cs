@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,27 +23,30 @@ namespace Barseghian_Nezami_SAE25.Utils
         {
             get
             {
-                // Si l'instance n'existe pas, on la crée.
                 if (connec == null)
                 {
                     try
                     {
-						// Chaîne de connexion à votre base de données
-						string chaine = @"Data Source = ..\..\Database\SDIS67.db";
+                        string dbPath = @"..\..\Database\SDIS67.db";
+                        if (!File.Exists(dbPath))
+                            throw new FileNotFoundException("Database file not found at " + dbPath);
+
+                        string chaine = $"Data Source={dbPath}";
                         connec = new SQLiteConnection(chaine);
                         connec.Open();
+
+                        Console.WriteLine("Connexion à la base de données ouverte.");
                     }
-                    catch (SQLiteException err) 
+                    catch (Exception err)
                     {
                         Console.WriteLine($"Erreur lors de l'ouverture de la connexion : {err.Message}");
+                        throw;
                     }
                 }
-				//Dans tous les cas on renvoie la connexion
                 return connec;
             }
         }
-
-		// Méthode pour fermer proprement la connexion
+        // Méthode pour fermer proprement la connexion
         public static void FermerConnexion()
         {
             if (connec != null)

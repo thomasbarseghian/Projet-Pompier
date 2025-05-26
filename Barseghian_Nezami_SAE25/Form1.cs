@@ -94,7 +94,9 @@ namespace Barseghian_Nezami_SAE25
         private void btnGestionEngins_Click(object sender, EventArgs e)
         {
             pnlMainLayout.Controls.Clear();
+            ucGestionEngins GE = new ucGestionEngins();
             activeBtnStylying((Button)sender);
+            addToPanelLayout(GE);
         }
 
         private void btnGestionPersonnel_Click(object sender, EventArgs e)
