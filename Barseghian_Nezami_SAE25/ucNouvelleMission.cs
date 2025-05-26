@@ -139,7 +139,7 @@ namespace Barseghian_Nezami_SAE25
             int i = 0;
             foreach (int hab in listHabilitations)
             {
-                string query4 = $@"SELECT matriculePompier FROM Mobiliser WHERE idHabilitation = {hab}";
+                string query4 = $@"SELECT matriculePompier FROM Passer WHERE idHabilitation = {hab}";
                 SQLiteCommand cmd4 = new SQLiteCommand(query4, conn);
                 SQLiteDataReader reader3 = cmd4.ExecuteReader();
                 while (reader3.Read())
@@ -148,6 +148,7 @@ namespace Barseghian_Nezami_SAE25
                 }
                 i++;
             }
+
             grpEnginsPompiers.Visible = true;
             btnAjouter.Visible = true;
         }
