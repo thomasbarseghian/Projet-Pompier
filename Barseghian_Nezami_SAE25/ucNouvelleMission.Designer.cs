@@ -49,13 +49,13 @@
             this.cboNatureSinistre = new System.Windows.Forms.ComboBox();
             this.btnAjouter = new System.Windows.Forms.Button();
             this.grpEnginsPompiers = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dgvPompiers = new System.Windows.Forms.DataGridView();
+            this.dgvEngins = new System.Windows.Forms.DataGridView();
             this.grpInfosUsagers.SuspendLayout();
             this.grpDecisions.SuspendLayout();
             this.grpEnginsPompiers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPompiers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEngins)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMission
@@ -217,6 +217,7 @@
             this.btnEquipe.TabIndex = 8;
             this.btnEquipe.Text = "Consistituer équipe";
             this.btnEquipe.UseVisualStyleBackColor = true;
+            this.btnEquipe.Click += new System.EventHandler(this.btnEquipe_Click);
             // 
             // btnAnnuler
             // 
@@ -281,11 +282,12 @@
             this.btnAjouter.TabIndex = 9;
             this.btnAjouter.Text = "Ajouter";
             this.btnAjouter.UseVisualStyleBackColor = true;
+            this.btnAjouter.Visible = false;
             // 
             // grpEnginsPompiers
             // 
-            this.grpEnginsPompiers.Controls.Add(this.dataGridView3);
-            this.grpEnginsPompiers.Controls.Add(this.dataGridView1);
+            this.grpEnginsPompiers.Controls.Add(this.dgvPompiers);
+            this.grpEnginsPompiers.Controls.Add(this.dgvEngins);
             this.grpEnginsPompiers.Location = new System.Drawing.Point(69, 450);
             this.grpEnginsPompiers.Name = "grpEnginsPompiers";
             this.grpEnginsPompiers.Size = new System.Drawing.Size(918, 206);
@@ -294,25 +296,25 @@
             this.grpEnginsPompiers.Text = "Mobilisation des engins et des pompiers";
             this.grpEnginsPompiers.Visible = false;
             // 
-            // dataGridView1
+            // dgvPompiers
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(36, 25);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(288, 175);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvPompiers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPompiers.Location = new System.Drawing.Point(481, 25);
+            this.dgvPompiers.Name = "dgvPompiers";
+            this.dgvPompiers.RowHeadersWidth = 62;
+            this.dgvPompiers.RowTemplate.Height = 28;
+            this.dgvPompiers.Size = new System.Drawing.Size(290, 175);
+            this.dgvPompiers.TabIndex = 12;
             // 
-            // dataGridView3
+            // dgvEngins
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(481, 25);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 62;
-            this.dataGridView3.RowTemplate.Height = 28;
-            this.dataGridView3.Size = new System.Drawing.Size(290, 175);
-            this.dataGridView3.TabIndex = 12;
+            this.dgvEngins.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEngins.Location = new System.Drawing.Point(36, 25);
+            this.dgvEngins.Name = "dgvEngins";
+            this.dgvEngins.RowHeadersWidth = 62;
+            this.dgvEngins.RowTemplate.Height = 28;
+            this.dgvEngins.Size = new System.Drawing.Size(288, 175);
+            this.dgvEngins.TabIndex = 0;
             // 
             // ucNouvelleMission
             // 
@@ -334,8 +336,8 @@
             this.grpDecisions.ResumeLayout(false);
             this.grpDecisions.PerformLayout();
             this.grpEnginsPompiers.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPompiers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEngins)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,7 +366,7 @@
         private System.Windows.Forms.Button btnAnnuler;
         private System.Windows.Forms.Button btnAjouter;
         private System.Windows.Forms.GroupBox grpEnginsPompiers;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvPompiers;
+        private System.Windows.Forms.DataGridView dgvEngins;
     }
 }
