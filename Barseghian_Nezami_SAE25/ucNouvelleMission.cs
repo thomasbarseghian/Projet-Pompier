@@ -94,25 +94,6 @@ namespace Barseghian_Nezami_SAE25
 
         private void cboCaserne_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //Trouver l'id du sinistre
-            string query1 = "SELECT id FROM NatureSinistre WHERE libelle=\"" + cboNatureSinistre.Text + "\"";
-            SQLiteCommand cmd1 = new SQLiteCommand(query1, conn);
-            string numSinistre = Convert.ToString(cmd1.ExecuteScalar());
-
-            //Trouver l'id du sinistre
-            string query2 = "SELECT codeTypeEngin, nombre FROM Necessiter WHERE idNatureSinistre=" + numSinistre;
-            SQLiteCommand cmd2 = new SQLiteCommand(query2, conn);
-            SQLiteDataReader reader1 = cmd2.ExecuteReader();
-            List <VehiculeNecessaire> listVehicule = new List<VehiculeNecessaire>();
-            while (reader1.Read())
-            {
-                listVehicule.Add(new VehiculeNecessaire
-                {
-                    CodeTypeEngin = reader1["CodeTypeEngin"].ToString(),
-                    nombre = Convert.ToInt32(reader1["nombre"])
-                });
-            }
-
         }
 
         private void cboNatureSinistre_SelectedIndexChanged(object sender, EventArgs e)
@@ -120,10 +101,56 @@ namespace Barseghian_Nezami_SAE25
             lblCaserne.Visible = true;
             cboCaserne.Visible = true;
         }
- 
-    }
-    public class VehiculeNecessaire{
-        public string CodeTypeEngin { get; set; }
-        public int nombre { get; set; } 
+
+        private void btnEquipe_Click(object sender, EventArgs e)
+        {
+            //Trouver l'id du sinistre
+            string query1 = "SELECT id FROM NatureSinistre WHERE libelle=\"" + cboNatureSinistre.Text + "\"";
+            SQLiteCommand cmd1 = new SQLiteCommand(query1, conn);
+            string numSinistre = Convert.ToString(cmd1.ExecuteScalar());
+
+            //Trouver les vehicules nécessaires
+            string query2 = "SELECT codeTypeEngin, nombre FROM Necessiter WHERE idNatureSinistre=" + numSinistre;
+            SQLiteCommand cmd2 = new SQLiteCommand(query2, conn);
+            SQLiteDataReader reader1 = cmd2.ExecuteReader();
+            List<VehiculeNecessaire> listVehicule = new List<VehiculeNecessaire>();
+            while (reader1.Read())
+            {
+                listVehicule.Add(new VehiculeNecessaire
+                {
+                    CodeTypeEngin = reader1["CodeTypeEngin"].ToString(),
+                    Nombre = Convert.ToInt32(reader1["nombre"])
+                });
+            }
+            dgvEngins.DataSource = listVehicule;
+            List<int> listHabilitations = new List<int>();
+            foreach (VehiculeNecessaire vehicule in listVehicule)
+            {
+                string query3 = "SELECT idHabilitation FROM Embarquer WHERE CodeTypeEngin = @code";
+                SQLiteCommand cmd3 = new SQLiteCommand(query3, conn);
+                cmd3.Parameters.AddWithValue("@code", vehicule);
+                SQLiteDataReader reader2 = cmd3.ExecuteReader();
+                while (reader2.Read())
+                {
+                    listHabilitations.Add(Convert.ToInt32(reader2["idHabilitation"]));
+                }
+            }
+            List<List<int>> matricules = new List<List<int>>();
+            int i = 0;
+            foreach (int hab in listHabilitations)
+            {
+                string query4 = $@"SELECT matriculePompier FROM Mobiliser WHERE idHabilitation = {hab}";
+                SQLiteCommand cmd4 = new SQLiteCommand(query4, conn);
+                SQLiteDataReader reader3 = cmd4.ExecuteReader();
+                while (reader3.Read())
+                {
+                    matricules[i].Add(Convert.ToInt32(reader3["matriculePompier"]));
+                }
+                i++;
+            }
+            grpEnginsPompiers.Visible = true;
+            btnAjouter.Visible = true;
+        }
+        
     }
 }
