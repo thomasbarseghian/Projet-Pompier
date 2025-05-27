@@ -126,29 +126,42 @@ namespace Barseghian_Nezami_SAE25
             List<int> listHabilitations = new List<int>();
             foreach (VehiculeNecessaire vehicule in listVehicule)
             {
-                string query3 = "SELECT idHabilitation FROM Embarquer WHERE CodeTypeEngin = @code";
+                string query3 = "SELECT idHabilitation FROM Embarquer WHERE CodeTypeEngin = \"@code\"";
                 SQLiteCommand cmd3 = new SQLiteCommand(query3, conn);
-                cmd3.Parameters.AddWithValue("@code", vehicule);
+                cmd3.Parameters.AddWithValue("@code", vehicule.CodeTypeEngin);
                 SQLiteDataReader reader2 = cmd3.ExecuteReader();
                 while (reader2.Read())
                 {
                     listHabilitations.Add(Convert.ToInt32(reader2["idHabilitation"]));
                 }
             }
+            dgvPompiers.DataSource = listHabilitations;
             List<List<int>> matricules = new List<List<int>>();
             int i = 0;
+
             foreach (int hab in listHabilitations)
             {
-                string query4 = $@"SELECT matriculePompier FROM Passer WHERE idHabilitation = {hab}";
+                // Créer une sous-liste vide et l'ajouter à la liste principale
+                matricules.Add(new List<int>());
+
+                string query4 = $@"SELECT matriculePompier 
+                       FROM Passer pass 
+                       JOIN Pompier pomp ON pass.matriculePompier = pomp.matricule
+                       WHERE idHabilitation = {hab} 
+                       AND pomp.enMission = 0 
+                       AND pomp.enConge = 0;";
+
                 SQLiteCommand cmd4 = new SQLiteCommand(query4, conn);
                 SQLiteDataReader reader3 = cmd4.ExecuteReader();
+
                 while (reader3.Read())
                 {
                     matricules[i].Add(Convert.ToInt32(reader3["matriculePompier"]));
                 }
+
                 i++;
             }
-
+            //dgvPompiers.DataSource = matricules;
             grpEnginsPompiers.Visible = true;
             btnAjouter.Visible = true;
         }
