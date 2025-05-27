@@ -50,6 +50,12 @@ namespace Barseghian_Nezami_SAE25
             img = Image.FromFile(@"..\..\Resources\Icons\logout.png");
             resizedImage = new Bitmap(img, new Size(50, 50));
             btnQuitter.Image = resizedImage;
+
+
+            pnlMainLayout.Controls.Clear();
+            dashboard db = new dashboard();
+            btnTableauBord.BackColor = Color.FromArgb(160, 40, 50);
+            addToPanelLayout(db);
         }
 
         private void btnQuitter_Click(object sender, EventArgs e)
@@ -80,7 +86,9 @@ namespace Barseghian_Nezami_SAE25
         private void btnTableauBord_Click(object sender, EventArgs e)
         {
             pnlMainLayout.Controls.Clear();
+            dashboard db = new dashboard();
             activeBtnStylying((Button)sender);
+            addToPanelLayout(db);
         }
 
         private void btnNouvelleMission_Click(object sender, EventArgs e)
