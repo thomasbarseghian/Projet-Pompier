@@ -110,7 +110,7 @@ namespace Barseghian_Nezami_SAE25
         {
             if (cboCaserne.SelectedValue == null)
                 return;
-
+            pos = 0;
             int selectedCaserneId;
             if (!int.TryParse(cboCaserne.SelectedValue.ToString(), out selectedCaserneId))
                 return;
@@ -166,6 +166,21 @@ namespace Barseghian_Nezami_SAE25
             int enPanne = Convert.ToInt32(dr["enPanne"].ToString());
             string state = enMission == 1 ? "En mission " : enPanne == 1 ? "En Panne" : "Disponible";
             lblState.Text = state;
+            string statusPath = "";
+            if (enMission == 1)
+                statusPath = $@"..\..\Resources\Icons\mission.png";
+            else if(enPanne == 1)
+                statusPath = $@"..\..\Resources\Icons\panne.png";
+            else
+                statusPath = $@"..\..\Resources\Icons\Disponible.png";
+            if (File.Exists(statusPath))
+            {
+                pbStatus.Image = Image.FromFile(statusPath);
+            }
+            else
+            {
+                MessageBox.Show($"Image not found: {statusPath}");
+            }
         }
         private void btnNext_Click(object sender, EventArgs e)
         {
@@ -193,6 +208,11 @@ namespace Barseghian_Nezami_SAE25
                 pos = enginRows.Length - 1;
                 showData(enginRows[pos]);
             }
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

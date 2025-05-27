@@ -37,6 +37,7 @@
             this.btnPrevious = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pbEngin = new System.Windows.Forms.PictureBox();
             this.lblState = new System.Windows.Forms.Label();
             this.lblReception = new System.Windows.Forms.Label();
             this.lblCaserne = new System.Windows.Forms.Label();
@@ -52,15 +53,18 @@
             this.lblType = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlLayout = new System.Windows.Forms.Panel();
-            this.pbEngin = new System.Windows.Forms.PictureBox();
+            this.pbStatus = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlHeader.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEngin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlLayout.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEngin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStatus)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -94,23 +98,23 @@
             this.cboCaserne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
             this.cboCaserne.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCaserne.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cboCaserne.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCaserne.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCaserne.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.cboCaserne.FormattingEnabled = true;
-            this.cboCaserne.Location = new System.Drawing.Point(406, 91);
+            this.cboCaserne.Location = new System.Drawing.Point(406, 87);
             this.cboCaserne.Name = "cboCaserne";
-            this.cboCaserne.Size = new System.Drawing.Size(212, 25);
+            this.cboCaserne.Size = new System.Drawing.Size(212, 30);
             this.cboCaserne.TabIndex = 3;
             this.cboCaserne.SelectionChangeCommitted += new System.EventHandler(this.cboCaserne_SelectionChangeCommitted);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.label14.Location = new System.Drawing.Point(215, 94);
+            this.label14.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Brown;
+            this.label14.Location = new System.Drawing.Point(201, 90);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(165, 18);
+            this.label14.Size = new System.Drawing.Size(199, 22);
             this.label14.TabIndex = 4;
             this.label14.Text = "Choisissez la Caserne";
             // 
@@ -163,8 +167,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Controls.Add(this.pbEngin);
-            this.panel1.Controls.Add(this.lblState);
             this.panel1.Controls.Add(this.lblReception);
             this.panel1.Controls.Add(this.lblCaserne);
             this.panel1.Controls.Add(this.lblCode);
@@ -185,15 +189,28 @@
             this.panel1.Size = new System.Drawing.Size(806, 390);
             this.panel1.TabIndex = 12;
             // 
+            // pbEngin
+            // 
+            this.pbEngin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbEngin.Location = new System.Drawing.Point(460, 42);
+            this.pbEngin.Name = "pbEngin";
+            this.pbEngin.Size = new System.Drawing.Size(300, 300);
+            this.pbEngin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbEngin.TabIndex = 14;
+            this.pbEngin.TabStop = false;
+            // 
             // lblState
             // 
             this.lblState.AutoSize = true;
+            this.lblState.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblState.ForeColor = System.Drawing.Color.Maroon;
-            this.lblState.Location = new System.Drawing.Point(251, 283);
+            this.lblState.Location = new System.Drawing.Point(3, 0);
             this.lblState.Name = "lblState";
-            this.lblState.Size = new System.Drawing.Size(61, 22);
+            this.lblState.Size = new System.Drawing.Size(92, 49);
             this.lblState.TabIndex = 13;
-            this.lblState.Text = "label9";
+            this.lblState.Text = "En Panne";
+            this.lblState.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblReception
             // 
@@ -343,16 +360,29 @@
             this.pnlLayout.TabIndex = 13;
             this.pnlLayout.Visible = false;
             // 
-            // pbEngin
+            // pbStatus
             // 
-            this.pbEngin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbEngin.Location = new System.Drawing.Point(460, 42);
-            this.pbEngin.Name = "pbEngin";
-            this.pbEngin.Size = new System.Drawing.Size(300, 300);
-            this.pbEngin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbEngin.TabIndex = 14;
-            this.pbEngin.TabStop = false;
+            this.pbStatus.Location = new System.Drawing.Point(101, 3);
+            this.pbStatus.Name = "pbStatus";
+            this.pbStatus.Size = new System.Drawing.Size(40, 40);
+            this.pbStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbStatus.TabIndex = 15;
+            this.pbStatus.TabStop = false;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.Controls.Add(this.pbStatus, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblState, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(246, 270);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(183, 49);
+            this.tableLayoutPanel1.TabIndex = 16;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // ucGestionEngins
             // 
@@ -370,13 +400,16 @@
             this.pnlHeader.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEngin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlLayout.ResumeLayout(false);
             this.pnlLayout.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEngin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStatus)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -408,5 +441,7 @@
         private System.Windows.Forms.Label lblState;
         private System.Windows.Forms.Panel pnlLayout;
         private System.Windows.Forms.PictureBox pbEngin;
+        private System.Windows.Forms.PictureBox pbStatus;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
