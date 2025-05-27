@@ -67,6 +67,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connexion.cs" />
+    <Compile Include="dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="dashboard.Designer.cs">
+      <DependentUpon>dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,12 @@
     <Compile Include="ucGestionEngins.Designer.cs">
       <DependentUpon>ucGestionEngins.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucMission.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMission.Designer.cs">
+      <DependentUpon>ucMission.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucNouvelleMission.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -105,6 +117,9 @@
     <Compile Include="ucRessourceHumain.Designer.cs">
       <DependentUpon>ucRessourceHumain.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="dashboard.resx">
+      <DependentUpon>dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +140,9 @@
     </Compile>
     <EmbeddedResource Include="ucGestionEngins.resx">
       <DependentUpon>ucGestionEngins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucMission.resx">
+      <DependentUpon>ucMission.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucNouvelleMission.resx">
       <DependentUpon>ucNouvelleMission.cs</DependentUpon>
