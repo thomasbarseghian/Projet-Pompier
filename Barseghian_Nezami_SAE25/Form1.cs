@@ -54,7 +54,7 @@ namespace Barseghian_Nezami_SAE25
 
             pnlMainLayout.Controls.Clear();
             dashboard db = new dashboard();
-            btnTableauBord.BackColor = Color.FromArgb(160, 40, 50);
+            btnTableauBord.BackColor = Color.FromArgb(250, 128, 0);
             addToPanelLayout(db);
         }
 
@@ -74,11 +74,11 @@ namespace Barseghian_Nezami_SAE25
             {
                 if(buttonn == btn)
                 {
-                    buttonn.BackColor = Color.FromArgb(160, 40, 50); 
+                    buttonn.BackColor = Color.FromArgb(250, 128, 0); 
                 }
                 else
                 {
-                    buttonn.BackColor = Color.FromArgb(140, 30, 40);
+                    buttonn.BackColor = Color.FromArgb(243, 156, 18);
                 }
 
             }

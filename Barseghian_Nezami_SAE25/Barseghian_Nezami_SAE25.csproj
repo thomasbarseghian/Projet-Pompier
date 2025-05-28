@@ -117,6 +117,7 @@
     <Compile Include="ucRessourceHumain.Designer.cs">
       <DependentUpon>ucRessourceHumain.cs</DependentUpon>
     </Compile>
+    <Compile Include="VehiculeNecessaire.cs" />
     <EmbeddedResource Include="dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>
     </EmbeddedResource>
