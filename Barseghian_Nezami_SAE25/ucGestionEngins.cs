@@ -18,14 +18,13 @@ namespace Barseghian_Nezami_SAE25
     {
         SQLiteConnection conn = Connexion.Connec;
 
-        private DataSet ds;
+        private DataSet ds = MesDatas.DsGlobal;
 
         private int pos = 0;
         private DataRow[] enginRows;
         public ucGestionEngins()
         {
             InitializeComponent();
-            ds = new DataSet();
             this.Dock = DockStyle.Fill;
             changeHeaderPosition();
             CenterControl(pnlLayout, this);
@@ -45,17 +44,6 @@ namespace Barseghian_Nezami_SAE25
         {
             try
             {
-                string req;
-                DataTable schemaTable = conn.GetSchema("Tables");
-                for (int i = 0; i < schemaTable.Rows.Count; i++)
-                {
-                    string nomTable = schemaTable.Rows[i][2].ToString();
-                    req = @"SELECT * from " + nomTable;
-                    SQLiteCommand cmd = new SQLiteCommand(req, conn);
-                    SQLiteDataAdapter da = new SQLiteDataAdapter();
-                    da = new SQLiteDataAdapter(cmd);
-                    da.Fill(ds, nomTable);
-                }
                 LoadCboCaserneFromDs();
                 if (!ds.Relations.Contains("Caserne_Engins"))
                 {

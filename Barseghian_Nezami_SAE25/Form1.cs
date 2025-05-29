@@ -16,7 +16,6 @@ namespace Barseghian_Nezami_SAE25
         public mainLayout()
         {
             InitializeComponent();
-
         }
 
         private void mainLayout_Load(object sender, EventArgs e)
@@ -53,7 +52,7 @@ namespace Barseghian_Nezami_SAE25
 
 
             pnlMainLayout.Controls.Clear();
-            dashboard db = new dashboard();
+            ucDashboard db = new ucDashboard();
             btnTableauBord.BackColor = Color.FromArgb(250, 128, 0);
             addToPanelLayout(db);
         }
@@ -86,7 +85,7 @@ namespace Barseghian_Nezami_SAE25
         private void btnTableauBord_Click(object sender, EventArgs e)
         {
             pnlMainLayout.Controls.Clear();
-            dashboard db = new dashboard();
+            ucDashboard db = new ucDashboard();
             activeBtnStylying((Button)sender);
             addToPanelLayout(db);
         }

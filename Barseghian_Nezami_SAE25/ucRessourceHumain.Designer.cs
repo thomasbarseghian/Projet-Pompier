@@ -36,9 +36,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlInfoPersonal = new System.Windows.Forms.Panel();
-            this.lblSexe = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.prenomPompier = new System.Windows.Forms.Label();
             this.nomPompier = new System.Windows.Forms.Label();
+            this.lblSexe = new System.Windows.Forms.Label();
             this.pbGrade = new System.Windows.Forms.PictureBox();
             this.pbPompier = new System.Windows.Forms.PictureBox();
             this.panel22 = new System.Windows.Forms.Panel();
@@ -86,9 +87,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
+            this.chklstbHabilitation = new System.Windows.Forms.CheckedListBox();
             this.pbEditHabilitations = new System.Windows.Forms.PictureBox();
             this.btnConfirmHabilitation = new System.Windows.Forms.Button();
-            this.chklstbHabilitation = new System.Windows.Forms.CheckedListBox();
             this.lbHabilitations = new System.Windows.Forms.ListBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -101,10 +102,10 @@
             this.btnAjoutPompier = new System.Windows.Forms.Button();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblHeader = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tlpUserSettings.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlInfoPersonal.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbGrade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPompier)).BeginInit();
             this.panel22.SuspendLayout();
@@ -134,7 +135,6 @@
             this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbChoisirCaserne)).BeginInit();
             this.pnlHeader.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpUserSettings
@@ -254,16 +254,19 @@
             this.pnlInfoPersonal.TabIndex = 3;
             this.pnlInfoPersonal.Visible = false;
             // 
-            // lblSexe
+            // tableLayoutPanel1
             // 
-            this.lblSexe.AutoSize = true;
-            this.lblSexe.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSexe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.lblSexe.Location = new System.Drawing.Point(109, 82);
-            this.lblSexe.Name = "lblSexe";
-            this.lblSexe.Size = new System.Drawing.Size(46, 17);
-            this.lblSexe.TabIndex = 5;
-            this.lblSexe.Text = "label4";
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.Controls.Add(this.prenomPompier, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.nomPompier, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(108, 50);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(251, 29);
+            this.tableLayoutPanel1.TabIndex = 17;
             // 
             // prenomPompier
             // 
@@ -288,6 +291,17 @@
             this.nomPompier.Size = new System.Drawing.Size(61, 22);
             this.nomPompier.TabIndex = 1;
             this.nomPompier.Text = "label3";
+            // 
+            // lblSexe
+            // 
+            this.lblSexe.AutoSize = true;
+            this.lblSexe.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSexe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.lblSexe.Location = new System.Drawing.Point(109, 82);
+            this.lblSexe.Name = "lblSexe";
+            this.lblSexe.Size = new System.Drawing.Size(46, 17);
+            this.lblSexe.TabIndex = 5;
+            this.lblSexe.Text = "label4";
             // 
             // pbGrade
             // 
@@ -869,6 +883,18 @@
             this.panel19.Size = new System.Drawing.Size(668, 86);
             this.panel19.TabIndex = 2;
             // 
+            // chklstbHabilitation
+            // 
+            this.chklstbHabilitation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
+            this.chklstbHabilitation.CheckOnClick = true;
+            this.chklstbHabilitation.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chklstbHabilitation.FormattingEnabled = true;
+            this.chklstbHabilitation.Location = new System.Drawing.Point(0, 3);
+            this.chklstbHabilitation.Name = "chklstbHabilitation";
+            this.chklstbHabilitation.Size = new System.Drawing.Size(616, 76);
+            this.chklstbHabilitation.TabIndex = 2;
+            this.chklstbHabilitation.Visible = false;
+            // 
             // pbEditHabilitations
             // 
             this.pbEditHabilitations.BackColor = System.Drawing.Color.Transparent;
@@ -897,18 +923,6 @@
             this.btnConfirmHabilitation.UseVisualStyleBackColor = false;
             this.btnConfirmHabilitation.Visible = false;
             this.btnConfirmHabilitation.Click += new System.EventHandler(this.btnConfirmHabilitation_Click);
-            // 
-            // chklstbHabilitation
-            // 
-            this.chklstbHabilitation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
-            this.chklstbHabilitation.CheckOnClick = true;
-            this.chklstbHabilitation.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chklstbHabilitation.FormattingEnabled = true;
-            this.chklstbHabilitation.Location = new System.Drawing.Point(0, 3);
-            this.chklstbHabilitation.Name = "chklstbHabilitation";
-            this.chklstbHabilitation.Size = new System.Drawing.Size(616, 76);
-            this.chklstbHabilitation.TabIndex = 2;
-            this.chklstbHabilitation.Visible = false;
             // 
             // lbHabilitations
             // 
@@ -1065,20 +1079,6 @@
             this.lblHeader.Text = "Gestion Des Pompiers";
             this.lblHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.prenomPompier, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.nomPompier, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(108, 50);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(251, 29);
-            this.tableLayoutPanel1.TabIndex = 17;
-            // 
             // ucRessourceHumain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1097,6 +1097,8 @@
             this.panel1.PerformLayout();
             this.pnlInfoPersonal.ResumeLayout(false);
             this.pnlInfoPersonal.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbGrade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPompier)).EndInit();
             this.panel22.ResumeLayout(false);
@@ -1149,8 +1151,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbChoisirCaserne)).EndInit();
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
