@@ -208,6 +208,7 @@
             this.grpDecisions.Size = new System.Drawing.Size(918, 154);
             this.grpDecisions.TabIndex = 3;
             this.grpDecisions.TabStop = false;
+            this.grpDecisions.Text = "Décisions du régulateur";
             // 
             // btnEquipe
             // 
@@ -217,6 +218,7 @@
             this.btnEquipe.TabIndex = 8;
             this.btnEquipe.Text = "Consistituer équipe";
             this.btnEquipe.UseVisualStyleBackColor = true;
+            this.btnEquipe.Visible = false;
             this.btnEquipe.Click += new System.EventHandler(this.btnEquipe_Click);
             // 
             // btnAnnuler
@@ -225,8 +227,9 @@
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(204, 44);
             this.btnAnnuler.TabIndex = 7;
-            this.btnAnnuler.Text = "Annuler";
+            this.btnAnnuler.Text = "Effacer";
             this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
             // cboCaserne
             // 
@@ -237,7 +240,6 @@
             this.cboCaserne.Name = "cboCaserne";
             this.cboCaserne.Size = new System.Drawing.Size(200, 28);
             this.cboCaserne.TabIndex = 6;
-            this.cboCaserne.Visible = false;
             this.cboCaserne.SelectedIndexChanged += new System.EventHandler(this.cboCaserne_SelectedIndexChanged);
             // 
             // lblCaserne
@@ -250,7 +252,6 @@
             this.lblCaserne.Size = new System.Drawing.Size(154, 24);
             this.lblCaserne.TabIndex = 5;
             this.lblCaserne.Text = "Caserne à Mobiliser";
-            this.lblCaserne.Visible = false;
             // 
             // label6
             // 

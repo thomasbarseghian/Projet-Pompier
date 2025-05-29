@@ -58,6 +58,8 @@ namespace Barseghian_Nezami_SAE25
             {
                 cboCaserne.Items.Add(reader2["nom"].ToString());
             }
+            cboCaserne.SelectedIndex = -1;
+            cboNatureSinistre.SelectedIndex = -1;
         }
         
 
@@ -92,16 +94,6 @@ namespace Barseghian_Nezami_SAE25
             }
         }
 
-        private void cboCaserne_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void cboNatureSinistre_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            lblCaserne.Visible = true;
-            cboCaserne.Visible = true;
-        }
-
         private void btnEquipe_Click(object sender, EventArgs e)
         {
             //Trouver l'id du sinistre
@@ -126,45 +118,81 @@ namespace Barseghian_Nezami_SAE25
             List<int> listHabilitations = new List<int>();
             foreach (VehiculeNecessaire vehicule in listVehicule)
             {
-                string query3 = "SELECT idHabilitation FROM Embarquer WHERE CodeTypeEngin = \"@code\"";
+                string query3 = @"SELECT idHabilitation FROM Embarquer WHERE CodeTypeEngin = " + "\"" + vehicule.CodeTypeEngin + "\"";
                 SQLiteCommand cmd3 = new SQLiteCommand(query3, conn);
-                cmd3.Parameters.AddWithValue("@code", vehicule.CodeTypeEngin);
                 SQLiteDataReader reader2 = cmd3.ExecuteReader();
                 while (reader2.Read())
                 {
                     listHabilitations.Add(Convert.ToInt32(reader2["idHabilitation"]));
                 }
             }
-            dgvPompiers.DataSource = listHabilitations;
-            List<List<int>> matricules = new List<List<int>>();
-            int i = 0;
+            List<int> pompiersAffectes = new List<int>();
 
             foreach (int hab in listHabilitations)
             {
-                // Créer une sous-liste vide et l'ajouter à la liste principale
-                matricules.Add(new List<int>());
-
-                string query4 = $@"SELECT matriculePompier 
-                       FROM Passer pass 
-                       JOIN Pompier pomp ON pass.matriculePompier = pomp.matricule
-                       WHERE idHabilitation = {hab} 
-                       AND pomp.enMission = 0 
-                       AND pomp.enConge = 0;";
+                string query4 = $@"
+                    SELECT matriculePompier
+                    FROM Passer pass
+                    JOIN Pompier pomp ON pass.matriculePompier = pomp.matricule
+                    WHERE idHabilitation = {hab}
+                    AND pomp.enMission = 0
+                    AND pomp.enConge = 0
+                    LIMIT 1;";
 
                 SQLiteCommand cmd4 = new SQLiteCommand(query4, conn);
-                SQLiteDataReader reader3 = cmd4.ExecuteReader();
+                object result = cmd4.ExecuteScalar();
 
-                while (reader3.Read())
-                {
-                    matricules[i].Add(Convert.ToInt32(reader3["matriculePompier"]));
-                }
-
-                i++;
+                if (result != null)
+                    pompiersAffectes.Add(Convert.ToInt32(result));
+                else
+                    pompiersAffectes.Add(-1); // Toujours ajouter une valeur
             }
-            //dgvPompiers.DataSource = matricules;
+            // Affichage lisible dans le DataGridView
+            var data = new List<object>();
+
+
+            for (int i = 0; i < listHabilitations.Count; i++)
+            {
+                int habilitationId = listHabilitations[i];
+                int pompier = pompiersAffectes[i]; // OK car même longueur
+
+                data.Add(new
+                {
+                    MatriculePompier = pompier != -1 ? pompier.ToString() : "Aucun disponible",
+                    Habilitation = habilitationId
+                });
+            }
+
+            dgvPompiers.DataSource = data;
             grpEnginsPompiers.Visible = true;
             btnAjouter.Visible = true;
         }
-        
+
+        private void btnAnnuler_Click(object sender, EventArgs e)
+        {
+            rtbMotif.Text = "";
+            txtCP.Text = "";
+            txtRue.Text = "";
+            txtVille.Text = "";
+            cboCaserne.SelectedIndex = -1;
+            cboNatureSinistre.SelectedIndex = -1;
+            btnEquipe.Visible = false;
+        }
+
+        private void cboNatureSinistre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboCaserne.SelectedIndex!=-1)
+            {
+                btnEquipe.Visible = true;
+            }
+        }
+
+        private void cboCaserne_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboNatureSinistre.SelectedIndex != -1)
+            {
+                btnEquipe.Visible = true;
+            }
+        }
     }
 }
