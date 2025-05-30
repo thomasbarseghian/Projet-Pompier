@@ -10,9 +10,9 @@ namespace Barseghian_Nezami_SAE25
     {
         private string codeTypeEngin;
 
-        private int nombre;
+        private int numero;
 
         public string CodeTypeEngin { get => codeTypeEngin; set => codeTypeEngin = value; }
-        public int Nombre { get => nombre; set => nombre = value; }
+        public int Numero { get => numero; set => numero = value; }
     }
 }

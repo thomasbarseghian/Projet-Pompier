@@ -100,32 +100,51 @@ namespace Barseghian_Nezami_SAE25
             string query1 = "SELECT id FROM NatureSinistre WHERE libelle=\"" + cboNatureSinistre.Text + "\"";
             SQLiteCommand cmd1 = new SQLiteCommand(query1, conn);
             string numSinistre = Convert.ToString(cmd1.ExecuteScalar());
-
             //Trouver les vehicules nécessaires
             string query2 = "SELECT codeTypeEngin, nombre FROM Necessiter WHERE idNatureSinistre=" + numSinistre;
             SQLiteCommand cmd2 = new SQLiteCommand(query2, conn);
             SQLiteDataReader reader1 = cmd2.ExecuteReader();
-            List<VehiculeNecessaire> listVehicule = new List<VehiculeNecessaire>();
+            List<VehiculeNecessaire> listVehiculeNecessaire = new List<VehiculeNecessaire>();
             while (reader1.Read())
             {
-                listVehicule.Add(new VehiculeNecessaire
+                listVehiculeNecessaire.Add(new VehiculeNecessaire
                 {
                     CodeTypeEngin = reader1["CodeTypeEngin"].ToString(),
-                    Nombre = Convert.ToInt32(reader1["nombre"])
+                    Numero = Convert.ToInt32(reader1["nombre"])
                 });
             }
-            dgvEngins.DataSource = listVehicule;
+
+            List<VehiculeNecessaire> listVehicule = new List<VehiculeNecessaire>();
             List<int> listHabilitations = new List<int>();
-            foreach (VehiculeNecessaire vehicule in listVehicule)
+            int idCaserne = cboCaserne.SelectedIndex+1;
+            foreach (VehiculeNecessaire vehicule in listVehiculeNecessaire)
             {
-                string query3 = @"SELECT idHabilitation FROM Embarquer WHERE CodeTypeEngin = " + "\"" + vehicule.CodeTypeEngin + "\"";
+                string query25 = "SELECT codeTypeEngin, numero FROM Engin WHERE codeTypeEngin =\"" + vehicule.CodeTypeEngin + "\" AND enMission = 0 AND enPanne = 0 AND idCaserne =" + idCaserne + " LIMIT " + vehicule.Numero;
+                SQLiteCommand cmd25 = new SQLiteCommand(query25, conn);
+                SQLiteDataReader reader25 = cmd25.ExecuteReader();
+                while (reader25.Read())
+                {
+                    listVehicule.Add(new VehiculeNecessaire
+                    {
+                        CodeTypeEngin = reader25["codeTypeEngin"].ToString(),
+                        Numero = Convert.ToInt32(reader25["numero"])
+                    });
+                }
+                string query3 = "SELECT idHabilitation, nombre FROM Embarquer WHERE CodeTypeEngin = \"" + vehicule.CodeTypeEngin + "\"";
                 SQLiteCommand cmd3 = new SQLiteCommand(query3, conn);
                 SQLiteDataReader reader2 = cmd3.ExecuteReader();
                 while (reader2.Read())
                 {
-                    listHabilitations.Add(Convert.ToInt32(reader2["idHabilitation"]));
+                    int idHabilitation = Convert.ToInt32(reader2["idHabilitation"]);
+                    int nombre = Convert.ToInt32(reader2["nombre"]);
+
+                    for (int i = 0; i < nombre; i++)
+                    {
+                        listHabilitations.Add(idHabilitation);
+                    }
                 }
             }
+            dgvEngins.DataSource = listVehicule;
             List<int> pompiersAffectes = new List<int>();
 
             foreach (int hab in listHabilitations)
@@ -137,15 +156,21 @@ namespace Barseghian_Nezami_SAE25
                     WHERE idHabilitation = {hab}
                     AND pomp.enMission = 0
                     AND pomp.enConge = 0
-                    LIMIT 1;";
+                    LIMIT 1";
 
                 SQLiteCommand cmd4 = new SQLiteCommand(query4, conn);
                 object result = cmd4.ExecuteScalar();
 
                 if (result != null)
+                {
                     pompiersAffectes.Add(Convert.ToInt32(result));
+                    btnAjouter.Visible = true;
+                }
                 else
+                {
                     pompiersAffectes.Add(-1); // Toujours ajouter une valeur
+                    MessageBox.Show("Pas de pompiers disponible pour une des habilitation,\n la mission ne peut pas être déclenchée");
+                }
             }
             // Affichage lisible dans le DataGridView
             var data = new List<object>();
@@ -165,7 +190,6 @@ namespace Barseghian_Nezami_SAE25
 
             dgvPompiers.DataSource = data;
             grpEnginsPompiers.Visible = true;
-            btnAjouter.Visible = true;
         }
 
         private void btnAnnuler_Click(object sender, EventArgs e)
@@ -193,6 +217,11 @@ namespace Barseghian_Nezami_SAE25
             {
                 btnEquipe.Visible = true;
             }
+        }
+
+        private void btnAjouter_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
