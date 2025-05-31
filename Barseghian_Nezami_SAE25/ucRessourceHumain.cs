@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Data.SQLite;
 using Barseghian_Nezami_SAE25.Utils;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Barseghian_Nezami_SAE25
 {
@@ -116,7 +117,7 @@ namespace Barseghian_Nezami_SAE25
                 string num = reader["portable"].ToString();
                 lblTelephone.Text = $"{num.Substring(0, 2)} {num.Substring(2, 2)} {num.Substring(4, 2)} {num.Substring(6, 2)} {num.Substring(8, 2)}";
                 lblMatricule.Text = matricule.ToString();
-                lblGrade.Text = reader["codeGrade"].ToString();
+                
                 lblEmbauche.Text = reader["dateEmbauche"].ToString();
                 lblBip.Text = reader["bip"].ToString();
                 
@@ -128,12 +129,19 @@ namespace Barseghian_Nezami_SAE25
                 
                 string gradeCode = reader["codeGrade"].ToString();
                 pbGrade.Image = Image.FromFile($@"..\..\Resources\ImagesGrades\{gradeCode}.png");
-                pbGrade.Location = new Point(462, (panel3.ClientSize.Height - pbGrade.Height) / 2);
+                //pbGrade.Location = new Point(462, (panel3.ClientSize.Height - pbGrade.Height) / 2);
                 
                 string type = reader["type"].ToString();
-                rdbProfessionnel.Checked = (type == "p");
-                rdvVolontaire.Checked = (type != "p");
-                chkConge.Checked = reader["enConge"].ToString() == "0" ? false : true;  
+                if (type == "p") lblTypePompier.Text = "Pompier";
+                if (type != "p") lblTypePompier.Text = "Volontaire";
+                chkConge.Checked = reader["enConge"].ToString() == "0" ? false : true;
+                string grade =  reader["codeGrade"].ToString();
+                // Pour la grade
+                string query2 = $@"Select * from Grade where code = '{grade}'";
+                cmd = new SQLiteCommand(query2, conn);
+                reader = cmd.ExecuteReader();
+                if (!reader.Read()) return;
+                lblGrade.Text = reader["libelle"].ToString();
                 if (isLogged)
                 {
                     remplirHabilitations(matricule);
@@ -251,6 +259,7 @@ namespace Barseghian_Nezami_SAE25
                 cboCaserneRattachement.DataSource = source.Copy();
                 cboCaserneRattachement.DisplayMember = "nom";
                 cboCaserneRattachement.ValueMember = "id";
+                cboCaserneRattachement.SelectedIndex = -1;
                 chkConge.Visible = true;
            
                 if (cboPompier.SelectedValue == null) return;
@@ -311,9 +320,14 @@ namespace Barseghian_Nezami_SAE25
                 pnlChoisirGrade.Visible = true;
                 lbllnfoCarriere.Visible = true;
                 isLogged = true;
+                btnPlusInfoCarriere.Visible = false;
                 remplirHabilitations(Convert.ToInt32(cboPompier.SelectedValue));
                 remplirCaserneRattachement();
                 remplirPanelGrade();
+                pnlChoisirGrade.Visible = true;
+                pnlChoisirCaserne.Visible = true;
+                pbChoisirCaserne.Visible = false;
+                pbEditGrade.Visible = false;
             }
             else
             {
@@ -335,10 +349,11 @@ namespace Barseghian_Nezami_SAE25
                 cboGrade.DisplayMember = "libelle";
                 cboGrade.ValueMember = "code";
 
-                if (!string.IsNullOrEmpty(lblGrade.Text))
+                cboGrade.SelectedIndex = -1;
+               /* if (!string.IsNullOrEmpty(lblGrade.Text))
                 {
                     cboGrade.SelectedValue = lblGrade.Text;
-                }
+                }*/
             }
             catch (SQLiteException ex)
             {
@@ -352,7 +367,7 @@ namespace Barseghian_Nezami_SAE25
         }
         private void cboGrade_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            lblGrade.Text = cboGrade.SelectedValue.ToString();
+            lblGrade.Text = cboGrade.Text;
         }
         
         // Event quand utilisateur veut modifier, alors dans ce cas il faut logic d'abord
@@ -367,6 +382,7 @@ namespace Barseghian_Nezami_SAE25
                 pnlChoisirGrade.Visible = true;
                 pnlChoisirCaserne.Visible = true;
             }
+
         }
 
         private void btnPlusInfoCarriere_Click(object sender, EventArgs e)
@@ -500,15 +516,7 @@ namespace Barseghian_Nezami_SAE25
             else MessageBox.Show("Opération annulée", "Erreur");    
         }
 
-        private void pnlInfoPersonal_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void ucRessourceHumain_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 
     // Class pour faciliter travaile avec Combo box

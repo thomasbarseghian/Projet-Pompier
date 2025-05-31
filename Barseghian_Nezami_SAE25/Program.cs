@@ -16,6 +16,8 @@ namespace Barseghian_Nezami_SAE25
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            _ = new MesDatas();
             Application.Run(new mainLayout());
         }
     }

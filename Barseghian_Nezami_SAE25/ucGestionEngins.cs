@@ -18,14 +18,13 @@ namespace Barseghian_Nezami_SAE25
     {
         SQLiteConnection conn = Connexion.Connec;
 
-        private DataSet ds;
+        private DataSet ds = MesDatas.DsGlobal;
 
         private int pos = 0;
         private DataRow[] enginRows;
         public ucGestionEngins()
         {
             InitializeComponent();
-            ds = new DataSet();
             this.Dock = DockStyle.Fill;
             changeHeaderPosition();
             CenterControl(pnlLayout, this);
@@ -45,17 +44,6 @@ namespace Barseghian_Nezami_SAE25
         {
             try
             {
-                string req;
-                DataTable schemaTable = conn.GetSchema("Tables");
-                for (int i = 0; i < schemaTable.Rows.Count; i++)
-                {
-                    string nomTable = schemaTable.Rows[i][2].ToString();
-                    req = @"SELECT * from " + nomTable;
-                    SQLiteCommand cmd = new SQLiteCommand(req, conn);
-                    SQLiteDataAdapter da = new SQLiteDataAdapter();
-                    da = new SQLiteDataAdapter(cmd);
-                    da.Fill(ds, nomTable);
-                }
                 LoadCboCaserneFromDs();
                 if (!ds.Relations.Contains("Caserne_Engins"))
                 {
@@ -110,7 +98,7 @@ namespace Barseghian_Nezami_SAE25
         {
             if (cboCaserne.SelectedValue == null)
                 return;
-
+            pos = 0;
             int selectedCaserneId;
             if (!int.TryParse(cboCaserne.SelectedValue.ToString(), out selectedCaserneId))
                 return;
@@ -166,6 +154,21 @@ namespace Barseghian_Nezami_SAE25
             int enPanne = Convert.ToInt32(dr["enPanne"].ToString());
             string state = enMission == 1 ? "En mission " : enPanne == 1 ? "En Panne" : "Disponible";
             lblState.Text = state;
+            string statusPath = "";
+            if (enMission == 1)
+                statusPath = $@"..\..\Resources\Icons\mission.png";
+            else if(enPanne == 1)
+                statusPath = $@"..\..\Resources\Icons\panne.png";
+            else
+                statusPath = $@"..\..\Resources\Icons\Disponible.png";
+            if (File.Exists(statusPath))
+            {
+                pbStatus.Image = Image.FromFile(statusPath);
+            }
+            else
+            {
+                MessageBox.Show($"Image not found: {statusPath}");
+            }
         }
         private void btnNext_Click(object sender, EventArgs e)
         {
@@ -193,6 +196,11 @@ namespace Barseghian_Nezami_SAE25
                 pos = enginRows.Length - 1;
                 showData(enginRows[pos]);
             }
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
