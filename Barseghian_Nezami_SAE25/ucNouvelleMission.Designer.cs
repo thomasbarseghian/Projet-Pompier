@@ -47,7 +47,7 @@
             this.lblCaserne = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cboNatureSinistre = new System.Windows.Forms.ComboBox();
-            this.btnAjouter = new System.Windows.Forms.Button();
+            this.btnCreer = new System.Windows.Forms.Button();
             this.grpEnginsPompiers = new System.Windows.Forms.GroupBox();
             this.dgvPompiers = new System.Windows.Forms.DataGridView();
             this.dgvEngins = new System.Windows.Forms.DataGridView();
@@ -82,6 +82,7 @@
             // 
             // grpInfosUsagers
             // 
+            this.grpInfosUsagers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.grpInfosUsagers.Controls.Add(this.txtVille);
             this.grpInfosUsagers.Controls.Add(this.txtRue);
             this.grpInfosUsagers.Controls.Add(this.txtCP);
@@ -195,6 +196,7 @@
             // 
             // grpDecisions
             // 
+            this.grpDecisions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.grpDecisions.Controls.Add(this.btnEquipe);
             this.grpDecisions.Controls.Add(this.btnAnnuler);
             this.grpDecisions.Controls.Add(this.cboCaserne);
@@ -212,27 +214,30 @@
             // 
             // btnEquipe
             // 
+            this.btnEquipe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
             this.btnEquipe.Location = new System.Drawing.Point(647, 75);
             this.btnEquipe.Name = "btnEquipe";
             this.btnEquipe.Size = new System.Drawing.Size(192, 44);
             this.btnEquipe.TabIndex = 8;
             this.btnEquipe.Text = "Consistituer équipe";
-            this.btnEquipe.UseVisualStyleBackColor = true;
+            this.btnEquipe.UseVisualStyleBackColor = false;
             this.btnEquipe.Visible = false;
             this.btnEquipe.Click += new System.EventHandler(this.btnEquipe_Click);
             // 
             // btnAnnuler
             // 
+            this.btnAnnuler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
             this.btnAnnuler.Location = new System.Drawing.Point(405, 75);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(204, 44);
             this.btnAnnuler.TabIndex = 7;
             this.btnAnnuler.Text = "Effacer";
-            this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.btnAnnuler.UseVisualStyleBackColor = false;
             this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
             // cboCaserne
             // 
+            this.cboCaserne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
             this.cboCaserne.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCaserne.FormattingEnabled = true;
             this.cboCaserne.Location = new System.Drawing.Point(583, 22);
@@ -266,6 +271,7 @@
             // 
             // cboNatureSinistre
             // 
+            this.cboNatureSinistre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
             this.cboNatureSinistre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboNatureSinistre.FormattingEnabled = true;
             this.cboNatureSinistre.Location = new System.Drawing.Point(188, 26);
@@ -275,24 +281,27 @@
             this.cboNatureSinistre.TabIndex = 0;
             this.cboNatureSinistre.SelectedIndexChanged += new System.EventHandler(this.cboNatureSinistre_SelectedIndexChanged);
             // 
-            // btnAjouter
+            // btnCreer
             // 
-            this.btnAjouter.Location = new System.Drawing.Point(795, 671);
-            this.btnAjouter.Name = "btnAjouter";
-            this.btnAjouter.Size = new System.Drawing.Size(192, 44);
-            this.btnAjouter.TabIndex = 9;
-            this.btnAjouter.Text = "Ajouter";
-            this.btnAjouter.UseVisualStyleBackColor = true;
-            this.btnAjouter.Visible = false;
-            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
+            this.btnCreer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
+            this.btnCreer.Location = new System.Drawing.Point(694, 215);
+            this.btnCreer.Name = "btnCreer";
+            this.btnCreer.Size = new System.Drawing.Size(192, 44);
+            this.btnCreer.TabIndex = 9;
+            this.btnCreer.Text = "Creer";
+            this.btnCreer.UseVisualStyleBackColor = false;
+            this.btnCreer.Visible = false;
+            this.btnCreer.Click += new System.EventHandler(this.btnCreer_Click);
             // 
             // grpEnginsPompiers
             // 
+            this.grpEnginsPompiers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.grpEnginsPompiers.Controls.Add(this.dgvPompiers);
+            this.grpEnginsPompiers.Controls.Add(this.btnCreer);
             this.grpEnginsPompiers.Controls.Add(this.dgvEngins);
             this.grpEnginsPompiers.Location = new System.Drawing.Point(69, 450);
             this.grpEnginsPompiers.Name = "grpEnginsPompiers";
-            this.grpEnginsPompiers.Size = new System.Drawing.Size(918, 206);
+            this.grpEnginsPompiers.Size = new System.Drawing.Size(918, 275);
             this.grpEnginsPompiers.TabIndex = 10;
             this.grpEnginsPompiers.TabStop = false;
             this.grpEnginsPompiers.Text = "Mobilisation des engins et des pompiers";
@@ -322,9 +331,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(235)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(230)))));
             this.Controls.Add(this.grpEnginsPompiers);
-            this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.grpDecisions);
             this.Controls.Add(this.grpInfosUsagers);
             this.Controls.Add(this.lblDeclenche);
@@ -366,7 +374,7 @@
         private System.Windows.Forms.Label lblCaserne;
         private System.Windows.Forms.Button btnEquipe;
         private System.Windows.Forms.Button btnAnnuler;
-        private System.Windows.Forms.Button btnAjouter;
+        private System.Windows.Forms.Button btnCreer;
         private System.Windows.Forms.GroupBox grpEnginsPompiers;
         private System.Windows.Forms.DataGridView dgvPompiers;
         private System.Windows.Forms.DataGridView dgvEngins;

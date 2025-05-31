@@ -17,6 +17,7 @@ namespace Barseghian_Nezami_SAE25
     public partial class ucNouvelleMission : UserControl
     {
         SQLiteConnection conn = Connexion.Connec;
+        private DataSet dsLocal;
         public ucNouvelleMission()
         {
             InitializeComponent();
@@ -26,42 +27,48 @@ namespace Barseghian_Nezami_SAE25
         public ucNouvelleMission(DataSet ds)
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
+            dsLocal = ds;
+
             cboCaserne.DataSource = ds.Tables["Caserne"];
             cboCaserne.DisplayMember = "nom";
         }
 
         private void UserControl1_Load(object sender, EventArgs e)
         {
-            //Mettre la date du jour et l'heure du jour
             lblDeclenche.Text += DateTime.Now;
 
-            //Mettre le numero de la mission
-            string query1 = "SELECT MAX(id) FROM Mission M;";
-            SQLiteCommand cmd1 = new SQLiteCommand(query1, conn);
-            int numMission = Convert.ToInt32(cmd1.ExecuteScalar());
-            lblMission.Text += Convert.ToString(numMission + 1);
+            SQLiteConnection conn = Connexion.Connec;
 
-            //remplir la comboBox avec les types de sinistres
-            string query2 = "SELECT libelle FROM NatureSinistre;";
-            SQLiteCommand cmd2 = new SQLiteCommand(query2, conn);
-            SQLiteDataReader reader = cmd2.ExecuteReader();
-            while (reader.Read())
-            {
-                cboNatureSinistre.Items.Add(reader["libelle"].ToString());
-            }
+            // 1. Récupérer le dernier id de mission
+            SQLiteDataAdapter adapterId = new SQLiteDataAdapter("SELECT MAX(id) as maxId FROM Mission;", conn);
+            DataTable tableId = new DataTable();
+            adapterId.Fill(tableId);
 
-            //remplir la comboBox avec les casernes
-            string query3 = "SELECT nom FROM Caserne;";
-            SQLiteCommand cmd3 = new SQLiteCommand(query3, conn);
-            SQLiteDataReader reader2 = cmd3.ExecuteReader();
-            while (reader2.Read())
-            {
-                cboCaserne.Items.Add(reader2["nom"].ToString());
-            }
-            cboCaserne.SelectedIndex = -1;
+            int numMission = 0;
+            if (tableId.Rows.Count > 0 && tableId.Rows[0]["maxId"] != DBNull.Value)
+                numMission = Convert.ToInt32(tableId.Rows[0]["maxId"]);
+            lblMission.Text += (numMission + 1).ToString();
+
+            // 2. Charger les types de sinistre
+            SQLiteDataAdapter adapterSinistre = new SQLiteDataAdapter("SELECT libelle FROM NatureSinistre;", conn);
+            DataTable tableSinistre = new DataTable();
+            adapterSinistre.Fill(tableSinistre);
+            cboNatureSinistre.DataSource = tableSinistre;
+            cboNatureSinistre.DisplayMember = "libelle";
             cboNatureSinistre.SelectedIndex = -1;
+
+            // 3. Charger les casernes
+            SQLiteDataAdapter adapterCaserne = new SQLiteDataAdapter("SELECT nom FROM Caserne;", conn);
+            DataTable tableCaserne = new DataTable();
+            adapterCaserne.Fill(tableCaserne);
+            cboCaserne.DataSource = tableCaserne;
+            cboCaserne.DisplayMember = "nom";
+            cboCaserne.SelectedIndex = -1;
+
+
         }
-        
+
 
 
         private void txtRue_KeyPress(object sender, KeyPressEventArgs e)
@@ -164,7 +171,7 @@ namespace Barseghian_Nezami_SAE25
                 if (result != null)
                 {
                     pompiersAffectes.Add(Convert.ToInt32(result));
-                    btnAjouter.Visible = true;
+                    btnCreer.Visible = true;
                 }
                 else
                 {
@@ -201,6 +208,7 @@ namespace Barseghian_Nezami_SAE25
             cboCaserne.SelectedIndex = -1;
             cboNatureSinistre.SelectedIndex = -1;
             btnEquipe.Visible = false;
+            grpEnginsPompiers.Visible = false;
         }
 
         private void cboNatureSinistre_SelectedIndexChanged(object sender, EventArgs e)
@@ -219,9 +227,71 @@ namespace Barseghian_Nezami_SAE25
             }
         }
 
-        private void btnAjouter_Click(object sender, EventArgs e)
+        private void btnCreer_Click(object sender, EventArgs e)
         {
+            try
+            {
+                // ID mission
+                int idMission = int.Parse(lblMission.Text.Substring(10));
 
+                // 1. Ajouter ligne mission
+                DataRow drMission = dsLocal.Tables["MissionsTemp"].NewRow();
+                drMission["id"] = idMission;
+                drMission["date"] = DateTime.Now;
+                drMission["motif"] = rtbMotif.Text;
+                drMission["rue"] = txtRue.Text;
+                drMission["ville"] = txtVille.Text;
+                drMission["codePostal"] = txtCP.Text;
+
+                // ID nature sinistre
+                string query = $"SELECT id FROM NatureSinistre WHERE libelle = \"{cboNatureSinistre.Text}\"";
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                drMission["idNatureSinistre"] = Convert.ToInt32(cmd.ExecuteScalar());
+
+                // ID caserne
+                drMission["idCaserne"] = cboCaserne.SelectedIndex + 1;
+
+                dsLocal.Tables["MissionsTemp"].Rows.Add(drMission);
+
+                // 2. Engins associés
+                foreach (DataGridViewRow row in dgvEngins.Rows)
+                {
+                    if (row.IsNewRow) continue;
+
+                    DataRow drEngin = dsLocal.Tables["EnginsTemp"].NewRow();
+                    drEngin["idMission"] = idMission;
+                    drEngin["numero"] = Convert.ToInt32(row.Cells["Numero"].Value);
+                    dsLocal.Tables["EnginsTemp"].Rows.Add(drEngin);
+                }
+
+                // 3. Pompiers associés
+                foreach (DataGridViewRow row in dgvPompiers.Rows)
+                {
+                    if (row.IsNewRow) continue;
+
+                    string matricule = row.Cells["MatriculePompier"].Value.ToString();
+                    if (matricule == "Aucun disponible") continue;
+
+                    DataRow drPompier = dsLocal.Tables["PompiersTemp"].NewRow();
+                    drPompier["idMission"] = idMission;
+                    drPompier["matriculePompier"] = Convert.ToInt32(matricule);
+                    dsLocal.Tables["PompiersTemp"].Rows.Add(drPompier);
+                }
+
+                MessageBox.Show("Mission créée.");
+                rtbMotif.Text = "";
+                txtCP.Text = "";
+                txtRue.Text = "";
+                txtVille.Text = "";
+                cboCaserne.SelectedIndex = -1;
+                cboNatureSinistre.SelectedIndex = -1;
+                btnEquipe.Visible = false;
+                grpEnginsPompiers.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur création mission : " + ex.Message);
+            }
         }
     }
 }
