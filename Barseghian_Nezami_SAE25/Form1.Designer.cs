@@ -50,7 +50,7 @@ namespace Barseghian_Nezami_SAE25
             // 
             // pnlSideBar
             // 
-            this.pnlSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.pnlSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
             this.pnlSideBar.Controls.Add(this.pictureBox1);
             this.pnlSideBar.Controls.Add(this.panel1);
             this.pnlSideBar.Controls.Add(this.btnQuitter);
@@ -68,7 +68,7 @@ namespace Barseghian_Nezami_SAE25
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(71, -12);
+            this.pictureBox1.Location = new System.Drawing.Point(72, -7);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(159, 132);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -90,7 +90,7 @@ namespace Barseghian_Nezami_SAE25
             this.btnQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQuitter.FlatAppearance.BorderSize = 0;
             this.btnQuitter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnQuitter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
+            this.btnQuitter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnQuitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitter.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitter.ForeColor = System.Drawing.Color.White;
@@ -112,7 +112,7 @@ namespace Barseghian_Nezami_SAE25
             this.btnGestionEngins.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGestionEngins.FlatAppearance.BorderSize = 0;
             this.btnGestionEngins.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnGestionEngins.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
+            this.btnGestionEngins.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnGestionEngins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGestionEngins.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionEngins.ForeColor = System.Drawing.Color.White;
@@ -134,7 +134,7 @@ namespace Barseghian_Nezami_SAE25
             this.btnGestionPersonnel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGestionPersonnel.FlatAppearance.BorderSize = 0;
             this.btnGestionPersonnel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnGestionPersonnel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
+            this.btnGestionPersonnel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnGestionPersonnel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGestionPersonnel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionPersonnel.ForeColor = System.Drawing.Color.White;
@@ -156,7 +156,7 @@ namespace Barseghian_Nezami_SAE25
             this.btnStatistiques.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStatistiques.FlatAppearance.BorderSize = 0;
             this.btnStatistiques.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnStatistiques.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
+            this.btnStatistiques.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnStatistiques.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStatistiques.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStatistiques.ForeColor = System.Drawing.Color.White;
@@ -178,7 +178,7 @@ namespace Barseghian_Nezami_SAE25
             this.btnNouvelleMission.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNouvelleMission.FlatAppearance.BorderSize = 0;
             this.btnNouvelleMission.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnNouvelleMission.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
+            this.btnNouvelleMission.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnNouvelleMission.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNouvelleMission.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNouvelleMission.ForeColor = System.Drawing.Color.White;
@@ -200,7 +200,7 @@ namespace Barseghian_Nezami_SAE25
             this.btnTableauBord.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTableauBord.FlatAppearance.BorderSize = 0;
             this.btnTableauBord.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnTableauBord.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
+            this.btnTableauBord.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnTableauBord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTableauBord.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTableauBord.ForeColor = System.Drawing.Color.White;
@@ -227,6 +227,7 @@ namespace Barseghian_Nezami_SAE25
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlMainLayout.AutoScroll = true;
+            this.pnlMainLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(230)))));
             this.pnlMainLayout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlMainLayout.Controls.Add(this.label2);
             this.pnlMainLayout.Location = new System.Drawing.Point(302, 1);
@@ -250,13 +251,14 @@ namespace Barseghian_Nezami_SAE25
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(1007, 749);
             this.Controls.Add(this.pnlMainLayout);
             this.Controls.Add(this.pnlSideBar);
             this.Name = "mainLayout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
-            this.Text = "\'";
+            this.Text = "Âme Brûlée";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.mainLayout_Load);
             this.pnlSideBar.ResumeLayout(false);

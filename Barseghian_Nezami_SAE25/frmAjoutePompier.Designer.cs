@@ -73,8 +73,8 @@
             // 
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Arial Rounded MT Bold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.lblHeader.Location = new System.Drawing.Point(195, 21);
+            this.lblHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
+            this.lblHeader.Location = new System.Drawing.Point(195, 16);
             this.lblHeader.Name = "lblHeader";
             this.lblHeader.Size = new System.Drawing.Size(439, 55);
             this.lblHeader.TabIndex = 0;
@@ -83,7 +83,7 @@
             // 
             // pnlHeader
             // 
-            this.pnlHeader.BackColor = System.Drawing.Color.Brown;
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.pnlHeader.Controls.Add(this.lblHeader);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.ForeColor = System.Drawing.Color.Coral;
@@ -95,7 +95,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
             this.panel1.Location = new System.Drawing.Point(20, 120);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(729, 2);
@@ -114,7 +114,7 @@
             // 
             // txtNom
             // 
-            this.txtNom.BackColor = System.Drawing.Color.RosyBrown;
+            this.txtNom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.txtNom.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNom.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNom.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -126,7 +126,7 @@
             // 
             // txtPrenom
             // 
-            this.txtPrenom.BackColor = System.Drawing.Color.RosyBrown;
+            this.txtPrenom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.txtPrenom.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPrenom.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrenom.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -252,7 +252,7 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.BackColor = System.Drawing.Color.RosyBrown;
+            this.txtPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhone.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -276,7 +276,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Location = new System.Drawing.Point(24, 410);
@@ -325,7 +325,7 @@
             // 
             // cboCaserne
             // 
-            this.cboCaserne.BackColor = System.Drawing.Color.RosyBrown;
+            this.cboCaserne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.cboCaserne.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cboCaserne.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCaserne.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -366,12 +366,12 @@
             // 
             // btnAjouter
             // 
-            this.btnAjouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
+            this.btnAjouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
             this.btnAjouter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAjouter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.btnAjouter.FlatAppearance.BorderSize = 0;
-            this.btnAjouter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
-            this.btnAjouter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAjouter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(84)))), ((int)(((byte)(0)))));
+            this.btnAjouter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAjouter.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAjouter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btnAjouter.Location = new System.Drawing.Point(594, 657);
@@ -397,7 +397,7 @@
             this.pnlType.Controls.Add(this.rdbPompier);
             this.pnlType.Location = new System.Drawing.Point(296, 610);
             this.pnlType.Name = "pnlType";
-            this.pnlType.Size = new System.Drawing.Size(275, 35);
+            this.pnlType.Size = new System.Drawing.Size(275, 32);
             this.pnlType.TabIndex = 30;
             // 
             // errorProvider1
@@ -406,7 +406,7 @@
             // 
             // cboGrade
             // 
-            this.cboGrade.BackColor = System.Drawing.Color.RosyBrown;
+            this.cboGrade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.cboGrade.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cboGrade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboGrade.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -448,7 +448,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(230)))));
             this.ClientSize = new System.Drawing.Size(800, 749);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cboGrade);

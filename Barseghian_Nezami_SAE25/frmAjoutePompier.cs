@@ -50,6 +50,7 @@ namespace Barseghian_Nezami_SAE25
                 cboGrade.DataSource = dt1;
                 cboGrade.DisplayMember = "libelle";
                 cboGrade.ValueMember = "code";
+                cboGrade.SelectedIndex = -1;
             }
             catch (SQLiteException ex)
             {
