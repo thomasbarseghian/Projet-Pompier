@@ -16,7 +16,6 @@ namespace Barseghian_Nezami_SAE25
         public mainLayout()
         {
             InitializeComponent();
-
         }
 
         private void mainLayout_Load(object sender, EventArgs e)
@@ -50,6 +49,12 @@ namespace Barseghian_Nezami_SAE25
             img = Image.FromFile(@"..\..\Resources\Icons\logout.png");
             resizedImage = new Bitmap(img, new Size(50, 50));
             btnQuitter.Image = resizedImage;
+
+
+            pnlMainLayout.Controls.Clear();
+            ucDashboard db = new ucDashboard();
+            btnTableauBord.BackColor = Color.FromArgb(250, 128, 0);
+            addToPanelLayout(db);
         }
 
         private void btnQuitter_Click(object sender, EventArgs e)
@@ -68,11 +73,11 @@ namespace Barseghian_Nezami_SAE25
             {
                 if(buttonn == btn)
                 {
-                    buttonn.BackColor = Color.FromArgb(160, 40, 50); 
+                    buttonn.BackColor = Color.FromArgb(250, 128, 0); 
                 }
                 else
                 {
-                    buttonn.BackColor = Color.FromArgb(140, 30, 40);
+                    buttonn.BackColor = Color.FromArgb(243, 156, 18);
                 }
 
             }
@@ -80,7 +85,9 @@ namespace Barseghian_Nezami_SAE25
         private void btnTableauBord_Click(object sender, EventArgs e)
         {
             pnlMainLayout.Controls.Clear();
+            ucDashboard db = new ucDashboard();
             activeBtnStylying((Button)sender);
+            addToPanelLayout(db);
         }
 
         private void btnNouvelleMission_Click(object sender, EventArgs e)
