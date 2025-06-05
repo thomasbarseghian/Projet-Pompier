@@ -474,8 +474,11 @@ namespace Barseghian_Nezami_SAE25
                 remplirHabilitations(matricule);
                 remplirCaserneRattachement();
                 remplirPanelGrade();
-                pnlChoisirGrade.Visible = false;
-                pnlChoisirCaserne.Visible = false;
+                if(!isLogged)
+                {
+                    pnlChoisirGrade.Visible = false;
+                    pnlChoisirCaserne.Visible = false;
+                }
                 for (int i = 0; i < chklstbHabilitation.Items.Count; i++)
                 {
                     chklstbHabilitation.SetItemChecked(i, false);

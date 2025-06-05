@@ -22,7 +22,12 @@ namespace Barseghian_Nezami_SAE25
             chargerRequetesFixes();
             this.Dock = DockStyle.Fill;
         }
-
+        void changeHeaderPosition()
+        {
+            lblHeader.Location = new Point(
+            (this.ClientSize.Width - lblHeader.Width) / 2,
+            lblHeader.Location.Y);
+        }
         private void ucStats_Load(object sender, EventArgs e)
         {
 
@@ -158,5 +163,9 @@ namespace Barseghian_Nezami_SAE25
             afficherDansGrid(DGV5, query);
         }
 
+        private void pnlHeader_Resize(object sender, EventArgs e)
+        {
+            changeHeaderPosition();
+        }
     }
 }

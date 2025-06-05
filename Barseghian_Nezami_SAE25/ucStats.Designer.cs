@@ -41,17 +41,20 @@
             this.DGV4 = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.DGV5 = new System.Windows.Forms.DataGridView();
+            this.pnlHeader = new System.Windows.Forms.Panel();
+            this.lblHeader = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGV1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV5)).BeginInit();
+            this.pnlHeader.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 13);
+            this.label1.Location = new System.Drawing.Point(3, 91);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 13);
             this.label1.TabIndex = 0;
@@ -60,7 +63,7 @@
             // cboCaserne
             // 
             this.cboCaserne.FormattingEnabled = true;
-            this.cboCaserne.Location = new System.Drawing.Point(126, 10);
+            this.cboCaserne.Location = new System.Drawing.Point(126, 88);
             this.cboCaserne.Name = "cboCaserne";
             this.cboCaserne.Size = new System.Drawing.Size(121, 21);
             this.cboCaserne.TabIndex = 1;
@@ -69,7 +72,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 63);
+            this.label2.Location = new System.Drawing.Point(3, 141);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 13);
             this.label2.TabIndex = 2;
@@ -78,7 +81,7 @@
             // DGV1
             // 
             this.DGV1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV1.Location = new System.Drawing.Point(126, 48);
+            this.DGV1.Location = new System.Drawing.Point(126, 126);
             this.DGV1.Name = "DGV1";
             this.DGV1.Size = new System.Drawing.Size(240, 150);
             this.DGV1.TabIndex = 3;
@@ -86,7 +89,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 217);
+            this.label3.Location = new System.Drawing.Point(3, 295);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 13);
             this.label3.TabIndex = 4;
@@ -95,7 +98,7 @@
             // DGV2
             // 
             this.DGV2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV2.Location = new System.Drawing.Point(126, 217);
+            this.DGV2.Location = new System.Drawing.Point(126, 295);
             this.DGV2.Name = "DGV2";
             this.DGV2.Size = new System.Drawing.Size(240, 150);
             this.DGV2.TabIndex = 5;
@@ -103,7 +106,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(380, 13);
+            this.label4.Location = new System.Drawing.Point(380, 91);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(113, 13);
             this.label4.TabIndex = 6;
@@ -112,7 +115,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(380, 63);
+            this.label5.Location = new System.Drawing.Point(380, 141);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(213, 13);
             this.label5.TabIndex = 7;
@@ -121,7 +124,7 @@
             // DGV3
             // 
             this.DGV3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV3.Location = new System.Drawing.Point(599, 48);
+            this.DGV3.Location = new System.Drawing.Point(599, 126);
             this.DGV3.Name = "DGV3";
             this.DGV3.Size = new System.Drawing.Size(240, 150);
             this.DGV3.TabIndex = 8;
@@ -129,7 +132,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(380, 217);
+            this.label6.Location = new System.Drawing.Point(380, 295);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(156, 13);
             this.label6.TabIndex = 9;
@@ -138,7 +141,7 @@
             // DGV4
             // 
             this.DGV4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV4.Location = new System.Drawing.Point(599, 217);
+            this.DGV4.Location = new System.Drawing.Point(599, 295);
             this.DGV4.Name = "DGV4";
             this.DGV4.Size = new System.Drawing.Size(240, 150);
             this.DGV4.TabIndex = 10;
@@ -146,7 +149,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(380, 391);
+            this.label7.Location = new System.Drawing.Point(380, 469);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(166, 13);
             this.label7.TabIndex = 11;
@@ -155,15 +158,41 @@
             // DGV5
             // 
             this.DGV5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV5.Location = new System.Drawing.Point(599, 391);
+            this.DGV5.Location = new System.Drawing.Point(599, 469);
             this.DGV5.Name = "DGV5";
             this.DGV5.Size = new System.Drawing.Size(240, 150);
             this.DGV5.TabIndex = 12;
+            // 
+            // pnlHeader
+            // 
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
+            this.pnlHeader.Controls.Add(this.lblHeader);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.ForeColor = System.Drawing.Color.Coral;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(922, 73);
+            this.pnlHeader.TabIndex = 13;
+            this.pnlHeader.Resize += new System.EventHandler(this.pnlHeader_Resize);
+            // 
+            // lblHeader
+            // 
+            this.lblHeader.AutoSize = true;
+            this.lblHeader.Font = new System.Drawing.Font("Arial Rounded MT Bold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
+            this.lblHeader.Location = new System.Drawing.Point(195, 16);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.Size = new System.Drawing.Size(302, 55);
+            this.lblHeader.TabIndex = 0;
+            this.lblHeader.Text = "Statistiques";
+            this.lblHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ucStats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(230)))));
+            this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.DGV5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.DGV4);
@@ -185,6 +214,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.DGV3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV5)).EndInit();
+            this.pnlHeader.ResumeLayout(false);
+            this.pnlHeader.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,5 +236,7 @@
         private System.Windows.Forms.DataGridView DGV4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView DGV5;
+        private System.Windows.Forms.Panel pnlHeader;
+        private System.Windows.Forms.Label lblHeader;
     }
 }

@@ -900,7 +900,7 @@
             this.pbEditHabilitations.BackColor = System.Drawing.Color.Transparent;
             this.pbEditHabilitations.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbEditHabilitations.Image = ((System.Drawing.Image)(resources.GetObject("pbEditHabilitations.Image")));
-            this.pbEditHabilitations.Location = new System.Drawing.Point(602, 23);
+            this.pbEditHabilitations.Location = new System.Drawing.Point(604, 23);
             this.pbEditHabilitations.Name = "pbEditHabilitations";
             this.pbEditHabilitations.Size = new System.Drawing.Size(45, 41);
             this.pbEditHabilitations.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
