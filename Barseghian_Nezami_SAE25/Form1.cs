@@ -117,7 +117,9 @@ namespace Barseghian_Nezami_SAE25
         private void btnStatistiques_Click(object sender, EventArgs e)
         {
             pnlMainLayout.Controls.Clear();
+            statistiques s = new statistiques();
             activeBtnStylying((Button)sender);
+            addToPanelLayout(s);
         }
 
         private void pnlMainLayout_Paint(object sender, PaintEventArgs e)
