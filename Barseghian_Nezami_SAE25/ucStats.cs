@@ -21,6 +21,12 @@ namespace Barseghian_Nezami_SAE25
             chargerCaserne();
             chargerRequetesFixes();
             this.Dock = DockStyle.Fill;
+            ApplyBeautifulStyle(DGV1);
+            ApplyBeautifulStyle(DGV2);
+            ApplyBeautifulStyle(DGV3);
+            ApplyBeautifulStyle(DGV4);
+            ApplyBeautifulStyle(DGV5);
+
         }
         void changeHeaderPosition()
         {
@@ -167,5 +173,59 @@ namespace Barseghian_Nezami_SAE25
         {
             changeHeaderPosition();
         }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void ApplyBeautifulStyle(DataGridView dgv)
+        {
+            // Font and alignment
+            dgv.Font = new Font("Arial", 12F, FontStyle.Regular);
+            dgv.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            // Colors
+            Color baseColor = Color.FromArgb(255, 234, 167); // warm light yellow
+            Color altRowColor = Color.FromArgb(255, 248, 200); // softer yellow for alternation
+            Color headerColor = Color.FromArgb(255, 204, 102); // slightly stronger for headers
+
+            dgv.BackgroundColor = baseColor;
+            dgv.DefaultCellStyle.BackColor = baseColor;
+            dgv.DefaultCellStyle.ForeColor = Color.Black;
+
+            // Alternating row style for better readability
+            dgv.AlternatingRowsDefaultCellStyle.BackColor = altRowColor;
+
+            // Header style
+            dgv.EnableHeadersVisualStyles = false;
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = headerColor;
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 12F, FontStyle.Bold);
+            dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            // Selection colors
+            dgv.DefaultCellStyle.SelectionBackColor = Color.Orange;
+            dgv.DefaultCellStyle.SelectionForeColor = Color.White;
+
+            // Layout
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgv.RowTemplate.Height = 32;
+
+            // Borders and lines - minimal
+            dgv.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dgv.BorderStyle = BorderStyle.None;
+            dgv.GridColor = baseColor;
+
+            // Behavior
+            dgv.AllowUserToAddRows = false;
+            dgv.AllowUserToDeleteRows = false;
+            dgv.ReadOnly = true;
+            dgv.RowHeadersVisible = false;
+        }
+
+
+
     }
 }
