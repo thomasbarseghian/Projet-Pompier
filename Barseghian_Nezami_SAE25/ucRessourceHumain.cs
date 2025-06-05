@@ -147,6 +147,10 @@ namespace Barseghian_Nezami_SAE25
                     remplirHabilitations(matricule);
                     remplirCaserneRattachement();
                     remplirPanelGrade();
+                    btnPlusInfoCarriere.Visible = false;
+                    pnlChoisirGrade.Visible = true ;
+                    pnlChoisirCaserne.Visible = true;
+
                 }
             }
             catch (SQLiteException ex)

@@ -55,6 +55,8 @@
             this.lblType = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlLayout = new System.Windows.Forms.Panel();
+            this.btnFinEngin = new System.Windows.Forms.Button();
+            this.btnDebutEngin = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -374,6 +376,8 @@
             // 
             this.pnlLayout.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlLayout.Controls.Add(this.btnDebutEngin);
+            this.pnlLayout.Controls.Add(this.btnFinEngin);
             this.pnlLayout.Controls.Add(this.panel1);
             this.pnlLayout.Controls.Add(this.btnNext);
             this.pnlLayout.Controls.Add(this.btnPrevious);
@@ -383,6 +387,40 @@
             this.pnlLayout.Size = new System.Drawing.Size(811, 632);
             this.pnlLayout.TabIndex = 13;
             this.pnlLayout.Visible = false;
+            // 
+            // btnFinEngin
+            // 
+            this.btnFinEngin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
+            this.btnFinEngin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFinEngin.FlatAppearance.BorderSize = 0;
+            this.btnFinEngin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnFinEngin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFinEngin.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinEngin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnFinEngin.Location = new System.Drawing.Point(489, 75);
+            this.btnFinEngin.Name = "btnFinEngin";
+            this.btnFinEngin.Size = new System.Drawing.Size(54, 35);
+            this.btnFinEngin.TabIndex = 13;
+            this.btnFinEngin.Text = ">>";
+            this.btnFinEngin.UseVisualStyleBackColor = false;
+            this.btnFinEngin.Click += new System.EventHandler(this.btnFinEngin_Click);
+            // 
+            // btnDebutEngin
+            // 
+            this.btnDebutEngin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
+            this.btnDebutEngin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDebutEngin.FlatAppearance.BorderSize = 0;
+            this.btnDebutEngin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnDebutEngin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDebutEngin.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDebutEngin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnDebutEngin.Location = new System.Drawing.Point(75, 75);
+            this.btnDebutEngin.Name = "btnDebutEngin";
+            this.btnDebutEngin.Size = new System.Drawing.Size(54, 35);
+            this.btnDebutEngin.TabIndex = 14;
+            this.btnDebutEngin.Text = "<<";
+            this.btnDebutEngin.UseVisualStyleBackColor = false;
+            this.btnDebutEngin.Click += new System.EventHandler(this.btnDebutEngin_Click);
             // 
             // ucGestionEngins
             // 
@@ -444,5 +482,7 @@
         private System.Windows.Forms.PictureBox pbEngin;
         private System.Windows.Forms.PictureBox pbStatus;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button btnFinEngin;
+        private System.Windows.Forms.Button btnDebutEngin;
     }
 }

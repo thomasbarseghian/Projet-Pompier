@@ -67,6 +67,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connexion.cs" />
+    <Compile Include="statistiques.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="statistiques.Designer.cs">
+      <DependentUpon>statistiques.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,6 +125,9 @@
       <DependentUpon>ucRessourceHumain.cs</DependentUpon>
     </Compile>
     <Compile Include="VehiculeNecessaire.cs" />
+    <EmbeddedResource Include="statistiques.resx">
+      <DependentUpon>statistiques.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucDashboard.resx">
       <DependentUpon>ucDashboard.cs</DependentUpon>
     </EmbeddedResource>
