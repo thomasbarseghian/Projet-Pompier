@@ -52,7 +52,7 @@ namespace Barseghian_Nezami_SAE25
                         ds.Tables["Engin"].Columns["idCaserne"]);
                 }
                 ds.Tables["Caserne"].PrimaryKey = new DataColumn[] { ds.Tables["Caserne"].Columns["id"] };
-              }
+            }
             catch (Exception ex)
             {
                 MessageBox.Show("Erreur lors du chargement des tables : " + ex.Message);
@@ -200,6 +200,20 @@ namespace Barseghian_Nezami_SAE25
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void btnFinEngin_Click(object sender, EventArgs e)
+        {
+            pos = enginRows.Length - 1;
+            showData(enginRows[pos]);
+
+        }
+
+        private void btnDebutEngin_Click(object sender, EventArgs e)
+        {
+            pos = 0;
+            showData(enginRows[pos]);
 
         }
     }
