@@ -90,5 +90,10 @@ namespace Barseghian_Nezami_SAE25
         {
             LoadDataIntoTable();
         }
+
+        private void Mission_ClotureClicked(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

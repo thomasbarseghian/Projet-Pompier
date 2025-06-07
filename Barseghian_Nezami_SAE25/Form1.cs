@@ -16,6 +16,10 @@ namespace Barseghian_Nezami_SAE25
         public mainLayout()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle; // ou FixedDialog
+            this.MaximizeBox = false; // si tu ne veux pas le bouton agrandir
+            this.MinimizeBox = true;  // à toi de voir
+            this.ControlBox = true;   // garde les boutons
         }
 
         private void mainLayout_Load(object sender, EventArgs e)
@@ -93,29 +97,7 @@ namespace Barseghian_Nezami_SAE25
         private void btnNouvelleMission_Click(object sender, EventArgs e)
         {
             pnlMainLayout.Controls.Clear();
-            DataTable dtMissions = new DataTable("MissionsTemp");
-            dtMissions.Columns.Add("id", typeof(int));
-            dtMissions.Columns.Add("date", typeof(DateTime));
-            dtMissions.Columns.Add("motif", typeof(string));
-            dtMissions.Columns.Add("rue", typeof(string));
-            dtMissions.Columns.Add("ville", typeof(string));
-            dtMissions.Columns.Add("codePostal", typeof(string));
-            dtMissions.Columns.Add("idNatureSinistre", typeof(int));
-            dtMissions.Columns.Add("idCaserne", typeof(int));
-
-            DataTable dtEngins = new DataTable("EnginsTemp");
-            dtEngins.Columns.Add("idMission", typeof(int));
-            dtEngins.Columns.Add("numero", typeof(int));
-
-            DataTable dtPompiers = new DataTable("PompiersTemp");
-            dtPompiers.Columns.Add("idMission", typeof(int));
-            dtPompiers.Columns.Add("matriculePompier", typeof(int));
-
-            DataSet dsLocal = new DataSet();
-            dsLocal.Tables.Add(dtMissions);
-            dsLocal.Tables.Add(dtEngins);
-            dsLocal.Tables.Add(dtPompiers);
-            ucNouvelleMission NM = new ucNouvelleMission(dsLocal);
+            ucNouvelleMission NM = new ucNouvelleMission();
             activeBtnStylying((Button)sender);
             addToPanelLayout(NM);
         }

@@ -22,6 +22,12 @@ namespace Barseghian_Nezami_SAE25
 
             centerLayout();
         }
+
+        public delegate void ClotureClickedEventHandler(object sender, EventArgs e);
+
+        // Déclaration de l'événement
+        public event ClotureClickedEventHandler ClotureClicked;
+
         public ucMission(DataRow dr)
         {
             InitializeComponent();
@@ -110,6 +116,13 @@ namespace Barseghian_Nezami_SAE25
         private void ucMission_Resize(object sender, EventArgs e)
         {
             centerLayout();
+        }
+
+        public delegate void btnCloture_click();
+
+        private void btnCloture_Click(object sender, EventArgs e)
+        {
+            ClotureClicked?.Invoke(this, e);
         }
     }
 }

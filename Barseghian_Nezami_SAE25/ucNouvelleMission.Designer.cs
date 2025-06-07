@@ -30,17 +30,6 @@
         {
             this.lblMission = new System.Windows.Forms.Label();
             this.lblDeclenche = new System.Windows.Forms.Label();
-            this.grpInfosUsagers = new System.Windows.Forms.GroupBox();
-            this.txtVille = new System.Windows.Forms.TextBox();
-            this.txtRue = new System.Windows.Forms.TextBox();
-            this.txtCP = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.rtbMotif = new System.Windows.Forms.RichTextBox();
-            this.grpDecisions = new System.Windows.Forms.GroupBox();
             this.btnEquipe = new System.Windows.Forms.Button();
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.cboCaserne = new System.Windows.Forms.ComboBox();
@@ -48,178 +37,72 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cboNatureSinistre = new System.Windows.Forms.ComboBox();
             this.btnCreer = new System.Windows.Forms.Button();
-            this.grpEnginsPompiers = new System.Windows.Forms.GroupBox();
-            this.dgvPompiers = new System.Windows.Forms.DataGridView();
-            this.dgvEngins = new System.Windows.Forms.DataGridView();
-            this.grpInfosUsagers.SuspendLayout();
-            this.grpDecisions.SuspendLayout();
-            this.grpEnginsPompiers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPompiers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEngins)).BeginInit();
+            this.flpVehicules = new System.Windows.Forms.FlowLayoutPanel();
+            this.rtbMotif = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblHeader = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.rtbVille = new System.Windows.Forms.RichTextBox();
+            this.rtbCP = new System.Windows.Forms.RichTextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.rtbRue = new System.Windows.Forms.RichTextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pnlEnginPompier = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.flpPompiers = new System.Windows.Forms.FlowLayoutPanel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.dgvMissionsTemp = new System.Windows.Forms.DataGridView();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.pnlEnginPompier.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMissionsTemp)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMission
             // 
             this.lblMission.AutoSize = true;
-            this.lblMission.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMission.Location = new System.Drawing.Point(64, 34);
+            this.lblMission.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.lblMission.Location = new System.Drawing.Point(64, 190);
             this.lblMission.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMission.Name = "lblMission";
-            this.lblMission.Size = new System.Drawing.Size(111, 29);
+            this.lblMission.Size = new System.Drawing.Size(158, 33);
             this.lblMission.TabIndex = 0;
             this.lblMission.Text = "Mission n° ";
             // 
             // lblDeclenche
             // 
             this.lblDeclenche.AutoSize = true;
-            this.lblDeclenche.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeclenche.Location = new System.Drawing.Point(529, 34);
+            this.lblDeclenche.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.lblDeclenche.Location = new System.Drawing.Point(766, 190);
             this.lblDeclenche.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDeclenche.Name = "lblDeclenche";
-            this.lblDeclenche.Size = new System.Drawing.Size(149, 29);
+            this.lblDeclenche.Size = new System.Drawing.Size(219, 33);
             this.lblDeclenche.TabIndex = 1;
             this.lblDeclenche.Text = "déclenchée le : ";
-            // 
-            // grpInfosUsagers
-            // 
-            this.grpInfosUsagers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
-            this.grpInfosUsagers.Controls.Add(this.txtVille);
-            this.grpInfosUsagers.Controls.Add(this.txtRue);
-            this.grpInfosUsagers.Controls.Add(this.txtCP);
-            this.grpInfosUsagers.Controls.Add(this.label5);
-            this.grpInfosUsagers.Controls.Add(this.label4);
-            this.grpInfosUsagers.Controls.Add(this.label3);
-            this.grpInfosUsagers.Controls.Add(this.label2);
-            this.grpInfosUsagers.Controls.Add(this.label1);
-            this.grpInfosUsagers.Controls.Add(this.rtbMotif);
-            this.grpInfosUsagers.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpInfosUsagers.Location = new System.Drawing.Point(69, 81);
-            this.grpInfosUsagers.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grpInfosUsagers.Name = "grpInfosUsagers";
-            this.grpInfosUsagers.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grpInfosUsagers.Size = new System.Drawing.Size(918, 197);
-            this.grpInfosUsagers.TabIndex = 2;
-            this.grpInfosUsagers.TabStop = false;
-            this.grpInfosUsagers.Text = "Informations usagers";
-            // 
-            // txtVille
-            // 
-            this.txtVille.Location = new System.Drawing.Point(536, 140);
-            this.txtVille.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtVille.Name = "txtVille";
-            this.txtVille.Size = new System.Drawing.Size(350, 30);
-            this.txtVille.TabIndex = 8;
-            this.txtVille.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVille_KeyPress);
-            // 
-            // txtRue
-            // 
-            this.txtRue.Location = new System.Drawing.Point(536, 71);
-            this.txtRue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtRue.Name = "txtRue";
-            this.txtRue.Size = new System.Drawing.Size(350, 30);
-            this.txtRue.TabIndex = 7;
-            this.txtRue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRue_KeyPress);
-            // 
-            // txtCP
-            // 
-            this.txtCP.Location = new System.Drawing.Point(536, 105);
-            this.txtCP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtCP.MaxLength = 5;
-            this.txtCP.Name = "txtCP";
-            this.txtCP.Size = new System.Drawing.Size(152, 30);
-            this.txtCP.TabIndex = 6;
-            this.txtCP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCP_KeyPress);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(422, 145);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 24);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Ville";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(422, 111);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 24);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Code postal";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(422, 75);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 24);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Rue";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(514, 31);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 24);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Adresse sinistre";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 65);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Motif";
-            // 
-            // rtbMotif
-            // 
-            this.rtbMotif.Location = new System.Drawing.Point(104, 62);
-            this.rtbMotif.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.rtbMotif.Name = "rtbMotif";
-            this.rtbMotif.Size = new System.Drawing.Size(220, 98);
-            this.rtbMotif.TabIndex = 0;
-            this.rtbMotif.Text = "";
-            // 
-            // grpDecisions
-            // 
-            this.grpDecisions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
-            this.grpDecisions.Controls.Add(this.btnEquipe);
-            this.grpDecisions.Controls.Add(this.btnAnnuler);
-            this.grpDecisions.Controls.Add(this.cboCaserne);
-            this.grpDecisions.Controls.Add(this.lblCaserne);
-            this.grpDecisions.Controls.Add(this.label6);
-            this.grpDecisions.Controls.Add(this.cboNatureSinistre);
-            this.grpDecisions.Location = new System.Drawing.Point(69, 288);
-            this.grpDecisions.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grpDecisions.Name = "grpDecisions";
-            this.grpDecisions.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grpDecisions.Size = new System.Drawing.Size(918, 154);
-            this.grpDecisions.TabIndex = 3;
-            this.grpDecisions.TabStop = false;
-            this.grpDecisions.Text = "Décisions du régulateur";
             // 
             // btnEquipe
             // 
             this.btnEquipe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
-            this.btnEquipe.Location = new System.Drawing.Point(647, 75);
+            this.btnEquipe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEquipe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnEquipe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEquipe.Font = new System.Drawing.Font("Arial", 12F);
+            this.btnEquipe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnEquipe.Location = new System.Drawing.Point(1164, 154);
             this.btnEquipe.Name = "btnEquipe";
-            this.btnEquipe.Size = new System.Drawing.Size(192, 44);
+            this.btnEquipe.Size = new System.Drawing.Size(204, 65);
             this.btnEquipe.TabIndex = 8;
-            this.btnEquipe.Text = "Consistituer équipe";
+            this.btnEquipe.Text = "Constituer";
             this.btnEquipe.UseVisualStyleBackColor = false;
             this.btnEquipe.Visible = false;
             this.btnEquipe.Click += new System.EventHandler(this.btnEquipe_Click);
@@ -227,9 +110,14 @@
             // btnAnnuler
             // 
             this.btnAnnuler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
-            this.btnAnnuler.Location = new System.Drawing.Point(405, 75);
+            this.btnAnnuler.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAnnuler.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnnuler.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnnuler.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnAnnuler.Location = new System.Drawing.Point(933, 154);
             this.btnAnnuler.Name = "btnAnnuler";
-            this.btnAnnuler.Size = new System.Drawing.Size(204, 44);
+            this.btnAnnuler.Size = new System.Drawing.Size(204, 65);
             this.btnAnnuler.TabIndex = 7;
             this.btnAnnuler.Text = "Effacer";
             this.btnAnnuler.UseVisualStyleBackColor = false;
@@ -237,117 +125,363 @@
             // 
             // cboCaserne
             // 
-            this.cboCaserne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
+            this.cboCaserne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.cboCaserne.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCaserne.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cboCaserne.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.cboCaserne.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.cboCaserne.FormattingEnabled = true;
-            this.cboCaserne.Location = new System.Drawing.Point(583, 22);
+            this.cboCaserne.Location = new System.Drawing.Point(1053, 82);
             this.cboCaserne.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboCaserne.Name = "cboCaserne";
-            this.cboCaserne.Size = new System.Drawing.Size(200, 28);
+            this.cboCaserne.Size = new System.Drawing.Size(315, 41);
             this.cboCaserne.TabIndex = 6;
             this.cboCaserne.SelectedIndexChanged += new System.EventHandler(this.cboCaserne_SelectedIndexChanged);
             // 
             // lblCaserne
             // 
             this.lblCaserne.AutoSize = true;
-            this.lblCaserne.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCaserne.Location = new System.Drawing.Point(421, 26);
+            this.lblCaserne.Font = new System.Drawing.Font("Arial", 12F);
+            this.lblCaserne.Location = new System.Drawing.Point(821, 91);
             this.lblCaserne.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCaserne.Name = "lblCaserne";
-            this.lblCaserne.Size = new System.Drawing.Size(154, 24);
+            this.lblCaserne.Size = new System.Drawing.Size(224, 27);
             this.lblCaserne.TabIndex = 5;
             this.lblCaserne.Text = "Caserne à Mobiliser";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(32, 31);
+            this.label6.Font = new System.Drawing.Font("Arial", 12F);
+            this.label6.Location = new System.Drawing.Point(51, 91);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 24);
+            this.label6.Size = new System.Drawing.Size(202, 27);
             this.label6.TabIndex = 4;
             this.label6.Text = "Nature du sinistre";
             // 
             // cboNatureSinistre
             // 
-            this.cboNatureSinistre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
+            this.cboNatureSinistre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.cboNatureSinistre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboNatureSinistre.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cboNatureSinistre.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.cboNatureSinistre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.cboNatureSinistre.FormattingEnabled = true;
-            this.cboNatureSinistre.Location = new System.Drawing.Point(188, 26);
+            this.cboNatureSinistre.Location = new System.Drawing.Point(261, 82);
             this.cboNatureSinistre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboNatureSinistre.Name = "cboNatureSinistre";
-            this.cboNatureSinistre.Size = new System.Drawing.Size(180, 28);
+            this.cboNatureSinistre.Size = new System.Drawing.Size(526, 41);
             this.cboNatureSinistre.TabIndex = 0;
             this.cboNatureSinistre.SelectedIndexChanged += new System.EventHandler(this.cboNatureSinistre_SelectedIndexChanged);
             // 
             // btnCreer
             // 
             this.btnCreer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
-            this.btnCreer.Location = new System.Drawing.Point(694, 215);
+            this.btnCreer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCreer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreer.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F);
+            this.btnCreer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnCreer.Location = new System.Drawing.Point(1164, 408);
             this.btnCreer.Name = "btnCreer";
-            this.btnCreer.Size = new System.Drawing.Size(192, 44);
+            this.btnCreer.Size = new System.Drawing.Size(204, 65);
             this.btnCreer.TabIndex = 9;
             this.btnCreer.Text = "Creer";
             this.btnCreer.UseVisualStyleBackColor = false;
             this.btnCreer.Visible = false;
             this.btnCreer.Click += new System.EventHandler(this.btnCreer_Click);
             // 
-            // grpEnginsPompiers
+            // flpVehicules
             // 
-            this.grpEnginsPompiers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
-            this.grpEnginsPompiers.Controls.Add(this.dgvPompiers);
-            this.grpEnginsPompiers.Controls.Add(this.btnCreer);
-            this.grpEnginsPompiers.Controls.Add(this.dgvEngins);
-            this.grpEnginsPompiers.Location = new System.Drawing.Point(69, 450);
-            this.grpEnginsPompiers.Name = "grpEnginsPompiers";
-            this.grpEnginsPompiers.Size = new System.Drawing.Size(918, 275);
-            this.grpEnginsPompiers.TabIndex = 10;
-            this.grpEnginsPompiers.TabStop = false;
-            this.grpEnginsPompiers.Text = "Mobilisation des engins et des pompiers";
-            this.grpEnginsPompiers.Visible = false;
+            this.flpVehicules.AutoScroll = true;
+            this.flpVehicules.Location = new System.Drawing.Point(23, 136);
+            this.flpVehicules.Name = "flpVehicules";
+            this.flpVehicules.Size = new System.Drawing.Size(573, 254);
+            this.flpVehicules.TabIndex = 13;
             // 
-            // dgvPompiers
+            // rtbMotif
             // 
-            this.dgvPompiers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPompiers.Location = new System.Drawing.Point(481, 25);
-            this.dgvPompiers.Name = "dgvPompiers";
-            this.dgvPompiers.RowHeadersWidth = 62;
-            this.dgvPompiers.RowTemplate.Height = 28;
-            this.dgvPompiers.Size = new System.Drawing.Size(290, 175);
-            this.dgvPompiers.TabIndex = 12;
+            this.rtbMotif.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
+            this.rtbMotif.Location = new System.Drawing.Point(22, 116);
+            this.rtbMotif.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rtbMotif.Name = "rtbMotif";
+            this.rtbMotif.Size = new System.Drawing.Size(520, 193);
+            this.rtbMotif.TabIndex = 0;
+            this.rtbMotif.Text = "";
             // 
-            // dgvEngins
+            // label1
             // 
-            this.dgvEngins.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEngins.Location = new System.Drawing.Point(36, 25);
-            this.dgvEngins.Name = "dgvEngins";
-            this.dgvEngins.RowHeadersWidth = 62;
-            this.dgvEngins.RowTemplate.Height = 28;
-            this.dgvEngins.Size = new System.Drawing.Size(288, 175);
-            this.dgvEngins.TabIndex = 0;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.label1.Location = new System.Drawing.Point(17, 78);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 33);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Motif";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.label2.Location = new System.Drawing.Point(696, 87);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(224, 33);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Adresse sinistre";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 12F);
+            this.label3.Location = new System.Drawing.Point(697, 142);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 27);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Rue";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 12F);
+            this.label4.Location = new System.Drawing.Point(697, 198);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(141, 27);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Code postal";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 12F);
+            this.label5.Location = new System.Drawing.Point(697, 254);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 27);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Ville";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
+            this.panel1.Controls.Add(this.lblHeader);
+            this.panel1.ForeColor = System.Drawing.Color.Coral;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1532, 112);
+            this.panel1.TabIndex = 11;
+            // 
+            // lblHeader
+            // 
+            this.lblHeader.AutoSize = true;
+            this.lblHeader.Font = new System.Drawing.Font("Arial Rounded MT Bold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
+            this.lblHeader.Location = new System.Drawing.Point(456, 25);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.Size = new System.Drawing.Size(623, 83);
+            this.lblHeader.TabIndex = 0;
+            this.lblHeader.Text = "Nouvelle Mission";
+            this.lblHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dgvMissionsTemp);
+            this.panel2.Controls.Add(this.rtbVille);
+            this.panel2.Controls.Add(this.rtbCP);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.rtbRue);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.rtbMotif);
+            this.panel2.Location = new System.Drawing.Point(70, 249);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1392, 330);
+            this.panel2.TabIndex = 12;
+            // 
+            // rtbVille
+            // 
+            this.rtbVille.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
+            this.rtbVille.Font = new System.Drawing.Font("Arial", 12F);
+            this.rtbVille.Location = new System.Drawing.Point(760, 251);
+            this.rtbVille.Name = "rtbVille";
+            this.rtbVille.Size = new System.Drawing.Size(570, 40);
+            this.rtbVille.TabIndex = 11;
+            this.rtbVille.Text = "";
+            this.rtbVille.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rtbVille_KeyPress);
+            // 
+            // rtbCP
+            // 
+            this.rtbCP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
+            this.rtbCP.Font = new System.Drawing.Font("Arial", 12F);
+            this.rtbCP.Location = new System.Drawing.Point(845, 195);
+            this.rtbCP.MaxLength = 5;
+            this.rtbCP.Name = "rtbCP";
+            this.rtbCP.Size = new System.Drawing.Size(100, 40);
+            this.rtbCP.TabIndex = 6;
+            this.rtbCP.Text = "";
+            this.rtbCP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rtbCP_KeyPress);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F);
+            this.label7.Location = new System.Drawing.Point(16, 23);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(345, 37);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Informations usagers";
+            // 
+            // rtbRue
+            // 
+            this.rtbRue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
+            this.rtbRue.Font = new System.Drawing.Font("Arial", 12F);
+            this.rtbRue.Location = new System.Drawing.Point(760, 139);
+            this.rtbRue.Name = "rtbRue";
+            this.rtbRue.Size = new System.Drawing.Size(570, 40);
+            this.rtbRue.TabIndex = 7;
+            this.rtbRue.Text = "";
+            this.rtbRue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rtbRue_KeyPress);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.btnEquipe);
+            this.panel3.Controls.Add(this.cboCaserne);
+            this.panel3.Controls.Add(this.cboNatureSinistre);
+            this.panel3.Controls.Add(this.btnAnnuler);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.lblCaserne);
+            this.panel3.Font = new System.Drawing.Font("Arial", 12F);
+            this.panel3.Location = new System.Drawing.Point(70, 607);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1392, 235);
+            this.panel3.TabIndex = 13;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F);
+            this.label8.Location = new System.Drawing.Point(16, 20);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(387, 37);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "Décisions du régulateur";
+            // 
+            // pnlEnginPompier
+            // 
+            this.pnlEnginPompier.Controls.Add(this.label12);
+            this.pnlEnginPompier.Controls.Add(this.label13);
+            this.pnlEnginPompier.Controls.Add(this.flpPompiers);
+            this.pnlEnginPompier.Controls.Add(this.label11);
+            this.pnlEnginPompier.Controls.Add(this.label10);
+            this.pnlEnginPompier.Controls.Add(this.label9);
+            this.pnlEnginPompier.Controls.Add(this.flpVehicules);
+            this.pnlEnginPompier.Controls.Add(this.btnCreer);
+            this.pnlEnginPompier.Location = new System.Drawing.Point(70, 877);
+            this.pnlEnginPompier.Name = "pnlEnginPompier";
+            this.pnlEnginPompier.Size = new System.Drawing.Size(1392, 554);
+            this.pnlEnginPompier.TabIndex = 14;
+            this.pnlEnginPompier.Visible = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 12F);
+            this.label12.Location = new System.Drawing.Point(1038, 97);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(137, 27);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "Habillitation";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 12F);
+            this.label13.Location = new System.Drawing.Point(743, 97);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(109, 27);
+            this.label13.TabIndex = 17;
+            this.label13.Text = "Matricule";
+            // 
+            // flpPompiers
+            // 
+            this.flpPompiers.AutoScroll = true;
+            this.flpPompiers.Location = new System.Drawing.Point(748, 136);
+            this.flpPompiers.Name = "flpPompiers";
+            this.flpPompiers.Size = new System.Drawing.Size(574, 254);
+            this.flpPompiers.TabIndex = 16;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 12F);
+            this.label11.Location = new System.Drawing.Point(313, 97);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(97, 27);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "Numero";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 12F);
+            this.label10.Location = new System.Drawing.Point(18, 97);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(198, 27);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Code Type Engin";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F);
+            this.label9.Location = new System.Drawing.Point(16, 22);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(635, 37);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Mobilisation des engins et des pompiers";
+            // 
+            // dgvMissionsTemp
+            // 
+            this.dgvMissionsTemp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMissionsTemp.Location = new System.Drawing.Point(200, 29);
+            this.dgvMissionsTemp.Name = "dgvMissionsTemp";
+            this.dgvMissionsTemp.RowHeadersWidth = 62;
+            this.dgvMissionsTemp.RowTemplate.Height = 28;
+            this.dgvMissionsTemp.Size = new System.Drawing.Size(587, 280);
+            this.dgvMissionsTemp.TabIndex = 12;
             // 
             // ucNouvelleMission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(230)))));
-            this.Controls.Add(this.grpEnginsPompiers);
-            this.Controls.Add(this.grpDecisions);
-            this.Controls.Add(this.grpInfosUsagers);
+            this.Controls.Add(this.pnlEnginPompier);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblDeclenche);
             this.Controls.Add(this.lblMission);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ucNouvelleMission";
-            this.Size = new System.Drawing.Size(1005, 728);
+            this.Size = new System.Drawing.Size(1532, 2075);
             this.Load += new System.EventHandler(this.UserControl1_Load);
-            this.grpInfosUsagers.ResumeLayout(false);
-            this.grpInfosUsagers.PerformLayout();
-            this.grpDecisions.ResumeLayout(false);
-            this.grpDecisions.PerformLayout();
-            this.grpEnginsPompiers.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPompiers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEngins)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.pnlEnginPompier.ResumeLayout(false);
+            this.pnlEnginPompier.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMissionsTemp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -357,17 +491,6 @@
 
         private System.Windows.Forms.Label lblMission;
         private System.Windows.Forms.Label lblDeclenche;
-        private System.Windows.Forms.GroupBox grpInfosUsagers;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox rtbMotif;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtVille;
-        private System.Windows.Forms.TextBox txtRue;
-        private System.Windows.Forms.TextBox txtCP;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox grpDecisions;
         private System.Windows.Forms.ComboBox cboNatureSinistre;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cboCaserne;
@@ -375,8 +498,29 @@
         private System.Windows.Forms.Button btnEquipe;
         private System.Windows.Forms.Button btnAnnuler;
         private System.Windows.Forms.Button btnCreer;
-        private System.Windows.Forms.GroupBox grpEnginsPompiers;
-        private System.Windows.Forms.DataGridView dgvPompiers;
-        private System.Windows.Forms.DataGridView dgvEngins;
+        private System.Windows.Forms.RichTextBox rtbMotif;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblHeader;
+        private System.Windows.Forms.FlowLayoutPanel flpVehicules;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RichTextBox rtbRue;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.RichTextBox rtbCP;
+        private System.Windows.Forms.RichTextBox rtbVille;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel pnlEnginPompier;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.FlowLayoutPanel flpPompiers;
+        private System.Windows.Forms.DataGridView dgvMissionsTemp;
     }
 }
