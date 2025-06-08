@@ -16,8 +16,6 @@ namespace Barseghian_Nezami_SAE25
 {
     public partial class ucGestionEngins : UserControl
     {
-        SQLiteConnection conn = Connexion.Connec;
-
         private DataSet ds = MesDatas.DsGlobal;
 
         private int pos = 0;

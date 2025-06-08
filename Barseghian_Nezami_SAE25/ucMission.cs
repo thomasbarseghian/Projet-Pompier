@@ -28,6 +28,11 @@ namespace Barseghian_Nezami_SAE25
         // Déclaration de l'événement
         public event ClotureClickedEventHandler ClotureClicked;
 
+        public delegate void PdfClickedEventHandler(object sender, EventArgs e);
+
+        // Déclaration de l'événement
+        public event ClotureClickedEventHandler PdfClicked;
+
         public ucMission(DataRow dr)
         {
             InitializeComponent();
@@ -119,10 +124,16 @@ namespace Barseghian_Nezami_SAE25
         }
 
         public delegate void btnCloture_click();
+        public delegate void btnPdf_click();
 
         private void btnCloture_Click(object sender, EventArgs e)
         {
             ClotureClicked?.Invoke(this, e);
+        }
+
+        private void btnPdf_Click(object sender, EventArgs e)
+        {
+            PdfClicked?.Invoke(this, e);
         }
     }
 }

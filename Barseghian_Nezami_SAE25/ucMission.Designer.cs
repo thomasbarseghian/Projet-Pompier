@@ -272,6 +272,7 @@
             this.btnPdf.TabIndex = 17;
             this.btnPdf.Text = "Télécharger PDF";
             this.btnPdf.UseVisualStyleBackColor = false;
+            this.btnPdf.Click += new System.EventHandler(this.btnPdf_Click);
             // 
             // label2
             // 

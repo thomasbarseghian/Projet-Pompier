@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using PdfSharpCore.Pdf;
+using PdfSharpCore.Drawing;
+
 
 namespace Barseghian_Nezami_SAE25
 {
@@ -76,6 +79,8 @@ namespace Barseghian_Nezami_SAE25
                 }
 
                 var control = new ucMission(dr);
+                control.ClotureClicked += Mission_ClotureClicked;
+                control.PdfClicked += Mission_PdfClicked;
                 tlpMissions.Controls.Add(control, col, row);
 
                 col++;
@@ -94,6 +99,19 @@ namespace Barseghian_Nezami_SAE25
         private void Mission_ClotureClicked(object sender, EventArgs e)
         {
             
+        }
+
+        private void Mission_PdfClicked(object sender, EventArgs e)
+        {
+            PdfDocument document = new PdfDocument();
+            document.Info.Title = "Mission";
+            PdfPage page = document.AddPage();
+            XGraphics gfx = XGraphics.FromPdfPage(page);
+            XFont font = new XFont("Verdana", 12);
+
+            gfx.DrawString("Récapitulatif mission", font, XBrushes.Black, new XRect(0, 0, page.Width, page.Height), XStringFormats.TopCenter);
+
+            document.Save("mission.pdf");
         }
     }
 }

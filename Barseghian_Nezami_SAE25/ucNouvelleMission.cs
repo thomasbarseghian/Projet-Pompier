@@ -16,7 +16,6 @@ namespace Barseghian_Nezami_SAE25
 {
     public partial class ucNouvelleMission : UserControl
     {
-        SQLiteConnection conn = Connexion.Connec;
         private DataSet dsLocal = MesDatas.DsGlobal;
         public ucNouvelleMission()
         {
@@ -29,48 +28,36 @@ namespace Barseghian_Nezami_SAE25
 
         private void UserControl1_Load(object sender, EventArgs e)
         {
-
-
-
-
-
-
-            //CONNECTE FAUT ENLEVER
-            SQLiteConnection conn = Connexion.Connec;
-
-
-
-
-
-            lblDeclenche.Text += DateTime.Now;
-            DataTable dtMission = dsLocal.Tables["Mission"];
-            // 1. Récupérer le dernier id de mission
-
-            long numMission = 0;
-            var ids = dtMission.AsEnumerable().Select(row => row.Field<long>("id"));
-            if (ids.Any())
-            {
-                numMission = ids.Max();
-            }
-            lblMission.Text += (numMission+1).ToString();
-
-            // 2. Charger les types de sinistre
-            SQLiteDataAdapter adapterSinistre = new SQLiteDataAdapter("SELECT libelle FROM NatureSinistre;", conn);
-            DataTable tableSinistre = new DataTable();
-            adapterSinistre.Fill(tableSinistre);
+            // 1. Met à jour la date et le numero de la mission 
+            EnteteAJour();
+            // 2. Charger les types de sinistre depuis le DataSet
+            DataTable tableSinistre = dsLocal.Tables["NatureSinistre"];
             cboNatureSinistre.DataSource = tableSinistre;
             cboNatureSinistre.DisplayMember = "libelle";
             cboNatureSinistre.SelectedIndex = -1;
 
-            // 3. Charger les casernes
-            SQLiteDataAdapter adapterCaserne = new SQLiteDataAdapter("SELECT nom FROM Caserne;", conn);
-            DataTable tableCaserne = new DataTable();
-            adapterCaserne.Fill(tableCaserne);
+            // 3. Charger les casernes depuis le DataSet
+            DataTable tableCaserne = dsLocal.Tables["Caserne"];
             cboCaserne.DataSource = tableCaserne;
             cboCaserne.DisplayMember = "nom";
             cboCaserne.SelectedIndex = -1;
 
+        }
 
+        public void EnteteAJour()
+        {
+            lblDeclenche.Text = "déclenchée le : " + DateTime.Now;
+            DataTable dtMission = dsLocal.Tables["Mission"];
+            // 1. Récupérer le dernier id de mission
+
+            long numMission = 0;
+            foreach (DataRow row in dtMission.Rows)
+            {
+                long id = (long)row["id"];
+                if (id > numMission)
+                    numMission = id;
+            }
+            lblMission.Text = "Mission n° " + (numMission + 1).ToString();
         }
 
 
@@ -88,7 +75,7 @@ namespace Barseghian_Nezami_SAE25
 
         private void cboNatureSinistre_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboCaserne.SelectedIndex!=-1)
+            if (cboCaserne.SelectedIndex != -1)
             {
                 btnEquipe.Visible = true;
             }
@@ -135,27 +122,61 @@ namespace Barseghian_Nezami_SAE25
 
         private void btnCreer_Click(object sender, EventArgs e)
         {
+            // 0. Error Provider
+
+            bool hasError = false;
+            epNouvelleMission.Clear(); // Nettoie les erreurs précédentes
+
+            if (string.IsNullOrWhiteSpace(rtbMotif.Text))
+            {
+                epNouvelleMission.SetError(rtbMotif, "Veuillez saisir un motif.");
+                hasError = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(rtbRue.Text))
+            {
+                epNouvelleMission.SetError(rtbRue, "Veuillez saisir une adresse.");
+                hasError = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(rtbCP.Text))
+            {
+                epNouvelleMission.SetError(rtbCP, "Veuillez saisir un code postal.");
+                hasError = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(rtbVille.Text))
+            {
+                epNouvelleMission.SetError(rtbVille, "Veuillez saisir une ville.");
+                hasError = true;
+            }
+            if (rtbCP.Text.Length < 5)
+            {
+                epNouvelleMission.SetError(rtbCP, "Un code postal contient 5 chiffres.");
+                hasError = true;
+            }
+
+            if (hasError)
+            {
+                return; // Stoppe l'exécution si un champ est vide
+            }
             try
             {
                 dgvMissionsTemp.DataSource = null;
-                dgvMissionsTemp.DataSource = dsLocal.Tables["Mission"];
+                dgvMissionsTemp.DataSource = MesDatas.DsGlobal.Tables["Mission"];
 
                 int idMission = int.Parse(lblMission.Text.Substring(10));
 
                 // Ajouter ligne mission
                 DataRow drMission = dsLocal.Tables["Mission"].NewRow();
                 drMission["id"] = idMission;
-                drMission["dateHeureDepart"] = DateTime.Now;
+                drMission["dateHeureDepart"] = lblDeclenche.Text.Substring(15);
                 drMission["motifAppel"] = rtbMotif.Text;
                 drMission["adresse"] = rtbRue.Text;
                 drMission["ville"] = rtbVille.Text;
                 drMission["cp"] = rtbCP.Text;
                 drMission["terminee"] = "0";
-
-                string query = $"SELECT id FROM NatureSinistre WHERE libelle = \"{cboNatureSinistre.Text}\"";
-                SQLiteCommand cmd = new SQLiteCommand(query, conn);
-                drMission["idNatureSinistre"] = Convert.ToInt32(cmd.ExecuteScalar());
-
+                drMission["idNatureSinistre"] = getIdSinistreFromLibelle();
                 drMission["idCaserne"] = cboCaserne.SelectedIndex + 1;
 
                 dsLocal.Tables["Mission"].Rows.Add(drMission);
@@ -170,8 +191,10 @@ namespace Barseghian_Nezami_SAE25
                 cboNatureSinistre.SelectedIndex = -1;
                 btnEquipe.Visible = false;
                 pnlEnginPompier.Visible = false;
+                EnteteAJour();
+
                 dgvMissionsTemp.DataSource = null;
-                dgvMissionsTemp.DataSource = dsLocal.Tables["Mission"];
+                dgvMissionsTemp.DataSource = MesDatas.DsGlobal.Tables["Mission"];
             }
             catch (Exception ex)
             {
@@ -179,114 +202,332 @@ namespace Barseghian_Nezami_SAE25
             }
         }
 
+        public int getIdSinistreFromLibelle()
+        {
+            DataTable dtNatureSinistre = dsLocal.Tables["NatureSinistre"];
+
+            DataRow[] result = dtNatureSinistre.Select($"libelle = '{cboNatureSinistre.Text.Replace("'", "''")}'");
+
+            if (result.Length == 1)
+            {
+                return Convert.ToInt32(result[0]["id"]);
+            }
+            else
+            {
+                MessageBox.Show("Libellé introuvable ou en double.");
+                return -1;
+            }
+
+        }
+
         private void btnEquipe_Click(object sender, EventArgs e)
         {
             // 1. Trouver l'id du sinistre
-            string query1 = "SELECT id FROM NatureSinistre WHERE libelle = @libelle";
-            SQLiteCommand cmd1 = new SQLiteCommand(query1, conn);
-            cmd1.Parameters.AddWithValue("@libelle", cboNatureSinistre.Text);
-            string numSinistre = Convert.ToString(cmd1.ExecuteScalar());
+            string numSinistre = getIdSinistreFromLibelle().ToString();
 
             // 2. Récupérer les véhicules nécessaires
-            string query2 = "SELECT codeTypeEngin, nombre FROM Necessiter WHERE idNatureSinistre = " + numSinistre;
-            SQLiteCommand cmd2 = new SQLiteCommand(query2, conn);
-            SQLiteDataReader reader1 = cmd2.ExecuteReader();
-
+            DataTable dtNecessiter = dsLocal.Tables["Necessiter"];
             List<VehiculeNecessaire> listVehiculeNecessaire = new List<VehiculeNecessaire>();
-            while (reader1.Read())
+
+            foreach (DataRow row in dtNecessiter.Rows)
             {
-                listVehiculeNecessaire.Add(new VehiculeNecessaire
+                if (Convert.ToInt32(row["idNatureSinistre"]) == Convert.ToInt32(numSinistre))
                 {
-                    CodeTypeEngin = reader1["codeTypeEngin"].ToString(),
-                    Numero = Convert.ToInt32(reader1["nombre"])
-                });
+                    listVehiculeNecessaire.Add(new VehiculeNecessaire
+                    {
+                        CodeTypeEngin = row["codeTypeEngin"].ToString(),
+                        Numero = Convert.ToInt32(row["nombre"])
+                    });
+                }
             }
+
+            // 3. Trouver les engins disponibles et les habilitations nécessaires
+            DataTable dtEngin = dsLocal.Tables["Engin"];
+            DataTable dtEmbarquer = dsLocal.Tables["Embarquer"];
 
             List<VehiculeNecessaire> listVehicule = new List<VehiculeNecessaire>();
             List<int> listHabilitations = new List<int>();
             int idCaserne = cboCaserne.SelectedIndex + 1;
 
-            // 3. Trouver les engins disponibles et les habilitations nécessaires
             foreach (VehiculeNecessaire vehicule in listVehiculeNecessaire)
             {
-                string queryEngins = $"SELECT codeTypeEngin, numero FROM Engin WHERE codeTypeEngin = \"{vehicule.CodeTypeEngin}\" AND enMission = 0 AND enPanne = 0 AND idCaserne = {idCaserne} LIMIT {vehicule.Numero}";
-                SQLiteCommand cmdEngins = new SQLiteCommand(queryEngins, conn);
-                SQLiteDataReader readerEngins = cmdEngins.ExecuteReader();
-
-                while (readerEngins.Read())
+                // 1) Récupérer les engins disponibles pour ce type et cette caserne
+                int compteur = 0;
+                foreach (DataRow row in dtEngin.Rows)
                 {
-                    listVehicule.Add(new VehiculeNecessaire
+                    string codeType = row["codeTypeEngin"].ToString();
+                    int mission = Convert.ToInt32(row["enMission"]);
+                    int panne = Convert.ToInt32(row["enPanne"]);
+                    int caserne = Convert.ToInt32(row["idCaserne"]);
+
+                    if (codeType == vehicule.CodeTypeEngin && mission == 0 && panne == 0 && caserne == idCaserne)
                     {
-                        CodeTypeEngin = readerEngins["codeTypeEngin"].ToString(),
-                        Numero = Convert.ToInt32(readerEngins["numero"])
-                    });
+                        VehiculeNecessaire engin = new VehiculeNecessaire
+                        {
+                            CodeTypeEngin = codeType,
+                            Numero = Convert.ToInt32(row["numero"])
+                        };
+                        listVehicule.Add(engin);
+                        compteur++;
+
+                        if (compteur >= vehicule.Numero)
+                            break; // Simule LIMIT
+                    }
                 }
 
-                string query3 = "SELECT idHabilitation, nombre FROM Embarquer WHERE CodeTypeEngin = \"" + vehicule.CodeTypeEngin + "\"";
-                SQLiteCommand cmd3 = new SQLiteCommand(query3, conn);
-                SQLiteDataReader reader2 = cmd3.ExecuteReader();
-
-                while (reader2.Read())
+                // 2) Récupérer les habilitations nécessaires depuis Embarquer
+                foreach (DataRow row in dtEmbarquer.Rows)
                 {
-                    int idHabilitation = Convert.ToInt32(reader2["idHabilitation"]);
-                    int nombre = Convert.ToInt32(reader2["nombre"]);
-
-                    for (int i = 0; i < nombre; i++)
+                    if (row["codeTypeEngin"].ToString() == vehicule.CodeTypeEngin)
                     {
-                        listHabilitations.Add(idHabilitation);
+                        int idHabilitation = Convert.ToInt32(row["idHabilitation"]);
+                        int nombre = Convert.ToInt32(row["nombre"]);
+
+                        for (int i = 0; i < nombre; i++)
+                        {
+                            listHabilitations.Add(idHabilitation);
+                        }
                     }
                 }
             }
+
 
             // 4. Affichage des engins dans le FlowLayoutPanel
             flpVehicules.Controls.Clear();
             foreach (VehiculeNecessaire vehicule in listVehicule)
             {
-                ucAffichageEnginPompier item = new ucAffichageEnginPompier();
-                item.SetDataEngin(vehicule.CodeTypeEngin, vehicule.Numero);
-                flpVehicules.Controls.Add(item);
+                ucAffichageEnginPompier item1 = new ucAffichageEnginPompier();
+                item1.SetDataEngin(vehicule.CodeTypeEngin, vehicule.Numero);
+                flpVehicules.Controls.Add(item1);
             }
 
             // 5. Trouver les pompiers disponibles
-            List<int> pompiersAffectes = new List<int>();
+            DataTable dtPompier = dsLocal.Tables["Pompier"];
+            DataTable dtPasser = dsLocal.Tables["Passer"];
+            DataTable dtTypeEngin = dsLocal.Tables["TypeEngin"];
+            DataTable dtAffectation = dsLocal.Tables["Affectation"];
+
+            List<(int Matricule, int Habilitation, string CodeTypeEngin)> pompiersAffectes = new List<(int, int, string)>();
             flpPompiers.Controls.Clear();
-
-            for (int i = 0; i < listHabilitations.Count; i++)
+            // Vérification des engins disponibles dans la caserne sélectionnée
+            foreach (VehiculeNecessaire vehicule in listVehicule)
             {
-                int hab = listHabilitations[i];
-                string query4 = $@"
-            SELECT matriculePompier
-            FROM Passer pass
-            JOIN Pompier pomp ON pass.matriculePompier = pomp.matricule
-            WHERE idHabilitation = {hab}
-              AND pomp.enMission = 0
-              AND pomp.enConge = 0
-            LIMIT 1";
+                bool enginDisponible = false;
+                string codeType = vehicule.CodeTypeEngin;
 
-                SQLiteCommand cmd4 = new SQLiteCommand(query4, conn);
-                object result = cmd4.ExecuteScalar();
-
-                int matricule = -1;
-                if (result != null)
+                foreach (DataRow row in dtEngin.Rows)
                 {
-                    matricule = Convert.ToInt32(result);
-                    btnCreer.Visible = true;
-                }
-                else
-                {
-                    MessageBox.Show("Pas de pompier disponible pour une des habilitations,\n la mission ne peut pas être déclenchée");
+                    if (row["codeTypeEngin"].ToString() == codeType &&
+                        Convert.ToInt32(row["idCaserne"]) == idCaserne &&
+                        Convert.ToInt32(row["enPanne"]) == 0 &&
+                        Convert.ToInt32(row["enMission"]) == 0)    // si l'engin n'est pas déjà mobilisé
+                    {
+                        enginDisponible = true;
+                        break;
+                    }
                 }
 
-                pompiersAffectes.Add(matricule);
-
-                // 6. Affichage du pompier affecté
-                ucAffichageEnginPompier item = new ucAffichageEnginPompier();
-                item.SetDataPompier(matricule, hab);
-                flpPompiers.Controls.Add(item);
+                if (!enginDisponible)
+                {
+                    MessageBox.Show("Aucun engin disponible de type " + codeType + " dans la caserne sélectionnée.\nMission annulée.");
+                    return;
+                }
             }
 
-            // 7. Rendre visible le panel
+            // Étape 1 – Affecter les pompiers habilités pour chaque engin
+            foreach (VehiculeNecessaire engin in listVehicule)
+            {
+                string codeType = engin.CodeTypeEngin;
+                List<int> habilitationsRequises = GetHabilitationsPourEngin(codeType);
+
+                foreach (int hab in habilitationsRequises)
+                {
+                    bool found = false;
+                    int matricule = -1;
+
+                    foreach (DataRow rowPasser in dtPasser.Rows)
+                    {
+                        if (Convert.ToInt32(rowPasser["idHabilitation"]) == hab)
+                        {
+                            int mat = Convert.ToInt32(rowPasser["matriculePompier"]);
+
+                            foreach (DataRow rowPompier in dtPompier.Rows)
+                            {
+                                if (Convert.ToInt32(rowPompier["matricule"]) == mat &&
+                                    Convert.ToInt32(rowPompier["enMission"]) == 0 &&
+                                    Convert.ToInt32(rowPompier["enConge"]) == 0 &&
+                                    !MatriculeDejaAffecte(pompiersAffectes, mat) &&
+                                    PompierEstActifDansCaserne(dtAffectation, mat, idCaserne))
+                                {
+                                    matricule = mat;
+                                    pompiersAffectes.Add((matricule, hab, codeType));
+                                    found = true;
+                                    break;
+                                }
+                            }
+
+                            if (found)
+                                break;
+                        }
+                    }
+
+                    if (!found)
+                    {
+                        MessageBox.Show($"Pas de pompier disponible avec l'habilitation {hab} pour l'engin {codeType}, mission annulée.");
+                        return;
+                    }
+                }
+            }
+
+            // Étape 2 – Complément si besoin (effectif minimum)
+            foreach (VehiculeNecessaire engin in listVehicule)
+            {
+                string codeType = engin.CodeTypeEngin;
+                int equipageMin = 0;
+
+                foreach (DataRow row in dtTypeEngin.Rows)
+                {
+                    if (row["code"].ToString() == codeType)
+                    {
+                        equipageMin = Convert.ToInt32(row["equipage"]);
+                        break;
+                    }
+                }
+
+                int actuels = 0;
+                foreach (var p in pompiersAffectes)
+                {
+                    if (p.CodeTypeEngin == codeType)
+                        actuels++;
+                }
+
+                int manquants = equipageMin - actuels;
+                while (manquants > 0)
+                {
+                    bool found = false;
+
+                    foreach (DataRow rowPompier in dtPompier.Rows)
+                    {
+                        int mat = Convert.ToInt32(rowPompier["matricule"]);
+
+                        if (Convert.ToInt32(rowPompier["enMission"]) == 0 &&
+                            Convert.ToInt32(rowPompier["enConge"]) == 0 &&
+                            !MatriculeDejaAffecte(pompiersAffectes, mat))
+                        {
+                            pompiersAffectes.Add((mat, -1, codeType));
+                            found = true;
+                            manquants--;
+                            break;
+                        }
+                    }
+
+                    if (!found)
+                    {
+                        MessageBox.Show($"Attention : l'engin {codeType} est lancé avec un équipage incomplet ({equipageMin - manquants}/{equipageMin}).");
+                        break;
+                    }
+                }
+            }
+
+            // Étape 3 – Affichage
+            foreach (var tuple in pompiersAffectes)
+            {
+                int mat = tuple.Matricule;
+                int hab = tuple.Habilitation;
+
+                if (mat != -1)
+                {
+                    ucAffichageEnginPompier item = new ucAffichageEnginPompier();
+                    item.SetDataPompier(mat, hab); // hab peut être -1
+                    flpPompiers.Controls.Add(item);
+                }
+            }
+
             pnlEnginPompier.Visible = true;
+
+            SynchroniserAjoutsDataset(dsLocal, MesDatas.DsGlobal);
+        }
+
+        // Fonction de vérification
+        bool MatriculeDejaAffecte(List<(int Matricule, int Habilitation, string CodeTypeEngin)> liste, int mat)
+            {
+                foreach (var p in liste)
+                {
+                    if (p.Matricule == mat)
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            }          
+        bool PompierEstActifDansCaserne(DataTable dtAffecte, int matricule, int idCaserne2)
+        {
+            foreach (DataRow row in dtAffecte.Rows)
+            {
+                if (Convert.ToInt32(row["matriculePompier"]) == matricule &&
+                    Convert.ToInt32(row["idCaserne"]) == idCaserne2 &&
+                    row["dateFin"] == DBNull.Value)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+        List<int> GetHabilitationsPourEngin(string codeType)
+        {
+            List<int> result = new List<int>();
+
+            DataTable dtEmbarquer2 = dsLocal.Tables["Embarquer"];
+
+            foreach (DataRow row in dtEmbarquer2.Rows)
+            {
+                if (row["CodeTypeEngin"].ToString() == codeType)
+                {
+                    int idHabilitation = Convert.ToInt32(row["IdHabilitation"]);
+                    int nombre = Convert.ToInt32(row["nombre"]);
+
+                    for (int i = 0; i < nombre; i++)
+                    {
+                        result.Add(idHabilitation);
+                    }
+                }
+            }
+
+            return result;
+        }
+
+        public void SynchroniserAjoutsDataset(DataSet dsLocal, DataSet dsGlobal)
+        {
+            foreach (DataTable localTable in dsLocal.Tables)
+            {
+                string tableName = localTable.TableName;
+
+                if (!dsGlobal.Tables.Contains(tableName))
+                {
+                    continue;
+                }
+                DataTable globalTable = dsGlobal.Tables[tableName];
+
+                // Vérifie que la table a une clé primaire
+                if (globalTable.PrimaryKey.Length == 0)
+                {
+                    Console.WriteLine($"Table {tableName} n'a pas de clé primaire. Synchronisation ignorée.");
+                    continue;
+                }
+
+                foreach (DataRow localRow in localTable.Rows)
+                {
+                    // Recherche si une ligne avec la même clé existe déjà dans dsGlobal
+                    DataRow existing = globalTable.Rows.Find(localRow[globalTable.PrimaryKey[0].ColumnName]);
+
+                    if (existing == null)
+                    {
+                        globalTable.ImportRow(localRow); // Ajoute la ligne à dsGlobal
+                    }
+                }
+            }
         }
     }
 }
