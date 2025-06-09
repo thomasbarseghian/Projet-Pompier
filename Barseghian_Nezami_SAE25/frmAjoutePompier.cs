@@ -32,8 +32,8 @@ namespace Barseghian_Nezami_SAE25
                     return;
                 }
                 string query = "SELECT id, nom FROM Caserne";
-                var adapter = new SQLiteDataAdapter(query, conn);
-                var dt = new DataTable();
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conn);
+                DataTable dt = new DataTable();
                 adapter.Fill(dt);
 
                 cboCaserne.DataSource = dt;
@@ -43,8 +43,8 @@ namespace Barseghian_Nezami_SAE25
 
                 // Remplir Grade
                 string query1 = "SELECT * FROM Grade";
-                var adapter1 = new SQLiteDataAdapter(query1, conn);
-                var dt1 = new DataTable();
+                SQLiteDataAdapter adapter1 = new SQLiteDataAdapter(query1, conn);
+                DataTable dt1 = new DataTable();
                 adapter1.Fill(dt1);
 
                 cboGrade.DataSource = dt1;
@@ -76,43 +76,6 @@ namespace Barseghian_Nezami_SAE25
         {
             changeHeaderPosition();
         }
-        
-        // Conception personnalisée
-        private void cboCaserne_DrawItem(object sender, DrawItemEventArgs e)
-        {
-            if (e.Index < 0) return;
-
-            var item = cboCaserne.Items[e.Index] as DataRowView;
-            string text = item["nom"].ToString();
-
-            e.DrawBackground();
-
-            using (Brush whiteBrush = new SolidBrush(Color.White))
-            {
-                e.Graphics.DrawString(text, e.Font, whiteBrush, e.Bounds);
-            }
-
-            e.DrawFocusRectangle();
-        }
-
-        // Conception personnalisée
-        private void cboGrade_DrawItem(object sender, DrawItemEventArgs e)
-        {
-            if (e.Index < 0) return;
-
-            var item = cboGrade.Items[e.Index] as DataRowView;
-            string text = item["libelle"].ToString(); // <- Use the correct column name here
-
-            e.DrawBackground();
-
-            using (Brush whiteBrush = new SolidBrush(Color.White))
-            {
-                e.Graphics.DrawString(text, e.Font, whiteBrush, e.Bounds);
-            }
-
-            e.DrawFocusRectangle();
-        }
-
         // Pour s'assurer que le formulaire est correctement rempli
         private bool ValidateInputs()
         {
@@ -180,15 +143,39 @@ namespace Barseghian_Nezami_SAE25
                 string prenom = txtPrenom.Text;
                 string phone = txtPhone.Text;
                 string grade = cboGrade.SelectedValue.ToString();
-                var dob = dtpNaissance.Value.ToString("yyyy-MM-dd");
-                var da = dtpEmbauche.Value.ToString("yyyy-MM-dd");
+                DateTime dob = dtpNaissance.Value.Date;
+                DateTime da = dtpEmbauche.Value.Date;
                 string sexe = rdbFemme.Checked ? "f" : "m";
                 string type = rdbPompier.Checked ? "p" : "v";
                 int idCaserne = Convert.ToInt32(cboCaserne.SelectedValue);
+                
+                // Vérification si la personne a-t-elle au moins 18 ans ?
+                int age = DateTime.Now.Year - dob.Year;
+                if (dob > DateTime.Now.AddYears(-age)) age--;
 
-               
+                if (age < 18)
+                {
+                    MessageBox.Show("Vous ne pouvez pas ajouter un pompier de moins de 18 ans.", "Âge invalide", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                // Vérification si Date d'embouchure dans le futur ? Confirmer avec l'utilisateur
+                if (da > DateTime.Today)
+                {
+                    DialogResult resultat = MessageBox.Show(
+                        "La date d'embauche est dans le futur.\nVoulez-vous vraiment ajouter ce pompier avec une date future?",
+                        "Confirmer date future",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question
+                    );
+
+                    if (resultat == DialogResult.No)
+                    {
+                        return;
+                    }
+                }
+
                 string query1 = "SELECT MAX(matricule) FROM Pompier";
-                var cmd = new SQLiteCommand(query1, conn);
+                SQLiteCommand cmd = new SQLiteCommand(query1, conn);
                 object result = cmd.ExecuteScalar();
                 int matricule = result != DBNull.Value ? Convert.ToInt32(result) + 1 : 1;
 

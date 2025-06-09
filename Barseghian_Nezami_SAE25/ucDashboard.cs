@@ -91,7 +91,7 @@ namespace Barseghian_Nezami_SAE25
 
                 if (col == 0)
                 {
-                    // Add a new row
+                    // Ajouter nouvelle ligne
                     tlpMissions.RowCount += 1;
                     tlpMissions.RowStyles.Add(new RowStyle(SizeType.AutoSize));
                 }

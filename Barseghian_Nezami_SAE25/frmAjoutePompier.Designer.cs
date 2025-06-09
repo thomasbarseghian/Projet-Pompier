@@ -121,9 +121,8 @@
             this.txtNom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.txtNom.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNom.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNom.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txtNom.Location = new System.Drawing.Point(442, 215);
-            this.txtNom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.txtNom.Location = new System.Drawing.Point(295, 140);
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(292, 37);
             this.txtNom.TabIndex = 7;
@@ -134,9 +133,8 @@
             this.txtPrenom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.txtPrenom.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPrenom.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrenom.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txtPrenom.Location = new System.Drawing.Point(796, 215);
-            this.txtPrenom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPrenom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.txtPrenom.Location = new System.Drawing.Point(531, 140);
             this.txtPrenom.Name = "txtPrenom";
             this.txtPrenom.Size = new System.Drawing.Size(292, 37);
             this.txtPrenom.TabIndex = 8;
@@ -183,8 +181,9 @@
             this.dtpNaissance.CalendarTrailingForeColor = System.Drawing.Color.RosyBrown;
             this.dtpNaissance.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpNaissance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNaissance.Location = new System.Drawing.Point(442, 308);
-            this.dtpNaissance.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtpNaissance.Location = new System.Drawing.Point(295, 200);
+            this.dtpNaissance.MaxDate = new System.DateTime(2026, 12, 31, 0, 0, 0, 0);
+            this.dtpNaissance.MinDate = new System.DateTime(1965, 1, 1, 0, 0, 0, 0);
             this.dtpNaissance.Name = "dtpNaissance";
             this.dtpNaissance.Size = new System.Drawing.Size(372, 35);
             this.dtpNaissance.TabIndex = 12;
@@ -232,8 +231,7 @@
             // 
             this.rdbVolantaire.AutoSize = true;
             this.rdbVolantaire.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbVolantaire.Location = new System.Drawing.Point(266, 5);
-            this.rdbVolantaire.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rdbVolantaire.Location = new System.Drawing.Point(151, 3);
             this.rdbVolantaire.Name = "rdbVolantaire";
             this.rdbVolantaire.Size = new System.Drawing.Size(143, 31);
             this.rdbVolantaire.TabIndex = 18;
@@ -271,12 +269,11 @@
             this.txtPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhone.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txtPhone.Location = new System.Drawing.Point(444, 492);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.txtPhone.Location = new System.Drawing.Point(296, 320);
             this.txtPhone.MaxLength = 10;
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(292, 37);
+            this.txtPhone.Size = new System.Drawing.Size(248, 25);
             this.txtPhone.TabIndex = 20;
             this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
             // 
@@ -349,19 +346,17 @@
             // cboCaserne
             // 
             this.cboCaserne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
-            this.cboCaserne.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboCaserne.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCaserne.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboCaserne.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.cboCaserne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboCaserne.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCaserne.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.cboCaserne.FormattingEnabled = true;
             this.cboCaserne.Items.AddRange(new object[] {
             "Sangy bo na kai kor"});
             this.cboCaserne.Location = new System.Drawing.Point(444, 662);
             this.cboCaserne.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboCaserne.Name = "cboCaserne";
-            this.cboCaserne.Size = new System.Drawing.Size(290, 36);
+            this.cboCaserne.Size = new System.Drawing.Size(250, 32);
             this.cboCaserne.TabIndex = 24;
-            this.cboCaserne.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.cboCaserne_DrawItem);
             // 
             // dtpEmbauche
             // 
@@ -372,8 +367,9 @@
             this.dtpEmbauche.CalendarTrailingForeColor = System.Drawing.Color.RosyBrown;
             this.dtpEmbauche.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpEmbauche.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpEmbauche.Location = new System.Drawing.Point(444, 846);
-            this.dtpEmbauche.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtpEmbauche.Location = new System.Drawing.Point(296, 550);
+            this.dtpEmbauche.MaxDate = new System.DateTime(2026, 12, 31, 0, 0, 0, 0);
+            this.dtpEmbauche.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dtpEmbauche.Name = "dtpEmbauche";
             this.dtpEmbauche.Size = new System.Drawing.Size(372, 35);
             this.dtpEmbauche.TabIndex = 26;
@@ -426,7 +422,7 @@
             this.pnlType.Location = new System.Drawing.Point(444, 938);
             this.pnlType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlType.Name = "pnlType";
-            this.pnlType.Size = new System.Drawing.Size(412, 49);
+            this.pnlType.Size = new System.Drawing.Size(250, 32);
             this.pnlType.TabIndex = 30;
             // 
             // errorProvider1
@@ -436,19 +432,14 @@
             // cboGrade
             // 
             this.cboGrade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
-            this.cboGrade.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboGrade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboGrade.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboGrade.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.cboGrade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboGrade.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboGrade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.cboGrade.FormattingEnabled = true;
-            this.cboGrade.Items.AddRange(new object[] {
-            "Sangy bo na kai kor"});
-            this.cboGrade.Location = new System.Drawing.Point(442, 754);
-            this.cboGrade.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cboGrade.Location = new System.Drawing.Point(295, 490);
             this.cboGrade.Name = "cboGrade";
-            this.cboGrade.Size = new System.Drawing.Size(290, 36);
+            this.cboGrade.Size = new System.Drawing.Size(251, 32);
             this.cboGrade.TabIndex = 32;
-            this.cboGrade.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.cboGrade_DrawItem);
             // 
             // lblGrade
             // 

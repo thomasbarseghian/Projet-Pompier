@@ -35,8 +35,8 @@ namespace Barseghian_Nezami_SAE25
             try
             {
                 string query = "SELECT id, nom FROM Caserne";
-                var adapter = new SQLiteDataAdapter(query, conn);
-                var dt = new DataTable();
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conn);
+                DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 cboCaserne.DataSource = dt;
                 cboCaserne.DisplayMember = "nom";
@@ -71,8 +71,8 @@ namespace Barseghian_Nezami_SAE25
                     WHERE idCaserne = {idCaserne} 
                     AND dateFin is NULL";
 
-                var adapter = new SQLiteDataAdapter(query, conn);
-                var dt = new DataTable();
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conn);
+                DataTable dt = new DataTable();
                 adapter.Fill(dt);
 
                 cboPompier.DataSource = dt;
@@ -89,7 +89,6 @@ namespace Barseghian_Nezami_SAE25
                 MessageBox.Show("Erreur inattendue : " + ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         // Event quand un Pompier est changer
         private void cboPompier_SelectionChangeCommitted(object sender, EventArgs e)
         {
@@ -107,8 +106,8 @@ namespace Barseghian_Nezami_SAE25
 
                 string query = $"SELECT * FROM Pompier WHERE matricule = {matricule}";
 
-                var cmd = new SQLiteCommand(query, conn);
-                var reader = cmd.ExecuteReader();
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                SQLiteDataReader reader = cmd.ExecuteReader();
                 if (!reader.Read()) return;
 
                 nomPompier.Text = reader["nom"].ToString();
@@ -144,13 +143,17 @@ namespace Barseghian_Nezami_SAE25
                 lblGrade.Text = reader["libelle"].ToString();
                 if (isLogged)
                 {
-                    remplirHabilitations(matricule);
+                   pnlPlusInfo.Visible = true;
+                    pnlChoisirGrade.Visible = true;
+                    lbllnfoCarriere.Visible = true;
+                    btnPlusInfoCarriere.Visible = false;
+                    remplirHabilitations(Convert.ToInt32(cboPompier.SelectedValue));
                     remplirCaserneRattachement();
                     remplirPanelGrade();
-                    btnPlusInfoCarriere.Visible = false;
-                    pnlChoisirGrade.Visible = true ;
+                    pnlChoisirGrade.Visible = true;
                     pnlChoisirCaserne.Visible = true;
-
+                    pbChoisirCaserne.Visible = false;
+                    pbEditGrade.Visible = false;
                 }
             }
             catch (SQLiteException ex)
@@ -162,7 +165,6 @@ namespace Barseghian_Nezami_SAE25
                 MessageBox.Show("Erreur inattendue : " + ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         // Helper method pour remplir habilitations
         private void remplirHabilitations(int matricule)
         {
@@ -176,8 +178,8 @@ namespace Barseghian_Nezami_SAE25
                 JOIN Habilitation H ON P1.idHabilitation = H.id
                 WHERE P1.matriculePompier = {matricule}";
 
-                var adapter = new SQLiteDataAdapter(query, conn);
-                var dt = new DataTable();
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conn);
+                DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 foreach(DataRow dr in dt.Rows)
                 {
@@ -197,7 +199,6 @@ namespace Barseghian_Nezami_SAE25
                 MessageBox.Show("Erreur inattendue : " + ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-       
         // Click Event quand Utilisateur veut ajouter un ou plusieurs nouveau(x) habilitation
         private void pbEditHabilitations_Click(object sender, EventArgs e)
         {
@@ -209,12 +210,12 @@ namespace Barseghian_Nezami_SAE25
                 btnConfirmHabilitation.Visible = true;
                 pbEditHabilitations.Visible = false;
                 string query = "SELECT * FROM HABILITATION";
-                
-                var adapter = new SQLiteDataAdapter(query, conn);
-                var dt = new DataTable();
+
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conn);
+                DataTable dt = new DataTable();
                 adapter.Fill(dt);
 
-                var existantLibelle = new List<string>();
+                List<string> existantLibelle = new List<string>();
                 foreach(HabilitationItem item in lbHabilitations.Items)
                 {
                     existantLibelle.Add(item.Id);
@@ -259,7 +260,7 @@ namespace Barseghian_Nezami_SAE25
             try
             {
                 lbAffectations.Items.Clear();
-                var source = (DataTable)cboCaserne.DataSource;
+                DataTable source = (DataTable)cboCaserne.DataSource;
                 cboCaserneRattachement.DataSource = source.Copy();
                 cboCaserneRattachement.DisplayMember = "nom";
                 cboCaserneRattachement.ValueMember = "id";
@@ -275,8 +276,8 @@ namespace Barseghian_Nezami_SAE25
                     JOIN Caserne C ON C.id = A.idCaserne 
                     WHERE A.matriculePompier = {matricule}";
 
-                var cmd = new SQLiteCommand(query, conn);
-                var reader = cmd.ExecuteReader();
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                SQLiteDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
                     string idCaserne = reader["id"].ToString();
@@ -316,22 +317,25 @@ namespace Barseghian_Nezami_SAE25
         // Logique d'authentification de l'administrateur
         private void OpenLoginForm()
         {
-            var loginForm = new frmLogin();
-            var result = loginForm.ShowDialog();
+            frmLogin loginForm = new frmLogin();
+            DialogResult result = loginForm.ShowDialog();
             if (result == DialogResult.OK)
             {
-                pnlPlusInfo.Visible = true;
-                pnlChoisirGrade.Visible = true;
-                lbllnfoCarriere.Visible = true;
                 isLogged = true;
-                btnPlusInfoCarriere.Visible = false;
-                remplirHabilitations(Convert.ToInt32(cboPompier.SelectedValue));
-                remplirCaserneRattachement();
-                remplirPanelGrade();
-                pnlChoisirGrade.Visible = true;
-                pnlChoisirCaserne.Visible = true;
-                pbChoisirCaserne.Visible = false;
-                pbEditGrade.Visible = false;
+                if(cboCaserne.SelectedIndex != -1)
+                {
+                    pnlPlusInfo.Visible = true;
+                    pnlChoisirGrade.Visible = true;
+                    lbllnfoCarriere.Visible = true;
+                    btnPlusInfoCarriere.Visible = false;
+                    remplirHabilitations(Convert.ToInt32(cboPompier.SelectedValue));
+                    remplirCaserneRattachement();
+                    remplirPanelGrade();
+                    pnlChoisirGrade.Visible = true;
+                    pnlChoisirCaserne.Visible = true;
+                    pbChoisirCaserne.Visible = false;
+                    pbEditGrade.Visible = false;
+                }
             }
             else
             {
@@ -345,8 +349,8 @@ namespace Barseghian_Nezami_SAE25
             try
             {
                 string query = "SELECT * FROM Grade";
-                var adapter = new SQLiteDataAdapter(query, conn);
-                var dt = new DataTable();
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conn);
+                DataTable dt = new DataTable();
                 adapter.Fill(dt);
 
                 cboGrade.DataSource = dt;
@@ -405,6 +409,7 @@ namespace Barseghian_Nezami_SAE25
         // Event pour mettre à jour utilisateur
         private void btnMettreJour_Click(object sender, EventArgs e)
         {
+            int totalChanges = 0;
             SQLiteTransaction maTransac = conn.BeginTransaction();
             SQLiteCommand cmd = new SQLiteCommand
             {
@@ -422,15 +427,15 @@ namespace Barseghian_Nezami_SAE25
                          : -1;
                 int enConge = chkConge.Checked == true ? 1 : 0;
                 cmd.CommandText = $@"UPDATE Pompier
-                                set enConge = {enConge}
-                                where matricule = {matricule}";
-                cmd.ExecuteNonQuery();
-                if(!string.IsNullOrEmpty(newGrade))
+                    SET enConge = {enConge}
+                    WHERE matricule = {matricule} AND enConge <> {enConge}";
+                totalChanges += cmd.ExecuteNonQuery();
+                if (!string.IsNullOrEmpty(newGrade))
                 {
-                    cmd.CommandText = $@"UPDATE Pompier 
-                                   SET codeGrade = '{newGrade}'  
-                                   WHERE matricule = {matricule}";
-                    cmd.ExecuteNonQuery();
+                    cmd.CommandText = $@"UPDATE Pompier
+                        SET codeGrade = '{newGrade}'
+                        WHERE matricule = {matricule} AND codeGrade <> '{newGrade}'";
+                    totalChanges += cmd.ExecuteNonQuery();
                 }
                 if (newCaserne != -1 && newCaserne != oldCaserne)
                 {
@@ -447,17 +452,18 @@ namespace Barseghian_Nezami_SAE25
                                     SET dateFin = DATE('now')
                                     WHERE matriculePompier = {matricule}
                                     and idCaserne = {oldCaserne}";
-                        cmd.ExecuteNonQuery();
+                        totalChanges += cmd.ExecuteNonQuery();
 
                         cmd.CommandText = $@"INSERT INTO Affectation 
                                     (matriculePompier, dateA, idCaserne )
                                     VALUES ({matricule}, DATE('now'), {newCaserne})";
-                        cmd.ExecuteNonQuery();
+                        totalChanges += cmd.ExecuteNonQuery();
                         caserneChanger = true;
                     }
                     else
                     {
                         MessageBox.Show("Ce pompier est déjà affecté à une caserne aujourd'hui.");
+                        return;
                     }
                 }
                 if(chklstbHabilitation.CheckedItems.Count > 0)
@@ -466,11 +472,18 @@ namespace Barseghian_Nezami_SAE25
                     {
                         cmd.CommandText = $@"INSERT INTO Passer 
                                         VALUES({matricule}, {item.Id},DATE('now'))";
-                        cmd.ExecuteNonQuery();
+                        totalChanges += cmd.ExecuteNonQuery();
                     }
                 }
                 maTransac.Commit();
-                MessageBox.Show("Transaction réussie !");
+                if (totalChanges > 0)
+                {
+                    MessageBox.Show("Utilisateur mis à jour avec succès :)");
+                }
+                else
+                {
+                    MessageBox.Show("Aucune modification détectée.");
+                }
                 remplirHabilitations(matricule);
                 remplirCaserneRattachement();
                 remplirPanelGrade();
@@ -495,7 +508,7 @@ namespace Barseghian_Nezami_SAE25
             {
                 // annulation de la transaction
                 maTransac.Rollback();
-                MessageBox.Show("Transaction annulée !\n\nErreur : " + ex.Message +
+                MessageBox.Show("La mise à jour de l'utilisateur a été annulée!\nErreur : " + ex.Message +
                    "\n\nDétails : " + ex.StackTrace);
             }
 
@@ -509,18 +522,30 @@ namespace Barseghian_Nezami_SAE25
         // Ajoute nouveau pompier
         private void btnAjoutPompier_Click(object sender, EventArgs e)
         {
-            // on instancie un formulaire enfant
-            frmAjoutePompier fe = new frmAjoutePompier();
-            
-            // on affiche le formulaire
-            DialogResult dr = fe.ShowDialog();
-
-            // On attend la réponse
-            if (dr == DialogResult.OK)
+            if(isLogged)
             {
-                // faire quelquechose 
+
+                // on instancie un formulaire enfant
+                frmAjoutePompier fe = new frmAjoutePompier();
+                
+                // on affiche le formulaire
+                DialogResult dr = fe.ShowDialog();
+
+                // On attend la réponse
+                if (dr == DialogResult.OK)
+                {
+                    // faire quelquechose 
+                }
+                else MessageBox.Show("L'opération d'ajout a été annulée");    
             }
-            else MessageBox.Show("Opération annulée", "Erreur");    
+            else
+            {
+                OpenLoginForm();
+                if(isLogged)
+                {
+                    btnAjoutPompier_Click(sender, e);
+                }
+            }
         }
 
 
