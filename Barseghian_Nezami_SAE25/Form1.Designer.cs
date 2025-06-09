@@ -234,7 +234,6 @@ namespace Barseghian_Nezami_SAE25
             this.pnlMainLayout.Name = "pnlMainLayout";
             this.pnlMainLayout.Size = new System.Drawing.Size(705, 748);
             this.pnlMainLayout.TabIndex = 1;
-            this.pnlMainLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMainLayout_Paint);
             // 
             // label2
             // 

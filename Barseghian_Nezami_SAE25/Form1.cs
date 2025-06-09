@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using Barseghian_Nezami_SAE25.Utils;
+
 
 namespace Barseghian_Nezami_SAE25
 {
@@ -18,6 +20,7 @@ namespace Barseghian_Nezami_SAE25
             InitializeComponent();
         }
 
+        // Charge et applique les icônes aux boutons de la barre latérale.
         private void mainLayout_Load(object sender, EventArgs e)
         {
             // Button DashBoard
@@ -59,14 +62,19 @@ namespace Barseghian_Nezami_SAE25
 
         private void btnQuitter_Click(object sender, EventArgs e)
         {
+            Connexion.FermerConnexion();
             Application.Exit();
         }
+        //  Navigation entre les sections : réalisée par l'ajout dynamique de UserControls
+        //  dans le panel central.
         private void addToPanelLayout(UserControl uc)
         {
             pnlMainLayout.Controls.Clear();
           
             pnlMainLayout.Controls.Add(uc);
         }
+        //  Permet de styliser dynamiquement les boutons de navigation en fonction de
+        //  la section active.
         private void activeBtnStylying(Button btn)
         {
             foreach(Button buttonn in pnlSideBar.Controls.OfType<Button>())
@@ -121,15 +129,6 @@ namespace Barseghian_Nezami_SAE25
             activeBtnStylying((Button)sender);
             addToPanelLayout(stats);
         }
-
-        private void pnlMainLayout_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        /***************************************************************************/
-
-        /***************************************************************************/
 
     }
 }
