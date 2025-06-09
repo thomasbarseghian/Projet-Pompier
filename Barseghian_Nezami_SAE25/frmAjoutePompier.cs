@@ -32,8 +32,8 @@ namespace Barseghian_Nezami_SAE25
                     return;
                 }
                 string query = "SELECT id, nom FROM Caserne";
-                var adapter = new SQLiteDataAdapter(query, conn);
-                var dt = new DataTable();
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conn);
+                DataTable dt = new DataTable();
                 adapter.Fill(dt);
 
                 cboCaserne.DataSource = dt;
@@ -43,8 +43,8 @@ namespace Barseghian_Nezami_SAE25
 
                 // Remplir Grade
                 string query1 = "SELECT * FROM Grade";
-                var adapter1 = new SQLiteDataAdapter(query1, conn);
-                var dt1 = new DataTable();
+                SQLiteDataAdapter adapter1 = new SQLiteDataAdapter(query1, conn);
+                DataTable dt1 = new DataTable();
                 adapter1.Fill(dt1);
 
                 cboGrade.DataSource = dt1;
@@ -175,7 +175,7 @@ namespace Barseghian_Nezami_SAE25
                 }
 
                 string query1 = "SELECT MAX(matricule) FROM Pompier";
-                var cmd = new SQLiteCommand(query1, conn);
+                SQLiteCommand cmd = new SQLiteCommand(query1, conn);
                 object result = cmd.ExecuteScalar();
                 int matricule = result != DBNull.Value ? Convert.ToInt32(result) + 1 : 1;
 

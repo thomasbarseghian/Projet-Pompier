@@ -35,8 +35,8 @@ namespace Barseghian_Nezami_SAE25
             try
             {
                 string query = "SELECT id, nom FROM Caserne";
-                var adapter = new SQLiteDataAdapter(query, conn);
-                var dt = new DataTable();
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conn);
+                DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 cboCaserne.DataSource = dt;
                 cboCaserne.DisplayMember = "nom";
@@ -71,8 +71,8 @@ namespace Barseghian_Nezami_SAE25
                     WHERE idCaserne = {idCaserne} 
                     AND dateFin is NULL";
 
-                var adapter = new SQLiteDataAdapter(query, conn);
-                var dt = new DataTable();
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conn);
+                DataTable dt = new DataTable();
                 adapter.Fill(dt);
 
                 cboPompier.DataSource = dt;
@@ -106,8 +106,8 @@ namespace Barseghian_Nezami_SAE25
 
                 string query = $"SELECT * FROM Pompier WHERE matricule = {matricule}";
 
-                var cmd = new SQLiteCommand(query, conn);
-                var reader = cmd.ExecuteReader();
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                SQLiteDataReader reader = cmd.ExecuteReader();
                 if (!reader.Read()) return;
 
                 nomPompier.Text = reader["nom"].ToString();
@@ -178,8 +178,8 @@ namespace Barseghian_Nezami_SAE25
                 JOIN Habilitation H ON P1.idHabilitation = H.id
                 WHERE P1.matriculePompier = {matricule}";
 
-                var adapter = new SQLiteDataAdapter(query, conn);
-                var dt = new DataTable();
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conn);
+                DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 foreach(DataRow dr in dt.Rows)
                 {
@@ -210,12 +210,12 @@ namespace Barseghian_Nezami_SAE25
                 btnConfirmHabilitation.Visible = true;
                 pbEditHabilitations.Visible = false;
                 string query = "SELECT * FROM HABILITATION";
-                
-                var adapter = new SQLiteDataAdapter(query, conn);
-                var dt = new DataTable();
+
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conn);
+                DataTable dt = new DataTable();
                 adapter.Fill(dt);
 
-                var existantLibelle = new List<string>();
+                List<string> existantLibelle = new List<string>();
                 foreach(HabilitationItem item in lbHabilitations.Items)
                 {
                     existantLibelle.Add(item.Id);
@@ -260,7 +260,7 @@ namespace Barseghian_Nezami_SAE25
             try
             {
                 lbAffectations.Items.Clear();
-                var source = (DataTable)cboCaserne.DataSource;
+                DataTable source = (DataTable)cboCaserne.DataSource;
                 cboCaserneRattachement.DataSource = source.Copy();
                 cboCaserneRattachement.DisplayMember = "nom";
                 cboCaserneRattachement.ValueMember = "id";
@@ -276,8 +276,8 @@ namespace Barseghian_Nezami_SAE25
                     JOIN Caserne C ON C.id = A.idCaserne 
                     WHERE A.matriculePompier = {matricule}";
 
-                var cmd = new SQLiteCommand(query, conn);
-                var reader = cmd.ExecuteReader();
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                SQLiteDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
                     string idCaserne = reader["id"].ToString();
@@ -317,8 +317,8 @@ namespace Barseghian_Nezami_SAE25
         // Logique d'authentification de l'administrateur
         private void OpenLoginForm()
         {
-            var loginForm = new frmLogin();
-            var result = loginForm.ShowDialog();
+            frmLogin loginForm = new frmLogin();
+            DialogResult result = loginForm.ShowDialog();
             if (result == DialogResult.OK)
             {
                 isLogged = true;
@@ -349,8 +349,8 @@ namespace Barseghian_Nezami_SAE25
             try
             {
                 string query = "SELECT * FROM Grade";
-                var adapter = new SQLiteDataAdapter(query, conn);
-                var dt = new DataTable();
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conn);
+                DataTable dt = new DataTable();
                 adapter.Fill(dt);
 
                 cboGrade.DataSource = dt;
