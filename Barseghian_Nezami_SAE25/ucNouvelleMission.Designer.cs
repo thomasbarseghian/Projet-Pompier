@@ -48,7 +48,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblHeader = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dgvMissionsTemp = new System.Windows.Forms.DataGridView();
             this.rtbVille = new System.Windows.Forms.RichTextBox();
             this.rtbCP = new System.Windows.Forms.RichTextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -65,7 +64,6 @@
             this.epNouvelleMission = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMissionsTemp)).BeginInit();
             this.panel3.SuspendLayout();
             this.pnlEnginPompier.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epNouvelleMission)).BeginInit();
@@ -107,7 +105,6 @@
             this.btnEquipe.TabIndex = 8;
             this.btnEquipe.Text = "Constituer";
             this.btnEquipe.UseVisualStyleBackColor = false;
-            this.btnEquipe.Visible = false;
             this.btnEquipe.Click += new System.EventHandler(this.btnEquipe_Click);
             // 
             // btnAnnuler
@@ -290,7 +287,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dgvMissionsTemp);
             this.panel2.Controls.Add(this.rtbVille);
             this.panel2.Controls.Add(this.rtbCP);
             this.panel2.Controls.Add(this.label7);
@@ -305,16 +301,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1392, 330);
             this.panel2.TabIndex = 12;
-            // 
-            // dgvMissionsTemp
-            // 
-            this.dgvMissionsTemp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMissionsTemp.Location = new System.Drawing.Point(167, 72);
-            this.dgvMissionsTemp.Name = "dgvMissionsTemp";
-            this.dgvMissionsTemp.RowHeadersWidth = 62;
-            this.dgvMissionsTemp.RowTemplate.Height = 28;
-            this.dgvMissionsTemp.Size = new System.Drawing.Size(587, 280);
-            this.dgvMissionsTemp.TabIndex = 12;
             // 
             // rtbVille
             // 
@@ -483,7 +469,6 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMissionsTemp)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.pnlEnginPompier.ResumeLayout(false);
@@ -528,7 +513,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.FlowLayoutPanel flpPompiers;
-        private System.Windows.Forms.DataGridView dgvMissionsTemp;
         private System.Windows.Forms.ErrorProvider epNouvelleMission;
     }
 }

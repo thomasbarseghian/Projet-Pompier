@@ -17,8 +17,8 @@ namespace Barseghian_Nezami_SAE25
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle; // ou FixedDialog
-            this.MaximizeBox = false; // si tu ne veux pas le bouton agrandir
-            this.MinimizeBox = true;  // à toi de voir
+            this.MaximizeBox = true;
+            this.MinimizeBox = true;
             this.ControlBox = true;   // garde les boutons
         }
 

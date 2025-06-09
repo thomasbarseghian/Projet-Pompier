@@ -127,6 +127,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connexion.cs" />
+    <Compile Include="GenerateurPdf.cs" />
     <Compile Include="ucAffichageEnginPompier.cs">
       <SubType>UserControl</SubType>
     </Compile>
