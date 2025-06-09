@@ -55,8 +55,8 @@
             this.lblType = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlLayout = new System.Windows.Forms.Panel();
-            this.btnFinEngin = new System.Windows.Forms.Button();
             this.btnDebutEngin = new System.Windows.Forms.Button();
+            this.btnFinEngin = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -202,7 +202,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(183, 49);
             this.tableLayoutPanel1.TabIndex = 16;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // pbStatus
             // 
@@ -388,6 +387,24 @@
             this.pnlLayout.TabIndex = 13;
             this.pnlLayout.Visible = false;
             // 
+            // btnDebutEngin
+            // 
+            this.btnDebutEngin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDebutEngin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
+            this.btnDebutEngin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDebutEngin.FlatAppearance.BorderSize = 0;
+            this.btnDebutEngin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnDebutEngin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDebutEngin.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDebutEngin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnDebutEngin.Location = new System.Drawing.Point(75, 75);
+            this.btnDebutEngin.Name = "btnDebutEngin";
+            this.btnDebutEngin.Size = new System.Drawing.Size(54, 35);
+            this.btnDebutEngin.TabIndex = 14;
+            this.btnDebutEngin.Text = "<<";
+            this.btnDebutEngin.UseVisualStyleBackColor = false;
+            this.btnDebutEngin.Click += new System.EventHandler(this.btnDebutEngin_Click);
+            // 
             // btnFinEngin
             // 
             this.btnFinEngin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
@@ -404,23 +421,6 @@
             this.btnFinEngin.Text = ">>";
             this.btnFinEngin.UseVisualStyleBackColor = false;
             this.btnFinEngin.Click += new System.EventHandler(this.btnFinEngin_Click);
-            // 
-            // btnDebutEngin
-            // 
-            this.btnDebutEngin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
-            this.btnDebutEngin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDebutEngin.FlatAppearance.BorderSize = 0;
-            this.btnDebutEngin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnDebutEngin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDebutEngin.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDebutEngin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btnDebutEngin.Location = new System.Drawing.Point(75, 75);
-            this.btnDebutEngin.Name = "btnDebutEngin";
-            this.btnDebutEngin.Size = new System.Drawing.Size(54, 35);
-            this.btnDebutEngin.TabIndex = 14;
-            this.btnDebutEngin.Text = "<<";
-            this.btnDebutEngin.UseVisualStyleBackColor = false;
-            this.btnDebutEngin.Click += new System.EventHandler(this.btnDebutEngin_Click);
             // 
             // ucGestionEngins
             // 

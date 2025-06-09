@@ -16,8 +16,6 @@ namespace Barseghian_Nezami_SAE25
 {
     public partial class ucGestionEngins : UserControl
     {
-        SQLiteConnection conn = Connexion.Connec;
-
         private DataSet ds = MesDatas.DsGlobal;
 
         private int pos = 0;
@@ -29,6 +27,8 @@ namespace Barseghian_Nezami_SAE25
             changeHeaderPosition();
             CenterControl(pnlLayout, this);
         }
+
+        // Centre horizontalement le contrôle enfant par rapport au contrôle parent (sans modifier la position verticale)
         private void CenterControl(Control child, Control parent)
         {
             int x = (parent.ClientSize.Width - child.Width) / 2;
@@ -40,6 +40,8 @@ namespace Barseghian_Nezami_SAE25
             (this.ClientSize.Width - lblHeader.Width) / 2,
             lblHeader.Location.Y);
         }
+        /* Charge les données nécessaires pour la gestion des engins, crée la relation
+         Caserne-Engins si elle n'existe pas, et définit la clé primaire de la table Caserne */
         private void ucGestionEngins_Load(object sender, EventArgs e)
         {
             try
@@ -58,6 +60,8 @@ namespace Barseghian_Nezami_SAE25
                 MessageBox.Show("Erreur lors du chargement des tables : " + ex.Message);
             }
         }
+        /* Charge la liste des casernes dans le ComboBox à partir du DataSet 
+         (affiche le nom, utilise l'ID comme valeur) */
         private void LoadCboCaserneFromDs()
         {
             try
@@ -65,7 +69,6 @@ namespace Barseghian_Nezami_SAE25
                 if (ds.Tables.Contains("Caserne"))
                 {
                     DataTable dtCaserne = ds.Tables["Caserne"];
-
                     cboCaserne.DataSource = dtCaserne;
                     cboCaserne.DisplayMember = "nom";   
                     cboCaserne.ValueMember = "id";      
@@ -81,9 +84,6 @@ namespace Barseghian_Nezami_SAE25
                 MessageBox.Show("Erreur lors du chargement du combo: " + ex.Message);
             }
         }
-
-       
-
         private void pnlHeader_Resize(object sender, EventArgs e)
         {
             changeHeaderPosition();
@@ -93,7 +93,13 @@ namespace Barseghian_Nezami_SAE25
         {
             CenterControl(pnlLayout, this);
         }
-
+        /* Lorsqu'une caserne est sélectionnée dans le ComboBox :
+            - Récupère l'ID de la caserne sélectionnée
+            - Recherche la ligne correspondante dans la table "Caserne"
+            - Récupère tous les engins liés à cette caserne via la relation "Caserne_Engins"
+            - Si aucun engin n'est trouvé, affiche un message d'information
+            - Sinon, met à jour les labels et affiche les données du premier engin
+            - Rend le panneau de détails visible */
         private void cboCaserne_SelectionChangeCommitted(object sender, EventArgs e)
         {
             if (cboCaserne.SelectedValue == null)
@@ -102,12 +108,10 @@ namespace Barseghian_Nezami_SAE25
             int selectedCaserneId;
             if (!int.TryParse(cboCaserne.SelectedValue.ToString(), out selectedCaserneId))
                 return;
-            // Find parent Caserne row
             DataRow caserneRow = ds.Tables["Caserne"].Rows.Find(selectedCaserneId);
 
             if (caserneRow != null)
             {
-                // Get related Engin rows
                enginRows = caserneRow.GetChildRows("Caserne_Engins");
 
                 if (enginRows.Length == 0)
@@ -126,6 +130,8 @@ namespace Barseghian_Nezami_SAE25
                 MessageBox.Show("Caserne introuvable dans le DataSet.");
             }
         }
+
+        // Utilité fonction pour mettre à jour les donnée sur interface
         private void showData(DataRow dr)
         {
             string codeType = dr["codeTypeEngin"].ToString();
@@ -197,19 +203,12 @@ namespace Barseghian_Nezami_SAE25
                 showData(enginRows[pos]);
             }
         }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnFinEngin_Click(object sender, EventArgs e)
         {
             pos = enginRows.Length - 1;
             showData(enginRows[pos]);
 
         }
-
         private void btnDebutEngin_Click(object sender, EventArgs e)
         {
             pos = 0;
