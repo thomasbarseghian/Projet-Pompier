@@ -18,6 +18,10 @@ namespace Barseghian_Nezami_SAE25
         public mainLayout()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle; // ou FixedDialog
+            this.MaximizeBox = true;
+            this.MinimizeBox = true;
+            this.ControlBox = true;   // garde les boutons
         }
 
         // Charge et applique les icônes aux boutons de la barre latérale.

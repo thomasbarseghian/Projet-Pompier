@@ -343,8 +343,8 @@
             this.panel22.Location = new System.Drawing.Point(578, 212);
             this.panel22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel22.Name = "panel22";
-            this.panel22.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.panel22.Size = new System.Drawing.Size(450, 95);
+            this.panel22.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.panel22.Size = new System.Drawing.Size(300, 62);
             this.panel22.TabIndex = 11;
             // 
             // Type
@@ -365,8 +365,7 @@
             this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.panel23.Controls.Add(this.lblTypePompier);
             this.panel23.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel23.Location = new System.Drawing.Point(0, 41);
-            this.panel23.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel23.Location = new System.Drawing.Point(0, 27);
             this.panel23.Name = "panel23";
             this.panel23.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel23.Size = new System.Drawing.Size(450, 46);
@@ -394,8 +393,8 @@
             this.panel20.Location = new System.Drawing.Point(24, 212);
             this.panel20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel20.Name = "panel20";
-            this.panel20.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.panel20.Size = new System.Drawing.Size(450, 95);
+            this.panel20.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.panel20.Size = new System.Drawing.Size(300, 62);
             this.panel20.TabIndex = 7;
             // 
             // panel21
@@ -403,8 +402,7 @@
             this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.panel21.Controls.Add(this.lblMatricule);
             this.panel21.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel21.Location = new System.Drawing.Point(0, 41);
-            this.panel21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel21.Location = new System.Drawing.Point(0, 27);
             this.panel21.Name = "panel21";
             this.panel21.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel21.Size = new System.Drawing.Size(450, 46);
@@ -446,8 +444,8 @@
             this.pnlChoisirGrade.Location = new System.Drawing.Point(578, 449);
             this.pnlChoisirGrade.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlChoisirGrade.Name = "pnlChoisirGrade";
-            this.pnlChoisirGrade.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.pnlChoisirGrade.Size = new System.Drawing.Size(450, 112);
+            this.pnlChoisirGrade.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.pnlChoisirGrade.Size = new System.Drawing.Size(300, 73);
             this.pnlChoisirGrade.TabIndex = 16;
             this.pnlChoisirGrade.Visible = false;
             // 
@@ -462,7 +460,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(227, 27);
             this.label9.TabIndex = 0;
-            this.label9.Text = "Choisissez la Grade";
+            this.label9.Text = "Choisissez le Grade";
             // 
             // cboGrade
             // 
@@ -474,8 +472,7 @@
             this.cboGrade.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboGrade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.cboGrade.FormattingEnabled = true;
-            this.cboGrade.Location = new System.Drawing.Point(0, 63);
-            this.cboGrade.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cboGrade.Location = new System.Drawing.Point(0, 38);
             this.cboGrade.Name = "cboGrade";
             this.cboGrade.Size = new System.Drawing.Size(450, 41);
             this.cboGrade.TabIndex = 8;
@@ -490,8 +487,8 @@
             this.panel15.Location = new System.Drawing.Point(26, 568);
             this.panel15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel15.Name = "panel15";
-            this.panel15.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.panel15.Size = new System.Drawing.Size(450, 95);
+            this.panel15.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.panel15.Size = new System.Drawing.Size(300, 62);
             this.panel15.TabIndex = 15;
             // 
             // panel16
@@ -499,8 +496,7 @@
             this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.panel16.Controls.Add(this.lblBip);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel16.Location = new System.Drawing.Point(0, 41);
-            this.panel16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel16.Location = new System.Drawing.Point(0, 27);
             this.panel16.Name = "panel16";
             this.panel16.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel16.Size = new System.Drawing.Size(450, 46);
@@ -541,8 +537,8 @@
             this.panel2.Location = new System.Drawing.Point(578, 568);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.panel2.Size = new System.Drawing.Size(450, 95);
+            this.panel2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.panel2.Size = new System.Drawing.Size(300, 62);
             this.panel2.TabIndex = 13;
             // 
             // panel4
@@ -550,8 +546,7 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.panel4.Controls.Add(this.lblEmbauche);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 41);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel4.Location = new System.Drawing.Point(0, 27);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Size = new System.Drawing.Size(450, 46);
@@ -592,8 +587,8 @@
             this.panel12.Location = new System.Drawing.Point(24, 449);
             this.panel12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel12.Name = "panel12";
-            this.panel12.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.panel12.Size = new System.Drawing.Size(450, 95);
+            this.panel12.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.panel12.Size = new System.Drawing.Size(300, 62);
             this.panel12.TabIndex = 14;
             // 
             // pnlGrade
@@ -602,8 +597,7 @@
             this.pnlGrade.Controls.Add(this.pbEditGrade);
             this.pnlGrade.Controls.Add(this.lblGrade);
             this.pnlGrade.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlGrade.Location = new System.Drawing.Point(0, 41);
-            this.pnlGrade.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlGrade.Location = new System.Drawing.Point(0, 27);
             this.pnlGrade.Name = "pnlGrade";
             this.pnlGrade.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlGrade.Size = new System.Drawing.Size(450, 46);
@@ -657,8 +651,8 @@
             this.panel8.Location = new System.Drawing.Point(24, 331);
             this.panel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel8.Name = "panel8";
-            this.panel8.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.panel8.Size = new System.Drawing.Size(450, 95);
+            this.panel8.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.panel8.Size = new System.Drawing.Size(300, 62);
             this.panel8.TabIndex = 6;
             // 
             // panel9
@@ -666,8 +660,7 @@
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.panel9.Controls.Add(this.lblTelephone);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(0, 41);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel9.Location = new System.Drawing.Point(0, 27);
             this.panel9.Name = "panel9";
             this.panel9.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel9.Size = new System.Drawing.Size(450, 46);
@@ -720,8 +713,8 @@
             this.panel5.Location = new System.Drawing.Point(578, 331);
             this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel5.Name = "panel5";
-            this.panel5.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.panel5.Size = new System.Drawing.Size(450, 95);
+            this.panel5.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.panel5.Size = new System.Drawing.Size(300, 62);
             this.panel5.TabIndex = 3;
             // 
             // panel6
@@ -729,8 +722,7 @@
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.panel6.Controls.Add(this.lblDOB);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 41);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel6.Location = new System.Drawing.Point(0, 27);
             this.panel6.Name = "panel6";
             this.panel6.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel6.Size = new System.Drawing.Size(450, 46);
@@ -920,8 +912,8 @@
             this.panel17.Location = new System.Drawing.Point(24, 143);
             this.panel17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel17.Name = "panel17";
-            this.panel17.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.panel17.Size = new System.Drawing.Size(1002, 182);
+            this.panel17.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.panel17.Size = new System.Drawing.Size(668, 118);
             this.panel17.TabIndex = 18;
             // 
             // panel19
@@ -933,8 +925,7 @@
             this.panel19.Controls.Add(this.lbHabilitations);
             this.panel19.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel19.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel19.Location = new System.Drawing.Point(0, 42);
-            this.panel19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel19.Location = new System.Drawing.Point(0, 27);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(1002, 132);
             this.panel19.TabIndex = 2;
@@ -957,8 +948,8 @@
             this.pbEditHabilitations.BackColor = System.Drawing.Color.Transparent;
             this.pbEditHabilitations.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbEditHabilitations.Image = ((System.Drawing.Image)(resources.GetObject("pbEditHabilitations.Image")));
-            this.pbEditHabilitations.Location = new System.Drawing.Point(906, 35);
-            this.pbEditHabilitations.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbEditHabilitations.Location = new System.Drawing.Point(403, 15);
+            this.pbEditHabilitations.Margin = new System.Windows.Forms.Padding(2);
             this.pbEditHabilitations.Name = "pbEditHabilitations";
             this.pbEditHabilitations.Size = new System.Drawing.Size(68, 63);
             this.pbEditHabilitations.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

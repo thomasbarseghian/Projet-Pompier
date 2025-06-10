@@ -95,7 +95,7 @@
             // 
             // cboCaserne
             // 
-            this.cboCaserne.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cboCaserne.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.cboCaserne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.cboCaserne.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -226,7 +226,7 @@
             // 
             // pbEngin
             // 
-            this.pbEngin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pbEngin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbEngin.Location = new System.Drawing.Point(460, 42);
             this.pbEngin.Name = "pbEngin";
@@ -373,7 +373,7 @@
             // 
             // pnlLayout
             // 
-            this.pnlLayout.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pnlLayout.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlLayout.Controls.Add(this.btnDebutEngin);
             this.pnlLayout.Controls.Add(this.btnFinEngin);
@@ -486,3 +486,4 @@
         private System.Windows.Forms.Button btnDebutEngin;
     }
 }
+

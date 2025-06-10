@@ -1,5 +1,6 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,9 +11,14 @@ namespace Barseghian_Nezami_SAE25
     {
         private string codeTypeEngin;
 
-        private int nombre;
+        private int numero;
+
+        private int idCaserne;
 
         public string CodeTypeEngin { get => codeTypeEngin; set => codeTypeEngin = value; }
-        public int Nombre { get => nombre; set => nombre = value; }
+        public int Numero { get => numero; set => numero = value; }
+
+        public int IdCaserne { get => idCaserne; set => idCaserne = value; }
+
     }
 }
