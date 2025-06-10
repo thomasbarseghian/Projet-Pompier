@@ -232,8 +232,8 @@ namespace Barseghian_Nezami_SAE25
             // 
             // pnlMainLayout
             // 
-            this.pnlMainLayout.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlMainLayout.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlMainLayout.AutoScroll = true;
             this.pnlMainLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(230)))));
@@ -297,4 +297,3 @@ namespace Barseghian_Nezami_SAE25
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
-

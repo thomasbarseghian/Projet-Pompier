@@ -29,7 +29,7 @@ namespace Barseghian_Nezami_SAE25
         {
             // Button DashBoard
             Image img = Image.FromFile(@"..\..\Resources\Icons\dashboard.png");
-            Image resizedImage = new Bitmap(img, new Size(50, 50)); 
+            Image resizedImage = new Bitmap(img, new Size(50, 50));
             btnTableauBord.Image = resizedImage;
 
             // Button Nouvelle Mission
@@ -74,18 +74,18 @@ namespace Barseghian_Nezami_SAE25
         private void addToPanelLayout(UserControl uc)
         {
             pnlMainLayout.Controls.Clear();
-          
+
             pnlMainLayout.Controls.Add(uc);
         }
         //  Permet de styliser dynamiquement les boutons de navigation en fonction de
         //  la section active.
         private void activeBtnStylying(Button btn)
         {
-            foreach(Button buttonn in pnlSideBar.Controls.OfType<Button>())
+            foreach (Button buttonn in pnlSideBar.Controls.OfType<Button>())
             {
-                if(buttonn == btn)
+                if (buttonn == btn)
                 {
-                    buttonn.BackColor = Color.FromArgb(250, 128, 0); 
+                    buttonn.BackColor = Color.FromArgb(250, 128, 0);
                 }
                 else
                 {

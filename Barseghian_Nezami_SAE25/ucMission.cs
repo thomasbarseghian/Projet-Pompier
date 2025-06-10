@@ -19,7 +19,6 @@ namespace Barseghian_Nezami_SAE25
         {
             InitializeComponent();
             this.Dock = DockStyle.Fill;
-
             centerLayout();
         }
 

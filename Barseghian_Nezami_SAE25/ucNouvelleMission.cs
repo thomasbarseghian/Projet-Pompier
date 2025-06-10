@@ -49,7 +49,7 @@ namespace Barseghian_Nezami_SAE25
 
         public void EnteteAJour()
         {
-            lblDeclenche.Text = "déclenchée le : " + DateTime.Now;
+            lblDeclenche.Text = "Déclenchée le : " + DateTime.Now;
             DataTable dtMission = dsLocal.Tables["Mission"];
             // 1. Récupérer le dernier id de mission
 

@@ -1,19 +1,9 @@
 ﻿using Barseghian_Nezami_SAE25.Utils;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Data.SQLite;
-using System.Diagnostics;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
-
 
 namespace Barseghian_Nezami_SAE25
 {
@@ -217,3 +207,4 @@ namespace Barseghian_Nezami_SAE25
         }
     }
 }
+
