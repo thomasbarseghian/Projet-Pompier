@@ -19,7 +19,7 @@ namespace Barseghian_Nezami_SAE25
         public int Numero { get; private set; }
 
         // Données Pompier
-        public int Matricule { get; private set; }
+        public string Nom { get; private set; }
         public int Habilitation { get; private set; }
 
         // Diffencier
@@ -48,13 +48,13 @@ namespace Barseghian_Nezami_SAE25
             pb2.Image = resizedImage2;
         }
 
-        public void SetDataPompier(int matricule, int habilitation)
+        public void SetDataPompier(string nom, int habilitation)
         {
             EstEngin = false;
 
-            Matricule = matricule;
+            Nom = nom;
             Habilitation = habilitation;
-            lbl1.Text = matricule.ToString();
+            lbl1.Text = nom;
             lbl2.Text = habilitation.ToString();
             Image img = Image.FromFile(@"..\..\Resources\Icons\matricule.png");
             Image resizedImage = new Bitmap(img, new Size(50, 30));

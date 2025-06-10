@@ -16,8 +16,8 @@ namespace Barseghian_Nezami_SAE25
 {
     public partial class ucNouvelleMission : UserControl
     {
-        private List<VehiculeNecessaire> listVehicule = new List<VehiculeNecessaire>();
-        private List<(int Matricule, int Habilitation, string CodeTypeEngin)> pompiersAffectes = new List<(int, int, string)>();
+        private List<VehiculeNecessaire> listVehicule;
+        private List<(int Matricule, int Habilitation, string CodeTypeEngin)> pompiersAffectes;
 
         private DataSet dsLocal = MesDatas.DsGlobal;
         public ucNouvelleMission()
@@ -180,6 +180,7 @@ namespace Barseghian_Nezami_SAE25
                 cboNatureSinistre.SelectedIndex = -1;
                 pnlEnginPompier.Visible = false;
                 EnteteAJour();
+                SynchroniserAjoutsDataset(dsLocal, MesDatas.DsGlobal);
             }
             catch (Exception ex)
             {
@@ -228,6 +229,9 @@ namespace Barseghian_Nezami_SAE25
                 return; // Stoppe l'exécution si un champ est vide
             }
 
+            //0.5 Initialisation des listes
+            listVehicule = new List<VehiculeNecessaire>();
+            pompiersAffectes = new List<(int, int, string)>();
 
             // 1. Trouver l'id du sinistre
             int numeroSinistre = getIdSinistreFromLibelle();
@@ -280,7 +284,7 @@ namespace Barseghian_Nezami_SAE25
                             };
                             listVehicule.Add(engin);
                             compteur++;
-
+                            row["enMission"] = 1;
                             if (compteur >= vehicule.Numero)
                             {
                                 break;
@@ -351,11 +355,13 @@ namespace Barseghian_Nezami_SAE25
                                     if (Convert.ToInt32(rowPompier["matricule"]) == mat &&
                                         Convert.ToInt32(rowPompier["enMission"]) == 0 &&
                                         Convert.ToInt32(rowPompier["enConge"]) == 0 &&
+                                        !MatriculeDejaAffecte(pompiersAffectes, mat) &&
                                         PompierEstActifDansCaserne(dtAffectation, mat, idCaserne))
                                     {
                                         matricule = mat;
                                         pompiersAffectes.Add((matricule, hab, codeType));
                                         found = true;
+                                        rowPompier["enMission"] = 1;
                                         break;
                                     }
                                 }
@@ -432,15 +438,26 @@ namespace Barseghian_Nezami_SAE25
 
                     if (mat != -1)
                     {
+                        string nomPompier = "Inconnu";
+
+                        // Recherche du nom dans la table Pompier
+                        foreach (DataRow row in MesDatas.DsGlobal.Tables["Pompier"].Rows)
+                        {
+                            if (Convert.ToInt32(row["matricule"]) == mat)
+                            {
+                                nomPompier = row["nom"].ToString();
+                                break;
+                            }
+                        }
+
                         ucAffichageEnginPompier item = new ucAffichageEnginPompier();
-                        item.SetDataPompier(mat, hab);
+                        item.SetDataPompier(nomPompier, hab);
                         flpPompiers.Controls.Add(item);
                     }
                 }
 
-                pnlEnginPompier.Visible = true;
 
-                SynchroniserAjoutsDataset(dsLocal, MesDatas.DsGlobal);
+                pnlEnginPompier.Visible = true;
             }
         }
 
