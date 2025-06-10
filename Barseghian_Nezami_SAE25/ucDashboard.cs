@@ -106,8 +106,6 @@ namespace Barseghian_Nezami_SAE25
 
         private void Mission_ClotureClicked(object sender, int idMission)
         {
-            string messagePDF;
-
             // Requête Mission
             string requete1 = "SELECT * FROM Mission";
             SQLiteDataAdapter da1;
@@ -135,27 +133,81 @@ namespace Barseghian_Nezami_SAE25
             {
                 try
                 {
+                    // Mise à jour des tables Mobiliser et PartirAvec
                     string requete2 = "SELECT * FROM Mobiliser";
                     SQLiteDataAdapter da2 = new SQLiteDataAdapter(requete2, conn);
                     SQLiteCommandBuilder cb2 = new SQLiteCommandBuilder(da2);
                     da2.Update(MesDatas.DsGlobal, "Mobiliser");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erreur lors de la mise à jour de la table Mobiliser : " + ex.Message);
-                    return;
-                }
 
-                try
-                {
                     string requete3 = "SELECT * FROM PartirAvec";
                     SQLiteDataAdapter da3 = new SQLiteDataAdapter(requete3, conn);
                     SQLiteCommandBuilder cb3 = new SQLiteCommandBuilder(da3);
                     da3.Update(MesDatas.DsGlobal, "PartirAvec");
+
+                    // Mise à jour des POMPIERS enMission = 0
+                    DataTable tableMobiliser = MesDatas.DsGlobal.Tables["Mobiliser"];
+                    if (tableMobiliser.PrimaryKey == null || tableMobiliser.PrimaryKey.Length == 0)
+                    {
+                        tableMobiliser.PrimaryKey = new DataColumn[] {
+                            tableMobiliser.Columns["matriculePompier"],
+                            tableMobiliser.Columns["idMission"]
+                        };
+                    }
+                    DataTable tablePompier = MesDatas.DsGlobal.Tables["Pompier"];
+                    foreach (DataRow row in tableMobiliser.Rows)
+                    {
+                        if (Convert.ToInt32(row["idMission"]) == idMission)
+                        {
+                            int matricule = Convert.ToInt32(row["matriculePompier"]);
+                            foreach (DataRow pompierRow in tablePompier.Rows)
+                            {
+                                if (Convert.ToInt32(pompierRow["matricule"]) == matricule &&
+                                    Convert.ToInt32(pompierRow["enMission"]) == 1)
+                                {
+                                    pompierRow["enMission"] = 0;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+
+                    // Mise à jour des ENGINS enMission = 0
+                    DataTable tablePartirAvec = MesDatas.DsGlobal.Tables["PartirAvec"];
+                    DataTable tableEngin = MesDatas.DsGlobal.Tables["Engin"];
+                    foreach (DataRow row in tablePartirAvec.Rows)
+                    {
+                        if (Convert.ToInt32(row["idMission"]) == idMission)
+                        {
+                            int numero = Convert.ToInt32(row["numeroEngin"]);
+                            string codeType = row["codeTypeEngin"].ToString();
+                            int idCaserne = Convert.ToInt32(row["idCaserne"]);
+
+                            foreach (DataRow enginRow in tableEngin.Rows)
+                            {
+                                if (Convert.ToInt32(enginRow["numero"]) == numero &&
+                                    enginRow["codeTypeEngin"].ToString() == codeType &&
+                                    Convert.ToInt32(enginRow["idCaserne"]) == idCaserne &&
+                                    Convert.ToInt32(enginRow["enMission"]) == 1)
+                                {
+                                    enginRow["enMission"] = 0;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+
+                    // MAJ du DataSet en base
+                    SQLiteDataAdapter daPompier = new SQLiteDataAdapter("SELECT * FROM Pompier", conn);
+                    SQLiteCommandBuilder cbPompier = new SQLiteCommandBuilder(daPompier);
+                    daPompier.Update(MesDatas.DsGlobal, "Pompier");
+
+                    SQLiteDataAdapter daEngin = new SQLiteDataAdapter("SELECT * FROM Engin", conn);
+                    SQLiteCommandBuilder cbEngin = new SQLiteCommandBuilder(daEngin);
+                    daEngin.Update(MesDatas.DsGlobal, "Engin");
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erreur lors de la mise à jour de la table PartirAvec : " + ex.Message);
+                    MessageBox.Show("Erreur lors de la mise à jour : " + ex.Message);
                     return;
                 }
 
@@ -180,6 +232,7 @@ namespace Barseghian_Nezami_SAE25
                 MessageBox.Show("Cette mission est déjà clôturée.");
             }
 
+            // Génération du PDF
             try
             {
                 string chemin = "rapport_mission" + idMission.ToString() + ".pdf";
@@ -192,13 +245,13 @@ namespace Barseghian_Nezami_SAE25
         }
 
 
+
         private void Mission_PdfClicked(object sender, int idMission)
         {
             try
             {
                 string chemin = "rapport_mission" + idMission.ToString() + ".pdf";
                 GenerateurPdf.GenererPdfMission(idMission, chemin);
-                MessageBox.Show("PDF récapitulatif généré.");
             }
             catch (Exception ex)
             {

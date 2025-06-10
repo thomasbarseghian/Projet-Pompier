@@ -49,8 +49,9 @@
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.ForeColor = System.Drawing.Color.Coral;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(771, 73);
+            this.pnlHeader.Size = new System.Drawing.Size(1156, 112);
             this.pnlHeader.TabIndex = 3;
             this.pnlHeader.Resize += new System.EventHandler(this.pnlHeader_Resize);
             // 
@@ -60,10 +61,11 @@
             this.pnlChoisirGrade.BackColor = System.Drawing.Color.Transparent;
             this.pnlChoisirGrade.Controls.Add(this.label9);
             this.pnlChoisirGrade.Controls.Add(this.cboFiltre);
-            this.pnlChoisirGrade.Location = new System.Drawing.Point(3, 35);
+            this.pnlChoisirGrade.Location = new System.Drawing.Point(4, 54);
+            this.pnlChoisirGrade.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlChoisirGrade.Name = "pnlChoisirGrade";
-            this.pnlChoisirGrade.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.pnlChoisirGrade.Size = new System.Drawing.Size(201, 38);
+            this.pnlChoisirGrade.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
+            this.pnlChoisirGrade.Size = new System.Drawing.Size(302, 75);
             this.pnlChoisirGrade.TabIndex = 17;
             // 
             // label9
@@ -71,9 +73,10 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.label9.Location = new System.Drawing.Point(3, 6);
+            this.label9.Location = new System.Drawing.Point(4, 9);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 18);
+            this.label9.Size = new System.Drawing.Size(66, 27);
             this.label9.TabIndex = 0;
             this.label9.Text = "Filtre";
             // 
@@ -90,9 +93,10 @@
             "Toutes",
             "En cours",
             "Terminées"});
-            this.cboFiltre.Location = new System.Drawing.Point(47, 0);
+            this.cboFiltre.Location = new System.Drawing.Point(70, 0);
+            this.cboFiltre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboFiltre.Name = "cboFiltre";
-            this.cboFiltre.Size = new System.Drawing.Size(149, 30);
+            this.cboFiltre.Size = new System.Drawing.Size(222, 41);
             this.cboFiltre.TabIndex = 8;
             this.cboFiltre.SelectionChangeCommitted += new System.EventHandler(this.cboGrade_SelectionChangeCommitted);
             // 
@@ -101,9 +105,10 @@
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Arial Rounded MT Bold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
-            this.lblHeader.Location = new System.Drawing.Point(195, 14);
+            this.lblHeader.Location = new System.Drawing.Point(292, 22);
+            this.lblHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(406, 55);
+            this.lblHeader.Size = new System.Drawing.Size(606, 83);
             this.lblHeader.TabIndex = 0;
             this.lblHeader.Text = "Tableau de bord";
             this.lblHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -117,10 +122,11 @@
             this.tlpMissions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpMissions.Dock = System.Windows.Forms.DockStyle.Top;
             this.tlpMissions.Location = new System.Drawing.Point(0, 0);
+            this.tlpMissions.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tlpMissions.Name = "tlpMissions";
             this.tlpMissions.RowCount = 1;
             this.tlpMissions.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpMissions.Size = new System.Drawing.Size(771, 0);
+            this.tlpMissions.Size = new System.Drawing.Size(1156, 0);
             this.tlpMissions.TabIndex = 4;
             // 
             // panel1
@@ -128,31 +134,34 @@
             this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.tlpMissions);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 73);
+            this.panel1.Location = new System.Drawing.Point(0, 112);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(771, 599);
+            this.panel1.Size = new System.Drawing.Size(1156, 922);
             this.panel1.TabIndex = 5;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 678);
+            this.panel2.Location = new System.Drawing.Point(0, 1043);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(771, 19);
+            this.panel2.Size = new System.Drawing.Size(1156, 29);
             this.panel2.TabIndex = 6;
             // 
             // ucDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlHeader);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ucDashboard";
-            this.Size = new System.Drawing.Size(771, 697);
+            this.Size = new System.Drawing.Size(1156, 1072);
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             this.pnlChoisirGrade.ResumeLayout(false);
