@@ -87,9 +87,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
-            this.chklstbHabilitation = new System.Windows.Forms.CheckedListBox();
             this.pbEditHabilitations = new System.Windows.Forms.PictureBox();
             this.btnConfirmHabilitation = new System.Windows.Forms.Button();
+            this.chklstbHabilitation = new System.Windows.Forms.CheckedListBox();
             this.lbHabilitations = new System.Windows.Forms.ListBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -893,18 +893,6 @@
             this.panel19.Size = new System.Drawing.Size(668, 86);
             this.panel19.TabIndex = 2;
             // 
-            // chklstbHabilitation
-            // 
-            this.chklstbHabilitation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
-            this.chklstbHabilitation.CheckOnClick = true;
-            this.chklstbHabilitation.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chklstbHabilitation.FormattingEnabled = true;
-            this.chklstbHabilitation.Location = new System.Drawing.Point(0, 3);
-            this.chklstbHabilitation.Name = "chklstbHabilitation";
-            this.chklstbHabilitation.Size = new System.Drawing.Size(613, 76);
-            this.chklstbHabilitation.TabIndex = 2;
-            this.chklstbHabilitation.Visible = false;
-            // 
             // pbEditHabilitations
             // 
             this.pbEditHabilitations.BackColor = System.Drawing.Color.Transparent;
@@ -934,6 +922,18 @@
             this.btnConfirmHabilitation.UseVisualStyleBackColor = false;
             this.btnConfirmHabilitation.Visible = false;
             this.btnConfirmHabilitation.Click += new System.EventHandler(this.btnConfirmHabilitation_Click);
+            // 
+            // chklstbHabilitation
+            // 
+            this.chklstbHabilitation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
+            this.chklstbHabilitation.CheckOnClick = true;
+            this.chklstbHabilitation.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chklstbHabilitation.FormattingEnabled = true;
+            this.chklstbHabilitation.Location = new System.Drawing.Point(0, 3);
+            this.chklstbHabilitation.Name = "chklstbHabilitation";
+            this.chklstbHabilitation.Size = new System.Drawing.Size(613, 76);
+            this.chklstbHabilitation.TabIndex = 2;
+            this.chklstbHabilitation.Visible = false;
             // 
             // lbHabilitations
             // 
