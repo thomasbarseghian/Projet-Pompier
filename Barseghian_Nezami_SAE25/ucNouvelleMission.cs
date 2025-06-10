@@ -351,7 +351,6 @@ namespace Barseghian_Nezami_SAE25
                                     if (Convert.ToInt32(rowPompier["matricule"]) == mat &&
                                         Convert.ToInt32(rowPompier["enMission"]) == 0 &&
                                         Convert.ToInt32(rowPompier["enConge"]) == 0 &&
-                                        !MatriculeDejaAffecte(pompiersAffectes, mat) &&
                                         PompierEstActifDansCaserne(dtAffectation, mat, idCaserne))
                                     {
                                         matricule = mat;

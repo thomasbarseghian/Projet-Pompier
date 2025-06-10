@@ -182,20 +182,14 @@
     <Compile Include="ucRessourceHumain.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucMission.Designer.cs">
-      <DependentUpon>ucMission.cs</DependentUpon>
+    <Compile Include="ucRessourceHumain.Designer.cs">
+      <DependentUpon>ucRessourceHumain.cs</DependentUpon>
     </Compile>
     <Compile Include="ucStats.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucStats.Designer.cs">
       <DependentUpon>ucStats.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ucRessourceHumain.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucRessourceHumain.Designer.cs">
-      <DependentUpon>ucRessourceHumain.cs</DependentUpon>
     </Compile>
     <Compile Include="VehiculeNecessaire.cs" />
     <EmbeddedResource Include="ucAffichageEnginPompier.resx">
@@ -236,9 +230,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucStats.resx">
       <DependentUpon>ucStats.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ucRessourceHumain.resx">
-      <DependentUpon>ucRessourceHumain.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

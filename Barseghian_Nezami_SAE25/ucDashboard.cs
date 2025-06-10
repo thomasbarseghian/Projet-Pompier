@@ -184,19 +184,16 @@ namespace Barseghian_Nezami_SAE25
                 }
 
                 MessageBox.Show("Mission clôturée.");
-                messagePDF = "PDF récapitulatif généré dans votre bin/Debug.";
             }
             else
             {
                 MessageBox.Show("Cette mission est déjà clôturée.");
-                messagePDF = "PDF récapitulatif tout de même généré dans votre bin/Debug.";
             }
 
             try
             {
                 string chemin = "rapport_mission" + idMission.ToString() + ".pdf";
                 GenerateurPdf.GenererPdfMission(idMission, chemin);
-                MessageBox.Show(messagePDF);
             }
             catch (Exception ex)
             {
@@ -211,7 +208,7 @@ namespace Barseghian_Nezami_SAE25
             {
                 string chemin = "rapport_mission" + idMission.ToString() + ".pdf";
                 GenerateurPdf.GenererPdfMission(idMission, chemin);
-                MessageBox.Show("PDF récapitulatif tout de même généré dans votre bin/Debug.");
+                MessageBox.Show("PDF récapitulatif généré.");
             }
             catch (Exception ex)
             {

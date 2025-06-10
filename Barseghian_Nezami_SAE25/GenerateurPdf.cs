@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PdfSharpCore.Pdf;
-using PdfSharpCore.Drawing;
 using System.Data;
 using System.IO;
+using System.Windows.Forms;
+using PdfSharpCore.Pdf;
+using PdfSharpCore.Drawing;
+
 
 namespace Barseghian_Nezami_SAE25
 {
@@ -14,9 +16,9 @@ namespace Barseghian_Nezami_SAE25
     {
         public static void GenererPdfMission(int idMission, string cheminFichier)
         {
-            var missionTable = MesDatas.DsGlobal.Tables["Mission"];
-            var natureTable = MesDatas.DsGlobal.Tables["NatureSinistre"];
-            var caserneTable = MesDatas.DsGlobal.Tables["Caserne"];
+            DataTable missionTable = MesDatas.DsGlobal.Tables["Mission"];
+            DataTable natureTable = MesDatas.DsGlobal.Tables["NatureSinistre"];
+            DataTable caserneTable = MesDatas.DsGlobal.Tables["Caserne"];
 
             DataRow mission = missionTable.Rows.Find(idMission);
             if (mission == null)
@@ -60,6 +62,32 @@ namespace Barseghian_Nezami_SAE25
                 gfx.DrawString(text, font, XBrushes.Black, new XRect(margin + indent, yOffset, page1.Width - margin * 2, 20), XStringFormats.TopLeft);
                 yOffset += 20;
             }
+
+            string cheminLogo = "../../Resources/Logo_couleur.png";
+            FileStream fs = File.OpenRead(cheminLogo);
+            Func<Stream> streamFactory = new Func<Stream>(() => fs);
+            XImage image = XImage.FromStream(streamFactory);
+
+            // Positionnement centré en haut
+
+            // Réduction de moitié
+            double originalWidth = image.PixelWidth * 72.0 / image.HorizontalResolution;
+            double originalHeight = image.PixelHeight * 72.0 / image.VerticalResolution;
+
+            double width = originalWidth / 2;
+            double height = originalHeight / 2;
+
+            // Position en haut à droite (avec un petit décalage de marge)
+            double margin2 = 20;
+            double xImage = page1.Width - width - margin2;
+            double yImage = margin2;
+
+            gfx.DrawImage(image, xImage, yImage, width, height);
+
+            // Libérer les ressources
+            image.Dispose();
+            fs.Close();
+            fs.Dispose();
 
             DrawText($"Rapport de la mission {idMission}", titreFont, ref y);
             y += 20;
@@ -114,10 +142,10 @@ namespace Barseghian_Nezami_SAE25
                 }
             }
             y += 10;
-            var mobiliserTable = MesDatas.DsGlobal.Tables["Mobiliser"];
-            var pompierTable = MesDatas.DsGlobal.Tables["Pompier"];
-            var gradeTable = MesDatas.DsGlobal.Tables["Grade"];
-            var habilitationTable = MesDatas.DsGlobal.Tables["Habilitation"];
+            DataTable mobiliserTable = MesDatas.DsGlobal.Tables["Mobiliser"];
+            DataTable pompierTable = MesDatas.DsGlobal.Tables["Pompier"];
+            DataTable gradeTable = MesDatas.DsGlobal.Tables["Grade"];
+            DataTable habilitationTable = MesDatas.DsGlobal.Tables["Habilitation"];
 
             if (gradeTable.PrimaryKey == null || gradeTable.PrimaryKey.Length == 0)
             {
@@ -135,21 +163,45 @@ namespace Barseghian_Nezami_SAE25
             y += 5;
 
             // On filtre les lignes Mobiliser liées à la mission
-            var lignesMobilisation = mobiliserTable.Rows
-                .Cast<DataRow>()
-                .Where(r => Convert.ToInt32(r["idMission"]) == idMission);
+            List<DataRow> lignesMobilisation = new List<DataRow>();
 
-            var pompiersGroupe = lignesMobilisation
-                .GroupBy(r => Convert.ToInt32(r["matriculePompier"])); // Regroupe par pompier
-
-            foreach (var groupe in pompiersGroupe)
+            // Filtrage manuel des lignes correspondant à la mission
+            foreach (DataRow row in mobiliserTable.Rows)
             {
-                int matricule = groupe.Key;
+                if (Convert.ToInt32(row["idMission"]) == idMission)
+                {
+                    lignesMobilisation.Add(row);
+                }
+            }
 
-                // On récupère la ligne Pompier
-                DataRow pompierRow = pompierTable.Rows
-                    .Cast<DataRow>()
-                    .FirstOrDefault(r => Convert.ToInt32(r["matricule"]) == matricule);
+            // Regroupement manuel par matriculePompier
+            Dictionary<int, List<DataRow>> pompiersGroupe = new Dictionary<int, List<DataRow>>();
+
+            foreach (DataRow row in lignesMobilisation)
+            {
+                int matricule = Convert.ToInt32(row["matriculePompier"]);
+                if (!pompiersGroupe.ContainsKey(matricule))
+                {
+                    pompiersGroupe[matricule] = new List<DataRow>();
+                }
+                pompiersGroupe[matricule].Add(row);
+            }
+
+            foreach (KeyValuePair<int, List<DataRow>> entry in pompiersGroupe)
+            {
+                int matricule = entry.Key;
+                List<DataRow> lignesPompier = entry.Value;
+
+                // On récupère la ligne du pompier
+                DataRow pompierRow = null;
+                foreach (DataRow row in pompierTable.Rows)
+                {
+                    if (Convert.ToInt32(row["matricule"]) == matricule)
+                    {
+                        pompierRow = row;
+                        break;
+                    }
+                }
 
                 if (pompierRow == null)
                     continue;
@@ -158,23 +210,27 @@ namespace Barseghian_Nezami_SAE25
                 string nom = pompierRow["nom"].ToString();
                 string codeGrade = pompierRow["codeGrade"].ToString();
 
-                // On cherche le libellé du grade
+                // Recherche du libellé du grade
                 string libelleGrade = "Grade inconnu";
                 DataRow gradeRow = gradeTable.Rows.Find(codeGrade);
                 if (gradeRow != null)
+                {
                     libelleGrade = gradeRow["libelle"].ToString();
+                }
 
-                // On récupère les habilitations du pompier pour cette mission
+                // Récupération des habilitations (sans doublons)
                 List<string> libellesHabilitation = new List<string>();
-                foreach (var ligne in groupe)
+                foreach (DataRow ligne in lignesPompier)
                 {
                     int idHab = Convert.ToInt32(ligne["idHabilitation"]);
                     DataRow habRow = habilitationTable.Rows.Find(idHab);
                     if (habRow != null)
                     {
                         string libelleHab = habRow["libelle"].ToString();
-                        if (!libellesHabilitation.Contains(libelleHab)) // éviter les doublons
+                        if (!libellesHabilitation.Contains(libelleHab))
+                        {
                             libellesHabilitation.Add(libelleHab);
+                        }
                     }
                 }
 
@@ -183,11 +239,27 @@ namespace Barseghian_Nezami_SAE25
             }
 
 
-            // Sauvegarde
-            using (FileStream stream = new FileStream(cheminFichier, FileMode.Create))
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Fichier PDF (*.pdf)|*.pdf";
+            saveFileDialog.Title = "Enregistrer le rapport de mission";
+            saveFileDialog.FileName = "rapport_mission_" + idMission + ".pdf";
+
+            DialogResult result = saveFileDialog.ShowDialog();
+            if (result == DialogResult.OK)
             {
-                document.Save(stream);
+                string cheminFichier2 = saveFileDialog.FileName;
+                FileStream outputStream = File.Create(cheminFichier2);
+                document.Save(outputStream);
+                outputStream.Close();
+                outputStream.Dispose();
+
+                MessageBox.Show("PDF généré avec succès !");
             }
+            else
+            {
+                MessageBox.Show("Enregistrement annulé.");
+            }
+
         }
     }
 }
