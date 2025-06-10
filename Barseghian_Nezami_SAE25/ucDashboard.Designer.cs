@@ -35,6 +35,7 @@
             this.lblHeader = new System.Windows.Forms.Label();
             this.tlpMissions = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pnlHeader.SuspendLayout();
             this.pnlChoisirGrade.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -126,11 +127,20 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.tlpMissions);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 73);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(771, 624);
+            this.panel1.Size = new System.Drawing.Size(771, 599);
             this.panel1.TabIndex = 5;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 678);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(771, 19);
+            this.panel2.TabIndex = 6;
             // 
             // ucDashboard
             // 
@@ -138,6 +148,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlHeader);
             this.Name = "ucDashboard";
@@ -161,5 +172,7 @@
         private System.Windows.Forms.Panel pnlChoisirGrade;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cboFiltre;
+        private System.Windows.Forms.Panel panel2;
     }
 }
+
