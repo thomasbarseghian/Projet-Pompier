@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using Barseghian_Nezami_SAE25.Utils;
+
 
 namespace Barseghian_Nezami_SAE25
 {
@@ -16,9 +18,9 @@ namespace Barseghian_Nezami_SAE25
         public mainLayout()
         {
             InitializeComponent();
-
         }
 
+        // Charge et applique les icônes aux boutons de la barre latérale.
         private void mainLayout_Load(object sender, EventArgs e)
         {
             // Button DashBoard
@@ -53,32 +55,37 @@ namespace Barseghian_Nezami_SAE25
 
 
             pnlMainLayout.Controls.Clear();
-            dashboard db = new dashboard();
-            btnTableauBord.BackColor = Color.FromArgb(160, 40, 50);
+            ucDashboard db = new ucDashboard();
+            btnTableauBord.BackColor = Color.FromArgb(250, 128, 0);
             addToPanelLayout(db);
         }
 
         private void btnQuitter_Click(object sender, EventArgs e)
         {
+            Connexion.FermerConnexion();
             Application.Exit();
         }
+        //  Navigation entre les sections : réalisée par l'ajout dynamique de UserControls
+        //  dans le panel central.
         private void addToPanelLayout(UserControl uc)
         {
             pnlMainLayout.Controls.Clear();
           
             pnlMainLayout.Controls.Add(uc);
         }
+        //  Permet de styliser dynamiquement les boutons de navigation en fonction de
+        //  la section active.
         private void activeBtnStylying(Button btn)
         {
             foreach(Button buttonn in pnlSideBar.Controls.OfType<Button>())
             {
                 if(buttonn == btn)
                 {
-                    buttonn.BackColor = Color.FromArgb(160, 40, 50); 
+                    buttonn.BackColor = Color.FromArgb(250, 128, 0); 
                 }
                 else
                 {
-                    buttonn.BackColor = Color.FromArgb(140, 30, 40);
+                    buttonn.BackColor = Color.FromArgb(243, 156, 18);
                 }
 
             }
@@ -86,7 +93,7 @@ namespace Barseghian_Nezami_SAE25
         private void btnTableauBord_Click(object sender, EventArgs e)
         {
             pnlMainLayout.Controls.Clear();
-            dashboard db = new dashboard();
+            ucDashboard db = new ucDashboard();
             activeBtnStylying((Button)sender);
             addToPanelLayout(db);
         }
@@ -118,17 +125,10 @@ namespace Barseghian_Nezami_SAE25
         private void btnStatistiques_Click(object sender, EventArgs e)
         {
             pnlMainLayout.Controls.Clear();
+            ucStats stats = new ucStats();
             activeBtnStylying((Button)sender);
+            addToPanelLayout(stats);
         }
-
-        private void pnlMainLayout_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        /***************************************************************************/
-
-        /***************************************************************************/
 
     }
 }

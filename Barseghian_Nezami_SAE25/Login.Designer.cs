@@ -50,7 +50,7 @@
             // 
             // pnlLogin
             // 
-            this.pnlLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
+            this.pnlLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
             this.pnlLogin.Controls.Add(this.panel21);
             this.pnlLogin.Controls.Add(this.panel20);
             this.pnlLogin.Controls.Add(this.PbLogo);
@@ -166,8 +166,9 @@
             // btnValider
             // 
             this.btnValider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnValider.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnValider.FlatAppearance.BorderSize = 0;
-            this.btnValider.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(150)))), ((int)(((byte)(0)))));
+            this.btnValider.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(84)))), ((int)(((byte)(0)))));
             this.btnValider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnValider.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnValider.ForeColor = System.Drawing.Color.WhiteSmoke;

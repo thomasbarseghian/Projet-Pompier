@@ -73,8 +73,8 @@
             // 
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Arial Rounded MT Bold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.lblHeader.Location = new System.Drawing.Point(195, 21);
+            this.lblHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
+            this.lblHeader.Location = new System.Drawing.Point(195, 16);
             this.lblHeader.Name = "lblHeader";
             this.lblHeader.Size = new System.Drawing.Size(439, 55);
             this.lblHeader.TabIndex = 0;
@@ -83,7 +83,7 @@
             // 
             // pnlHeader
             // 
-            this.pnlHeader.BackColor = System.Drawing.Color.Brown;
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.pnlHeader.Controls.Add(this.lblHeader);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.ForeColor = System.Drawing.Color.Coral;
@@ -95,7 +95,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
             this.panel1.Location = new System.Drawing.Point(20, 120);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(729, 2);
@@ -114,10 +114,10 @@
             // 
             // txtNom
             // 
-            this.txtNom.BackColor = System.Drawing.Color.RosyBrown;
+            this.txtNom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.txtNom.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNom.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNom.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txtNom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.txtNom.Location = new System.Drawing.Point(295, 140);
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(195, 25);
@@ -126,10 +126,10 @@
             // 
             // txtPrenom
             // 
-            this.txtPrenom.BackColor = System.Drawing.Color.RosyBrown;
+            this.txtPrenom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.txtPrenom.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPrenom.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrenom.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txtPrenom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.txtPrenom.Location = new System.Drawing.Point(531, 140);
             this.txtPrenom.Name = "txtPrenom";
             this.txtPrenom.Size = new System.Drawing.Size(195, 25);
@@ -175,6 +175,8 @@
             this.dtpNaissance.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpNaissance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNaissance.Location = new System.Drawing.Point(295, 200);
+            this.dtpNaissance.MaxDate = new System.DateTime(2026, 12, 31, 0, 0, 0, 0);
+            this.dtpNaissance.MinDate = new System.DateTime(1965, 1, 1, 0, 0, 0, 0);
             this.dtpNaissance.Name = "dtpNaissance";
             this.dtpNaissance.Size = new System.Drawing.Size(249, 26);
             this.dtpNaissance.TabIndex = 12;
@@ -219,7 +221,7 @@
             // 
             this.rdbVolantaire.AutoSize = true;
             this.rdbVolantaire.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbVolantaire.Location = new System.Drawing.Point(177, 3);
+            this.rdbVolantaire.Location = new System.Drawing.Point(151, 3);
             this.rdbVolantaire.Name = "rdbVolantaire";
             this.rdbVolantaire.Size = new System.Drawing.Size(96, 22);
             this.rdbVolantaire.TabIndex = 18;
@@ -252,14 +254,14 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.BackColor = System.Drawing.Color.RosyBrown;
+            this.txtPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhone.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txtPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.txtPhone.Location = new System.Drawing.Point(296, 320);
             this.txtPhone.MaxLength = 10;
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(195, 25);
+            this.txtPhone.Size = new System.Drawing.Size(248, 25);
             this.txtPhone.TabIndex = 20;
             this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
             // 
@@ -276,7 +278,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Location = new System.Drawing.Point(24, 410);
@@ -325,19 +327,17 @@
             // 
             // cboCaserne
             // 
-            this.cboCaserne.BackColor = System.Drawing.Color.RosyBrown;
-            this.cboCaserne.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboCaserne.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCaserne.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboCaserne.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.cboCaserne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
+            this.cboCaserne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboCaserne.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCaserne.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.cboCaserne.FormattingEnabled = true;
             this.cboCaserne.Items.AddRange(new object[] {
             "Sangy bo na kai kor"});
             this.cboCaserne.Location = new System.Drawing.Point(296, 430);
             this.cboCaserne.Name = "cboCaserne";
-            this.cboCaserne.Size = new System.Drawing.Size(195, 27);
+            this.cboCaserne.Size = new System.Drawing.Size(250, 32);
             this.cboCaserne.TabIndex = 24;
-            this.cboCaserne.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.cboCaserne_DrawItem);
             // 
             // dtpEmbauche
             // 
@@ -349,6 +349,8 @@
             this.dtpEmbauche.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpEmbauche.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpEmbauche.Location = new System.Drawing.Point(296, 550);
+            this.dtpEmbauche.MaxDate = new System.DateTime(2026, 12, 31, 0, 0, 0, 0);
+            this.dtpEmbauche.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dtpEmbauche.Name = "dtpEmbauche";
             this.dtpEmbauche.Size = new System.Drawing.Size(249, 26);
             this.dtpEmbauche.TabIndex = 26;
@@ -366,12 +368,12 @@
             // 
             // btnAjouter
             // 
-            this.btnAjouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
+            this.btnAjouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
             this.btnAjouter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAjouter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.btnAjouter.FlatAppearance.BorderSize = 0;
-            this.btnAjouter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
-            this.btnAjouter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAjouter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(84)))), ((int)(((byte)(0)))));
+            this.btnAjouter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAjouter.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAjouter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btnAjouter.Location = new System.Drawing.Point(594, 657);
@@ -397,7 +399,7 @@
             this.pnlType.Controls.Add(this.rdbPompier);
             this.pnlType.Location = new System.Drawing.Point(296, 610);
             this.pnlType.Name = "pnlType";
-            this.pnlType.Size = new System.Drawing.Size(275, 35);
+            this.pnlType.Size = new System.Drawing.Size(250, 32);
             this.pnlType.TabIndex = 30;
             // 
             // errorProvider1
@@ -406,19 +408,15 @@
             // 
             // cboGrade
             // 
-            this.cboGrade.BackColor = System.Drawing.Color.RosyBrown;
-            this.cboGrade.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboGrade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboGrade.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboGrade.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.cboGrade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
+            this.cboGrade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboGrade.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboGrade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.cboGrade.FormattingEnabled = true;
-            this.cboGrade.Items.AddRange(new object[] {
-            "Sangy bo na kai kor"});
             this.cboGrade.Location = new System.Drawing.Point(295, 490);
             this.cboGrade.Name = "cboGrade";
-            this.cboGrade.Size = new System.Drawing.Size(195, 27);
+            this.cboGrade.Size = new System.Drawing.Size(251, 32);
             this.cboGrade.TabIndex = 32;
-            this.cboGrade.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.cboGrade_DrawItem);
             // 
             // lblGrade
             // 
@@ -448,7 +446,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(230)))));
             this.ClientSize = new System.Drawing.Size(800, 749);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cboGrade);
