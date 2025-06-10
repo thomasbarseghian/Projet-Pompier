@@ -76,9 +76,8 @@
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.ForeColor = System.Drawing.Color.Coral;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1467, 112);
+            this.pnlHeader.Size = new System.Drawing.Size(978, 73);
             this.pnlHeader.TabIndex = 2;
             this.pnlHeader.Resize += new System.EventHandler(this.pnlHeader_Resize);
             // 
@@ -87,17 +86,16 @@
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Arial Rounded MT Bold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
-            this.lblHeader.Location = new System.Drawing.Point(292, 25);
-            this.lblHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHeader.Location = new System.Drawing.Point(195, 16);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(714, 83);
+            this.lblHeader.Size = new System.Drawing.Size(453, 55);
             this.lblHeader.TabIndex = 0;
-            this.lblHeader.Text = "Gestion Des Engins";
+            this.lblHeader.Text = "Gestion De Engins";
             this.lblHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cboCaserne
             // 
-            this.cboCaserne.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cboCaserne.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.cboCaserne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(167)))));
             this.cboCaserne.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -105,10 +103,9 @@
             this.cboCaserne.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCaserne.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.cboCaserne.FormattingEnabled = true;
-            this.cboCaserne.Location = new System.Drawing.Point(609, 134);
-            this.cboCaserne.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cboCaserne.Location = new System.Drawing.Point(406, 87);
             this.cboCaserne.Name = "cboCaserne";
-            this.cboCaserne.Size = new System.Drawing.Size(376, 41);
+            this.cboCaserne.Size = new System.Drawing.Size(252, 30);
             this.cboCaserne.TabIndex = 3;
             this.cboCaserne.SelectionChangeCommitted += new System.EventHandler(this.cboCaserne_SelectionChangeCommitted);
             // 
@@ -117,10 +114,9 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.label14.Location = new System.Drawing.Point(302, 138);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(201, 90);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(306, 33);
+            this.label14.Size = new System.Drawing.Size(199, 22);
             this.label14.TabIndex = 4;
             this.label14.Text = "Choisissez la Caserne";
             // 
@@ -129,10 +125,9 @@
             this.lblEngin.AutoSize = true;
             this.lblEngin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEngin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.lblEngin.Location = new System.Drawing.Point(326, 37);
-            this.lblEngin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEngin.Location = new System.Drawing.Point(217, 24);
             this.lblEngin.Name = "lblEngin";
-            this.lblEngin.Size = new System.Drawing.Size(250, 42);
+            this.lblEngin.Size = new System.Drawing.Size(165, 28);
             this.lblEngin.TabIndex = 0;
             this.lblEngin.Text = "Engin 2 Sur 7";
             // 
@@ -145,10 +140,9 @@
             this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrevious.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrevious.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btnPrevious.Location = new System.Drawing.Point(222, 115);
-            this.btnPrevious.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnPrevious.Location = new System.Drawing.Point(148, 75);
             this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(180, 54);
+            this.btnPrevious.Size = new System.Drawing.Size(120, 35);
             this.btnPrevious.TabIndex = 10;
             this.btnPrevious.Text = "← Précedent";
             this.btnPrevious.UseVisualStyleBackColor = false;
@@ -163,10 +157,9 @@
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btnNext.Location = new System.Drawing.Point(525, 115);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnNext.Location = new System.Drawing.Point(350, 75);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(180, 54);
+            this.btnNext.Size = new System.Drawing.Size(120, 35);
             this.btnNext.TabIndex = 11;
             this.btnNext.Text = "Suivant  →";
             this.btnNext.UseVisualStyleBackColor = false;
@@ -191,10 +184,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.Color.Brown;
-            this.panel1.Location = new System.Drawing.Point(3, 185);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(2, 120);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1209, 600);
+            this.panel1.Size = new System.Drawing.Size(806, 390);
             this.panel1.TabIndex = 12;
             // 
             // tableLayoutPanel1
@@ -204,20 +196,18 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.Controls.Add(this.pbStatus, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblState, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(369, 415);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(246, 270);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(274, 75);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(183, 49);
             this.tableLayoutPanel1.TabIndex = 16;
             // 
             // pbStatus
             // 
-            this.pbStatus.Location = new System.Drawing.Point(153, 5);
-            this.pbStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbStatus.Location = new System.Drawing.Point(101, 3);
             this.pbStatus.Name = "pbStatus";
-            this.pbStatus.Size = new System.Drawing.Size(60, 62);
+            this.pbStatus.Size = new System.Drawing.Size(40, 40);
             this.pbStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbStatus.TabIndex = 15;
             this.pbStatus.TabStop = false;
@@ -227,22 +217,20 @@
             this.lblState.AutoSize = true;
             this.lblState.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.lblState.Location = new System.Drawing.Point(4, 0);
-            this.lblState.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblState.Location = new System.Drawing.Point(3, 0);
             this.lblState.Name = "lblState";
-            this.lblState.Size = new System.Drawing.Size(141, 75);
+            this.lblState.Size = new System.Drawing.Size(92, 49);
             this.lblState.TabIndex = 13;
             this.lblState.Text = "En Panne";
             this.lblState.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pbEngin
             // 
-            this.pbEngin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pbEngin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbEngin.Location = new System.Drawing.Point(690, 65);
-            this.pbEngin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbEngin.Location = new System.Drawing.Point(460, 42);
             this.pbEngin.Name = "pbEngin";
-            this.pbEngin.Size = new System.Drawing.Size(450, 462);
+            this.pbEngin.Size = new System.Drawing.Size(300, 300);
             this.pbEngin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbEngin.TabIndex = 14;
             this.pbEngin.TabStop = false;
@@ -251,10 +239,9 @@
             // 
             this.lblReception.AutoSize = true;
             this.lblReception.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.lblReception.Location = new System.Drawing.Point(376, 331);
-            this.lblReception.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblReception.Location = new System.Drawing.Point(251, 215);
             this.lblReception.Name = "lblReception";
-            this.lblReception.Size = new System.Drawing.Size(93, 33);
+            this.lblReception.Size = new System.Drawing.Size(61, 22);
             this.lblReception.TabIndex = 12;
             this.lblReception.Text = "label8";
             // 
@@ -262,10 +249,9 @@
             // 
             this.lblCaserne.AutoSize = true;
             this.lblCaserne.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.lblCaserne.Location = new System.Drawing.Point(376, 228);
-            this.lblCaserne.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCaserne.Location = new System.Drawing.Point(251, 148);
             this.lblCaserne.Name = "lblCaserne";
-            this.lblCaserne.Size = new System.Drawing.Size(93, 33);
+            this.lblCaserne.Size = new System.Drawing.Size(61, 22);
             this.lblCaserne.TabIndex = 11;
             this.lblCaserne.Text = "label7";
             // 
@@ -273,10 +259,9 @@
             // 
             this.lblCode.AutoSize = true;
             this.lblCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.lblCode.Location = new System.Drawing.Point(376, 115);
-            this.lblCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCode.Location = new System.Drawing.Point(251, 75);
             this.lblCode.Name = "lblCode";
-            this.lblCode.Size = new System.Drawing.Size(93, 33);
+            this.lblCode.Size = new System.Drawing.Size(61, 22);
             this.lblCode.TabIndex = 10;
             this.lblCode.Text = "label6";
             // 
@@ -285,10 +270,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.label5.Location = new System.Drawing.Point(117, 435);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(78, 283);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(222, 33);
+            this.label5.Size = new System.Drawing.Size(147, 22);
             this.label5.TabIndex = 9;
             this.label5.Text = "ÉTAT ACTUAL :";
             // 
@@ -297,10 +281,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.label4.Location = new System.Drawing.Point(117, 331);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(78, 215);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(200, 33);
+            this.label4.Size = new System.Drawing.Size(133, 22);
             this.label4.TabIndex = 8;
             this.label4.Text = "RÉCEPTION :";
             // 
@@ -309,10 +292,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.label3.Location = new System.Drawing.Point(117, 228);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(78, 148);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(170, 33);
+            this.label3.Size = new System.Drawing.Size(113, 22);
             this.label3.TabIndex = 7;
             this.label3.Text = "CASERNE :";
             // 
@@ -321,20 +303,18 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.label2.Location = new System.Drawing.Point(117, 115);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(78, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 33);
+            this.label2.Size = new System.Drawing.Size(77, 22);
             this.label2.TabIndex = 6;
             this.label2.Text = "C0DE : ";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(30, 415);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox4.Location = new System.Drawing.Point(20, 270);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(75, 77);
+            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 5;
             this.pictureBox4.TabStop = false;
@@ -342,10 +322,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(30, 308);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox3.Location = new System.Drawing.Point(20, 200);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(75, 77);
+            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
@@ -353,10 +332,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(30, 200);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(20, 130);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(75, 77);
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -364,10 +342,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(30, 92);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(20, 60);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 77);
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -377,10 +354,9 @@
             this.lblType.AutoSize = true;
             this.lblType.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.lblType.Location = new System.Drawing.Point(264, 31);
-            this.lblType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblType.Location = new System.Drawing.Point(176, 20);
             this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(74, 33);
+            this.lblType.Size = new System.Drawing.Size(50, 22);
             this.lblType.TabIndex = 1;
             this.lblType.Text = "BRS";
             // 
@@ -389,16 +365,15 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.label1.Location = new System.Drawing.Point(30, 31);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(20, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(233, 33);
+            this.label1.Size = new System.Drawing.Size(153, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "TYPE D\'ENGIN :";
             // 
             // pnlLayout
             // 
-            this.pnlLayout.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pnlLayout.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlLayout.Controls.Add(this.btnDebutEngin);
             this.pnlLayout.Controls.Add(this.btnFinEngin);
@@ -406,10 +381,9 @@
             this.pnlLayout.Controls.Add(this.btnNext);
             this.pnlLayout.Controls.Add(this.btnPrevious);
             this.pnlLayout.Controls.Add(this.lblEngin);
-            this.pnlLayout.Location = new System.Drawing.Point(158, 185);
-            this.pnlLayout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlLayout.Location = new System.Drawing.Point(105, 120);
             this.pnlLayout.Name = "pnlLayout";
-            this.pnlLayout.Size = new System.Drawing.Size(1216, 972);
+            this.pnlLayout.Size = new System.Drawing.Size(811, 632);
             this.pnlLayout.TabIndex = 13;
             this.pnlLayout.Visible = false;
             // 
@@ -450,16 +424,15 @@
             // 
             // ucGestionEngins
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(230)))));
             this.Controls.Add(this.pnlLayout);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.cboCaserne);
             this.Controls.Add(this.label14);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ucGestionEngins";
-            this.Size = new System.Drawing.Size(1467, 1078);
+            this.Size = new System.Drawing.Size(978, 701);
             this.Load += new System.EventHandler(this.ucGestionEngins_Load);
             this.Resize += new System.EventHandler(this.ucGestionEngins_Resize);
             this.pnlHeader.ResumeLayout(false);
@@ -513,3 +486,4 @@
         private System.Windows.Forms.Button btnDebutEngin;
     }
 }
+
