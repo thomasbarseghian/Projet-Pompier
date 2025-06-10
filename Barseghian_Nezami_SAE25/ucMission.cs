@@ -22,6 +22,17 @@ namespace Barseghian_Nezami_SAE25
 
             centerLayout();
         }
+
+        public delegate void ClotureClickedEventHandler(object sender, int idMission);
+
+        // Déclaration de l'événement
+        public event ClotureClickedEventHandler ClotureClicked;
+
+        public delegate void PdfClickedEventHandler(object sender, int idMission);
+
+        // Déclaration de l'événement
+        public event PdfClickedEventHandler PdfClicked;
+
         public ucMission(DataRow dr)
         {
             InitializeComponent();
@@ -110,6 +121,21 @@ namespace Barseghian_Nezami_SAE25
         private void ucMission_Resize(object sender, EventArgs e)
         {
             centerLayout();
+        }
+
+        public delegate void btnCloture_click();
+        public delegate void btnPdf_click();
+
+        private void btnCloture_Click(object sender, EventArgs e)
+        {
+            int idMission = Convert.ToInt32(lblMission.Text);
+            ClotureClicked?.Invoke(this, idMission);
+        }
+
+        private void btnPdf_Click(object sender, EventArgs e)
+        {
+            int idMission = Convert.ToInt32(lblMission.Text);
+            PdfClicked?.Invoke(this, idMission);
         }
     }
 }
