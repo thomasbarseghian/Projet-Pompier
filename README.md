@@ -25,7 +25,7 @@ L’application est réalisée en C# (.NET Framework) avec une base de données 
 
 4. **Compiler et exécuter** :
    - Le formulaire principal `mainLayout` charge dynamiquement les UserControls
-   - Utiliser les identifiants admin pour accéder aux fonctionnalités étendues
+   - Utiliser les identifiants admin pour accéder aux fonctionnalités étendues  
      (login : vrichard, mdp : mdpVero)
 
 ## Architecture
