@@ -1,6 +1,6 @@
 # Gestion de caserne de pompiers
 
-<img width="1366" height="725" alt="Capture d’écran (19)" src="https://github.com/user-attachments/assets/3a451b13-a899-41ae-bfa6-871397708f2d" />
+<img width="1366" height="725" alt="Menu" src="https://github.com/user-attachments/assets/3a451b13-a899-41ae-bfa6-871397708f2d" />
 
 Gestion de Casernes de Pompiers, a été développé en 5 semaines dans le cadre d’un projet tutoré par un groupe de 3 étudiants.
 L’application est réalisée en C# (.NET Framework) avec une base de données SQLite. Elle permet une gestion complète des casernes de pompiers, incluant la supervision des missions, du matériel, des engins, et du personnel. Plusieurs casernes peuvent être créées, consultées et gérées, avec des liaisons entre elles pour une coordination efficace. 
