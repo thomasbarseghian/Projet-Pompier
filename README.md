@@ -14,7 +14,7 @@ L’application est réalisée en C# (.NET Framework) avec une base de données 
 ## Installation et Utilisation
 1. **Cloner le repository** :
    ```bash
-   git clone https://github.com/AbdullahPro2/Gestion-de-caserne-de-pompiers.git
+   git clone https://github.com/thomasbarseghian/Projet-Pompier.git
    ```
 
 2. **Ouvrir la solution** dans Visual Studio
