@@ -47,3 +47,6 @@ L’application est réalisée en C# (.NET Framework) avec une base de données 
 - Navigation via **UserControls** dynamiques dans un `mainLayout`
 - Génération PDF avec **iTextSharp**
 - Base **SQLite** avec relations complexes
+
+## Licence
+Projet sous licence MIT — voir le fichier LICENSE pour plus d’informations.
